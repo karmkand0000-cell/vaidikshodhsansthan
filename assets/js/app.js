@@ -199,7 +199,7 @@
       '<span class="meta">' + esc(t(c.name)) + (s.duration ? ' • ' + esc(s.duration) : '') + '</span>' +
       '<h3><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></h3>' +
       '<p>' + esc(t(s.desc)) + '</p>' +
-      '<div class="foot"><span class="price">' + inr(minPrice(s)) + '<small>' + u('from') + ' ' + u('starting') + '</small></span>' +
+      '<div class="foot"><span class="price">' + inr(minPrice(s)) + '</span>' +
       '<button class="btn btn-primary btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div></article>';
   }
 
@@ -237,7 +237,7 @@
       ((P.features || []).length ? '<ul class="prem-feat">' + P.features.map(function (f) { return '<li>' + ICONS.check + '<span>' + esc(t(f)) + '</span></li>'; }).join('') + '</ul>' : '') +
       '<div class="prem-list">' + items.map(function (s) {
         return '<div class="prem-item"><div><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a><small>' + esc(s.duration || '') + '</small></div>' +
-          '<span class="prem-price">' + inr(minPrice(s)) + '<small>' + u('starting') + '</small></span>' +
+          '<span class="prem-price">' + inr(minPrice(s)) + '</span>' +
           '<button class="btn btn-gold btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div>';
       }).join('') + '</div>' +
       '<a class="btn btn-ghost-light" href="tel:+91' + digits(D.settings.phone).slice(-10) + '">' + u('premium_enquire') + ' — ' + esc(D.settings.phone) + '</a>' +
