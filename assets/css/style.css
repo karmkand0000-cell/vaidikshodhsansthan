@@ -515,3 +515,12 @@ dialog.lb img{width:100%;max-height:78vh;object-fit:contain;background:#000}
 .t-src ul{padding-left:1.2em;word-break:break-all}
 .t-pn{display:flex;justify-content:space-between;gap:10px;margin-top:26px;flex-wrap:wrap}
 .sp-facts{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-m);padding:4px 16px;margin:0 0 10px}
+/* tirth photos */
+.t-card.has-img{padding-top:0;overflow:hidden}
+.t-img{display:block;width:calc(100% + 34px);margin:0 -16px 12px -18px;height:170px;object-fit:cover;background:var(--chandan)}
+.t-card.has-img .t-n{top:8px;right:10px;color:#fff;text-shadow:0 1px 4px #000}
+.sp-th{width:44px;height:44px;border-radius:50%;object-fit:cover;background:var(--chandan)}
+.t-photo{margin:0 0 18px;border-radius:var(--r-l);overflow:hidden;background:var(--chandan)}
+.t-photo img{width:100%;max-height:480px;object-fit:cover;display:block}
+.t-photo figcaption{font-size:.8rem;color:var(--ink-2);padding:6px 12px;background:var(--paper)}
+.t-photo figcaption a{color:var(--ink-2)}
