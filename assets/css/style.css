@@ -832,3 +832,27 @@ footer.site .copy{border-top-color:rgba(184,138,59,.25)}
 .sm-video{width:100%;border-radius:14px;background:#000;box-shadow:var(--shadow-s);grid-column:1/-1;max-height:520px}
 .sm-video.portrait{grid-column:auto;aspect-ratio:9/16;object-fit:cover;max-height:560px;max-width:320px}
 .sm-photo{width:100%;border-radius:14px;box-shadow:var(--shadow-s);object-fit:cover;aspect-ratio:3/4}
+
+/* ===== पुस्तकालय ===== */
+.bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:20px}
+.bk-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow-s);transition:transform .2s,box-shadow .2s}
+.bk-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
+.bk-card .bk-cover{display:block;width:100%;height:auto;aspect-ratio:220/300;background:#F2E8D7;padding:18px 34px;box-sizing:border-box}
+.bk-cover{filter:drop-shadow(0 10px 14px rgba(40,14,8,.35))}
+.bk-info{padding:14px 18px 18px;display:flex;flex-direction:column;gap:4px}
+.bk-info b{font-size:1.15rem;color:var(--kumkum-d)}.bk-info span{color:var(--ink-2);font-size:.95rem}.bk-info small{color:var(--gold-d)}.bk-info i{font-style:normal;color:var(--kumkum);font-weight:600;margin-top:6px}
+.bk-head{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start;margin-bottom:24px}
+.bk-cover.big{width:220px;height:auto}
+.bk-meta{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:14px 0;font-size:.95rem}.bk-meta dt{color:var(--ink-2)}.bk-meta dd{margin:0;font-weight:500}
+.bk-actions{display:flex;gap:10px;flex-wrap:wrap}
+.bk-frame{border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;background:#fff;box-shadow:var(--shadow-s)}
+.bk-frame iframe{display:block;width:100%;height:78vh;min-height:520px;border:0}
+.bk-frame.tall iframe{height:85vh}
+.bk-tip{font-size:.85rem;color:var(--ink-2);margin:8px 0 0}
+.bk-gp{background:#FFF8E8;border:1px solid #F1D9A3;border-radius:var(--r-m);padding:18px 22px}.bk-gp ol{margin:8px 0 16px}
+.books-teaser .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.bt-row{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.bt-item{text-decoration:none;color:var(--ink);text-align:center;transition:transform .2s}.bt-item:hover{transform:translateY(-4px)}
+.bt-item svg{width:100%;height:auto}.bt-item span{display:block;margin-top:10px;font-weight:600;font-size:.98rem}
+@media (max-width:900px){.bt-row{grid-template-columns:repeat(3,1fr)}.bk-head{grid-template-columns:1fr}.bk-cover.big{width:160px}}
+@media (max-width:520px){.bt-row{grid-template-columns:repeat(2,1fr);gap:14px}}
