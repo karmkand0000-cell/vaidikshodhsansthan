@@ -856,3 +856,4 @@ footer.site .copy{border-top-color:rgba(184,138,59,.25)}
 .bt-item svg{width:100%;height:auto}.bt-item span{display:block;margin-top:10px;font-weight:600;font-size:.98rem}
 @media (max-width:900px){.bt-row{grid-template-columns:repeat(3,1fr)}.bk-head{grid-template-columns:1fr}.bk-cover.big{width:160px}}
 @media (max-width:520px){.bt-row{grid-template-columns:repeat(2,1fr);gap:14px}}
+.svc-qa{margin:28px 0 8px}
