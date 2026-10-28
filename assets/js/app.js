@@ -7,7 +7,7 @@
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
       lang_btn: 'English', book_puja: 'पूजा बुक करें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
-      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान',
+      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
       email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
@@ -52,7 +52,7 @@
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
       lang_btn: 'हिंदी', book_puja: 'Book a puja', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
-      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan',
+      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
       email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
@@ -293,6 +293,13 @@
       '</div></section>' +
 
       premiumHTML() +
+
+      '<section class="tirth-teaser"><div class="wrap"><div class="sec-head"><div><h2>' + u('tirth_h') + '</h2><p>' + u('tirth_p') + '</p></div></div><div class="tt-grid">' +
+        [['jyotirling', lang === 'en' ? '12 Jyotirlingas' : '12 ज्योतिर्लिंग', lang === 'en' ? 'Somnath to Grishneshwar' : 'सोमनाथ से घृष्णेश्वर तक'],
+         ['ashtavinayak', lang === 'en' ? 'Ashtavinayak' : 'अष्टविनायक', lang === 'en' ? 'Eight swayambhu Ganesh shrines' : 'आठ स्वयंभू गणपति'],
+         ['shaktipeeth', lang === 'en' ? '51 Shakti Peethas' : '51 शक्तिपीठ', lang === 'en' ? 'From Hinglaj to Kamakhya' : 'हिंगलाज से कामाख्या तक']].map(function (x) {
+          return '<a class="tt-card tt-' + x[0] + '" href="#/tirth/' + x[0] + '"><b>' + x[1] + '</b><span>' + x[2] + '</span></a>'; }).join('') +
+      '</div></div></section>' +
 
       ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div><h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
         D.purposes.map(function (p) {
@@ -604,6 +611,12 @@
   /* ---------------- router ---------------- */
   function route() {
     var h = location.hash || '#/';
+    if (/^#\/tirth/.test(h) && window.VSSTirth) {
+      $('#nav').classList.remove('open');
+      window.VSSTirth.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
+      document.title = u('nav_tirth') + ' — ' + t(D.settings.siteName);
+      return window.VSSTirth.route(h);
+    }
     var am = h.match(/^#\/(panchang|kundli|rashifal|milan)/);
     if (am) {
       $('#nav').classList.remove('open');
