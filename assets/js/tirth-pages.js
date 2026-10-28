@@ -44,7 +44,7 @@
 
   function load() {
     if (DATA) return Promise.resolve(DATA);
-    if (!loading) loading = fetch('data/tirth.json?v=1').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) { DATA = d; return d; });
+    if (!loading) loading = fetch('data/tirth.json?v=2').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) { DATA = d; return d; });
     return loading;
   }
   function withData(fn) {
@@ -54,6 +54,11 @@
   function gname(g) { return L(g); }
   function gmaps(it) { return it.lat ? 'https://www.google.com/maps/search/?api=1&query=' + it.lat + ',' + it.lon : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent((it.name_en || '') + ' ' + (it.location_en || it.town || '')); }
   function placeOf(it) { return f(it, 'place') || f(it, 'location') || [it.town || it.village, it.district, it.state].filter(Boolean).join(', '); }
+  function imgUrl(it, w) { return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(it.img.file) + '?width=' + (w || 960); }
+  function credit(it) {
+    var a = it.img.artist || (X.lang === 'en' ? 'Wikimedia Commons contributor' : 'विकिमीडिया कॉमन्स योगदानकर्ता');
+    return (X.lang === 'en' ? 'Photo: ' : 'फ़ोटो: ') + '<a href="https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(it.img.file) + '" target="_blank" rel="noopener">' + X.esc(a) + '</a>, ' + X.esc(it.img.license) + ' — Wikimedia Commons';
+  }
   function idOf(it) { return it.id || ('p' + it.n); }
 
   /* ---------- landing ---------- */
@@ -130,8 +135,8 @@
         var vis = items.filter(function (i) { if (LS.c && i.country !== LS.c) return false; return !q || JSON.stringify(i).toLowerCase().indexOf(q) > -1; });
         X.$('#tlist').innerHTML = vis.map(function (it, i) {
           var num = it.n || (items.indexOf(it) + 1);
-          if (g === 'shaktipeeth') return '<a class="sp-row" href="#/tirth/' + g + '/' + idOf(it) + '"><span class="sp-n">' + num + '</span><span class="sp-main"><b>' + X.esc(f(it, 'name')) + '</b><small>' + X.esc(placeOf(it)) + '</small></span><span class="sp-meta"><span>' + L('part') + ': <b>' + X.esc(f(it, 'part')) + '</b></span><span>' + L('shakti') + ': <b>' + X.esc(f(it, 'shakti')) + '</b></span></span></a>';
-          return '<a class="t-card" href="#/tirth/' + g + '/' + idOf(it) + '"><span class="t-n">' + num + '</span><b>' + X.esc(f(it, 'name')) + '</b><small>' + X.esc(placeOf(it)) + '</small><p>' + X.esc((f(it, 'legend') || '').split(/(?<=[।.])\s/)[0]) + '</p></a>';
+          if (g === 'shaktipeeth') return '<a class="sp-row" href="#/tirth/' + g + '/' + idOf(it) + '">' + (it.img ? '<img class="sp-th" loading="lazy" alt="" src="' + imgUrl(it, 120) + '">' : '<span class="sp-n">' + num + '</span>') + '<span class="sp-main"><b>' + X.esc(f(it, 'name')) + '</b><small>' + X.esc(placeOf(it)) + '</small></span><span class="sp-meta"><span>' + L('part') + ': <b>' + X.esc(f(it, 'part')) + '</b></span><span>' + L('shakti') + ': <b>' + X.esc(f(it, 'shakti')) + '</b></span></span></a>';
+          return '<a class="t-card' + (it.img ? ' has-img' : '') + '" href="#/tirth/' + g + '/' + idOf(it) + '">' + (it.img ? '<img class="t-img" loading="lazy" alt="' + X.esc(f(it, 'name')) + '" src="' + imgUrl(it, 500) + '">' : '') + '<span class="t-n">' + num + '</span><b>' + X.esc(f(it, 'name')) + '</b><small>' + X.esc(placeOf(it)) + '</small><p>' + X.esc((f(it, 'legend') || '').split(/(?<=[।.])\s/)[0]) + '</p></a>';
         }).join('') || '<div class="empty">—</div>';
       };
       draw();
@@ -162,6 +167,7 @@
         '<nav class="crumbs"><a href="#/">' + X.u('home') + '</a> / <a href="#/tirth">' + L('tirth') + '</a> / <a href="#/tirth/' + g + '">' + gname(g) + '</a> / ' + X.esc(f(it, 'name')) + '</nav>' +
         '<div class="detail-grid"><article>' +
           '<div class="t-hero"><span class="tg-ic big">' + GROUPS[g].icon + '</span><div><span class="t-badge">' + gname(g) + ' • ' + (it.n || idx + 1) + '</span><h1>' + X.esc(f(it, 'name')) + '</h1><p class="t-place">📍 ' + X.esc(placeOf(it)) + '</p></div></div>' +
+          (it.img ? '<figure class="t-photo"><img src="' + imgUrl(it, 1280) + '" alt="' + X.esc(f(it, 'name')) + '"><figcaption>' + credit(it) + '</figcaption></figure>' : '') +
           (g === 'shaktipeeth' ? '<dl class="sp-facts">' + row(L('part'), f(it, 'part')) + row(L('shakti'), f(it, 'shakti')) + row(L('bhairav'), f(it, 'bhairav')) + row(L('country'), it.country) + '</dl>' : '') +
           para(L('setting'), f(it, 'geography') || f(it, 'river_or_setting')) +
           para(L('legend'), f(it, 'legend')) +
