@@ -419,3 +419,29 @@ dialog.lb img{width:100%;max-height:78vh;object-fit:contain;background:#000}
   .topbar,.toran,header.site,footer.site,.fab,.mbar,.kform,.astro-note,.crumbs,.kact,#kBook,#pv{display:none!important}
   body{background:#fff}.kres{border:0;padding:0}
 }
+
+/* ---------- kundli milan ---------- */
+.mform{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-l);padding:18px;margin-top:16px}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px}
+@media (max-width:760px){.mcols{grid-template-columns:1fr}}
+.mside{border:1.5px solid var(--line);border-radius:var(--r-m);padding:14px;display:grid;gap:10px;margin:0}
+.mside legend{font-family:var(--f-display);font-size:1.2rem;color:var(--kumkum-d);padding:0 6px}
+.mside .f input{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--vibhuti)}
+.mrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mform .err{color:#B00020;margin:0 0 8px}
+.mhead{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;margin-bottom:16px}
+@media (max-width:640px){.mhead{grid-template-columns:1fr}}
+.mscore{width:130px;height:130px;border-radius:50%;display:grid;place-content:center;text-align:center;background:conic-gradient(var(--c) calc(var(--p)*1%),#EFE3CF 0);position:relative}
+.mscore::before{content:'';position:absolute;inset:12px;border-radius:50%;background:var(--paper)}
+.mscore b,.mscore span{position:relative}
+.mscore b{font-family:var(--f-display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--kumkum-d)}
+.mscore span{font-size:.8rem;color:var(--ink-2)}
+.mscore.good{--c:#2E6B3A}.mscore.ok{--c:#E8871E}.mscore.bad{--c:#9E1B1B}
+.mhead h2{margin:0}
+.mverdict{font-weight:700;margin:4px 0}.mverdict.good{color:var(--patta)}.mverdict.ok{color:#9A5B00}.mverdict.bad{color:var(--kumkum)}
+.msub{color:var(--ink-2);margin:0;font-size:.95rem}
+.mtab td small{display:block;color:var(--ink-2);font-size:.8rem;font-weight:400}
+.mtab tr.zero td{background:#FBEDED}
+.mtab tr.tot td{background:#FFF3D6;font-size:1.05rem}
+.mtab td.kbar{width:160px;min-width:120px}.kbar i{display:block;height:10px;border-radius:10px;background:var(--genda);box-shadow:0 0 0 1px #E8C9A8}
+@media print{.mform,.seg-tabs,#mBook{display:none!important}}
