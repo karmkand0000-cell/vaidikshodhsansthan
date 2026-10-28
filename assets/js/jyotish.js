@@ -247,6 +247,60 @@
     } catch (e) { return 5.5; }
   }
 
-  var api = { N: N, PLANETS: PLANETS, ayanamsa: ayanamsa, sidLon: sidLon, tropLon: tropLon, ascendant: ascendant, elements: elements, panchang: panchang, events: events, kundli: kundli, moonNow: moonNow, tzOffset: tzOffset, amantaMonth: amantaMonth };
+
+  /* ---------- अष्टकूट गुण मिलान ---------- */
+  var VARNA = [1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0]; // 0 ब्राह्मण 1 क्षत्रिय 2 वैश्य 3 शूद्र (by rashi)
+  var VARNA_N = { hi: ['ब्राह्मण', 'क्षत्रिय', 'वैश्य', 'शूद्र'], en: ['Brahmin', 'Kshatriya', 'Vaishya', 'Shudra'] };
+  function vashyaOf(lon) { var r = Math.floor(lon / 30), d = lon % 30;
+    if (r === 8) return d < 15 ? 1 : 0; if (r === 9) return d < 15 ? 0 : 2;
+    return [0, 0, 1, 2, 3, 1, 1, 4, 0, 0, 1, 2][r]; }
+  var VASHYA_N = { hi: ['चतुष्पद', 'मानव', 'जलचर', 'वनचर', 'कीट'], en: ['Chatushpad', 'Manav', 'Jalchar', 'Vanchar', 'Keet'] };
+  var VASHYA_T = [[2, 1, 1, 0.5, 1], [1, 2, 0.5, 0, 1], [1, 0.5, 2, 1, 1], [0.5, 0, 1, 2, 0], [1, 1, 1, 0, 2]];
+  var YONI = [0, 1, 2, 3, 3, 4, 5, 2, 5, 6, 6, 7, 8, 9, 8, 9, 10, 10, 4, 11, 12, 11, 13, 0, 13, 7, 1];
+  var YONI_N = { hi: ['अश्व', 'गज', 'मेष', 'सर्प', 'श्वान', 'मार्जार', 'मूषक', 'गौ', 'महिष', 'व्याघ्र', 'मृग', 'वानर', 'नकुल', 'सिंह'], en: ['Horse', 'Elephant', 'Sheep', 'Serpent', 'Dog', 'Cat', 'Rat', 'Cow', 'Buffalo', 'Tiger', 'Deer', 'Monkey', 'Mongoose', 'Lion'] };
+  var YONI_T = [[4,2,2,3,2,2,2,1,0,1,3,3,2,1],[2,4,3,3,2,2,2,2,3,1,2,3,2,0],[2,3,4,2,1,2,1,3,3,1,2,0,3,1],[3,3,2,4,2,1,1,1,1,2,2,2,0,2],[2,2,1,2,4,2,1,2,2,1,0,2,1,1],[2,2,2,1,2,4,0,2,2,1,3,3,2,1],[2,2,1,1,1,0,4,2,2,2,2,2,1,2],[1,2,3,1,2,2,2,4,3,0,3,2,2,1],[0,3,3,1,2,2,2,3,4,1,2,2,2,1],[1,1,1,2,1,1,2,0,1,4,1,1,2,1],[3,2,2,2,0,3,2,3,2,1,4,2,2,1],[3,3,0,2,2,3,2,2,2,1,2,4,3,2],[2,2,3,0,1,2,1,2,2,2,2,3,4,2],[1,0,1,2,1,1,2,1,1,1,1,2,2,4]];
+  var LORD = [2, 5, 3, 1, 0, 3, 5, 2, 4, 6, 6, 4]; // Sun0 Moon1 Mars2 Merc3 Jup4 Ven5 Sat6
+  var LORD_ID = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
+  var MAITRI_T = [[5,5,5,4,5,0,0],[5,5,4,1,4,0.5,0.5],[5,4,5,0.5,5,3,0.5],[4,1,0.5,5,0.5,5,4],[5,4,5,0.5,5,0.5,3],[0,0.5,3,5,0.5,5,5],[0,0.5,0.5,4,3,5,5]];
+  var GANA = [0,1,2,1,0,1,0,0,2,2,1,1,0,2,0,2,0,2,2,1,1,0,2,2,1,1,0];
+  var GANA_N = { hi: ['देव', 'मनुष्य', 'राक्षस'], en: ['Deva', 'Manushya', 'Rakshasa'] };
+  var GANA_T = [[6, 5, 1], [6, 6, 0], [1, 0, 6]]; // वर (row) × वधू (col)
+  var NADI = [0,1,2,2,1,0,0,1,2,2,1,0,0,1,2,2,1,0,0,1,2,2,1,0,0,1,2];
+  var NADI_N = { hi: ['आदि', 'मध्य', 'अन्त्य'], en: ['Aadi', 'Madhya', 'Antya'] };
+
+  function milan(boy, girl) {
+    var bL = boy.planets[1].lon, gL = girl.planets[1].lon;
+    var bR = Math.floor(bL / 30), gR = Math.floor(gL / 30), bN = Math.floor(bL / NAKLEN), gN = Math.floor(gL / NAKLEN);
+    var K = [];
+    // 1 वर्ण
+    K.push({ id: 'varna', max: 1, got: VARNA[bR] <= VARNA[gR] ? 1 : 0, b: VARNA_N, bi: VARNA[bR], gi: VARNA[gR] });
+    // 2 वश्य
+    var bv = vashyaOf(bL), gv = vashyaOf(gL);
+    K.push({ id: 'vashya', max: 2, got: VASHYA_T[bv][gv], b: VASHYA_N, bi: bv, gi: gv });
+    // 3 तारा
+    var t1 = ((bN - gN + 27) % 27 + 1) % 9, t2 = ((gN - bN + 27) % 27 + 1) % 9;
+    var bad = function (x) { return x === 3 || x === 5 || x === 7; };
+    K.push({ id: 'tara', max: 3, got: (bad(t1) ? 0 : 1.5) + (bad(t2) ? 0 : 1.5), b: null, bi: t2 === 0 ? 9 : t2, gi: t1 === 0 ? 9 : t1 });
+    // 4 योनि
+    K.push({ id: 'yoni', max: 4, got: YONI_T[YONI[bN]][YONI[gN]], b: YONI_N, bi: YONI[bN], gi: YONI[gN] });
+    // 5 ग्रह मैत्री
+    var maitri = MAITRI_T[LORD[bR]][LORD[gR]];
+    K.push({ id: 'maitri', max: 5, got: maitri, lord: true, bi: LORD[bR], gi: LORD[gR] });
+    // 6 गण
+    K.push({ id: 'gana', max: 6, got: GANA_T[GANA[bN]][GANA[gN]], b: GANA_N, bi: GANA[bN], gi: GANA[gN] });
+    // 7 भकूट
+    var d1 = ((bR - gR + 12) % 12) + 1, d2 = ((gR - bR + 12) % 12) + 1, pair = [Math.min(d1, d2), Math.max(d1, d2)].join('-');
+    var bhakootDosh = ['2-12', '5-9', '6-8'].indexOf(pair) > -1;
+    var bhakootParihar = bhakootDosh && (LORD[bR] === LORD[gR] || maitri >= 4);
+    K.push({ id: 'bhakoot', max: 7, got: bhakootDosh ? 0 : 7, dosh: bhakootDosh, parihar: bhakootParihar, bi: d1, gi: d2, rashi: true });
+    // 8 नाड़ी
+    var nadiDosh = NADI[bN] === NADI[gN];
+    var nadiParihar = nadiDosh && ((bR === gR && bN !== gN) || (bN === gN && bR !== gR));
+    K.push({ id: 'nadi', max: 8, got: nadiDosh ? 0 : 8, dosh: nadiDosh, parihar: nadiParihar, b: NADI_N, bi: NADI[bN], gi: NADI[gN] });
+    var total = K.reduce(function (a, k) { return a + k.got; }, 0);
+    return { kootas: K, total: total, boy: { rashi: bR, nak: bN, manglik: boy.manglik || boy.manglikMoon }, girl: { rashi: gR, nak: gN, manglik: girl.manglik || girl.manglikMoon }, LORD_ID: LORD_ID };
+  }
+
+  var api = { N: N, PLANETS: PLANETS, ayanamsa: ayanamsa, sidLon: sidLon, tropLon: tropLon, ascendant: ascendant, elements: elements, panchang: panchang, events: events, kundli: kundli, moonNow: moonNow, tzOffset: tzOffset, amantaMonth: amantaMonth, milan: milan };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.VJ = api;
 })(typeof window !== 'undefined' ? window : globalThis);

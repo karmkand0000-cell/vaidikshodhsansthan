@@ -30,7 +30,19 @@
       deep: 'विस्तृत कुंडली विश्लेषण बुक करें', print: 'प्रिंट / PDF सहेजें', privacy: 'आपका जन्म विवरण कहीं भेजा या सहेजा नहीं जाता — कुंडली आपके फ़ोन/कंप्यूटर में ही बनती है।',
       r_title: 'दैनिक राशिफल', r_sub: 'चंद्रमा के गोचर पर आधारित आज का फल', moonin: 'आज चंद्रमा {r} राशि में ({n} नक्षत्र)',
       tomorrow: 'कल', remedy: 'उपाय', bypandit: 'पंडित जी द्वारा', r_note: 'यह राशिफल चंद्र गोचर पर आधारित सामान्य फल है। व्यक्तिगत फल आपकी पूरी कुंडली पर निर्भर करता है।',
-      knowrashi: 'अपनी राशि नहीं पता? निःशुल्क कुंडली बनाएँ', rating: 'दिन'
+      knowrashi: 'अपनी राशि नहीं पता? निःशुल्क कुंडली बनाएँ', rating: 'दिन',
+      m_title: 'कुंडली मिलान (गुण मिलान)', m_sub: 'वर और वधू का जन्म विवरण भरें — अष्टकूट के 36 गुण, नाड़ी व भकूट दोष और मांगलिक मिलान तुरंत।',
+      boy: 'वर (लड़का)', girl: 'वधू (लड़की)', match: 'गुण मिलाएँ', tab_k: 'जन्म कुंडली', tab_m: 'कुंडली मिलान',
+      koota: 'कूट', obtained: 'प्राप्त', gunas: 'गुण', total: 'कुल',
+      k_varna: 'वर्ण', k_vashya: 'वश्य', k_tara: 'तारा', k_yoni: 'योनि', k_maitri: 'ग्रह मैत्री', k_gana: 'गण', k_bhakoot: 'भकूट', k_nadi: 'नाड़ी',
+      d_varna: 'आध्यात्मिक अनुकूलता व अहं', d_vashya: 'आपसी आकर्षण', d_tara: 'भाग्य व स्वास्थ्य', d_yoni: 'शारीरिक व स्वभाविक अनुकूलता',
+      d_maitri: 'मानसिक मेल व मित्रता', d_gana: 'स्वभाव व व्यवहार', d_bhakoot: 'परिवार, धन व प्रेम', d_nadi: 'संतान व स्वास्थ्य',
+      v_bad: 'मिलान अनुकूल नहीं — 18 से कम गुण। विवाह से पहले पंडित जी से विस्तृत परामर्श आवश्यक है।',
+      v_ok: 'सामान्य मिलान — 18 से 24 गुण। विवाह संभव है, दोषों का परिहार देख लें।',
+      v_good: 'अच्छा मिलान — 25 से 32 गुण। विवाह हेतु शुभ।', v_best: 'उत्तम मिलान — 32 से अधिक गुण।',
+      nadi_dosh: 'नाड़ी दोष है (दोनों की नाड़ी एक ही)।', bhakoot_dosh: 'भकूट दोष है।', parihar: 'शास्त्र अनुसार इसका परिहार बनता है।',
+      mangl_both: 'दोनों मांगलिक हैं — मांगलिक दोष आपस में कट जाता है।', mangl_one: 'केवल {who} मांगलिक है — मंगल दोष विचार व शांति उपाय आवश्यक।', mangl_none: 'कोई भी मांगलिक नहीं है।',
+      book_milan: 'पंडित जी से विस्तृत मिलान कराएँ', m_note: 'गुण मिलान चंद्र नक्षत्र पर आधारित है। विवाह निर्णय के लिए दोनों की पूरी कुंडली (ग्रह स्थिति, दशा, सप्तम भाव) का विचार पंडित जी से अवश्य कराएँ।'
     },
     en: {
       p_title: "Today's Panchang", p_full: 'See full panchang', panchang: 'Panchang', kundli: 'Kundli', rashifal: 'Horoscope',
@@ -56,7 +68,19 @@
       deep: 'Book a detailed chart reading', print: 'Print / save PDF', privacy: 'Your birth details are not sent or stored anywhere — the chart is computed on your own device.',
       r_title: 'Daily Horoscope', r_sub: "Today's result based on the Moon's transit", moonin: 'Today the Moon is in {r} ({n} nakshatra)',
       tomorrow: 'Tomorrow', remedy: 'Remedy', bypandit: 'By Pandit ji', r_note: 'This is a general result from the Moon transit. Personal results depend on your full birth chart.',
-      knowrashi: "Don't know your rashi? Make a free kundli", rating: 'Day'
+      knowrashi: "Don't know your rashi? Make a free kundli", rating: 'Day',
+      m_title: 'Kundli Milan (Guna Matching)', m_sub: 'Enter the groom’s and bride’s birth details — get the Ashtakoot 36-guna score, Nadi & Bhakoot dosh and Manglik matching instantly.',
+      boy: 'Groom', girl: 'Bride', match: 'Match gunas', tab_k: 'Birth chart', tab_m: 'Kundli matching',
+      koota: 'Koota', obtained: 'Obtained', gunas: 'gunas', total: 'Total',
+      k_varna: 'Varna', k_vashya: 'Vashya', k_tara: 'Tara', k_yoni: 'Yoni', k_maitri: 'Graha Maitri', k_gana: 'Gana', k_bhakoot: 'Bhakoot', k_nadi: 'Nadi',
+      d_varna: 'Spiritual compatibility & ego', d_vashya: 'Mutual attraction', d_tara: 'Fortune & health', d_yoni: 'Physical & temperamental match',
+      d_maitri: 'Mental harmony & friendship', d_gana: 'Nature & behaviour', d_bhakoot: 'Family, wealth & love', d_nadi: 'Progeny & health',
+      v_bad: 'Not favourable — below 18 gunas. Consult Pandit ji in detail before marriage.',
+      v_ok: 'Average match — 18 to 24 gunas. Marriage is possible; check remedies for doshas.',
+      v_good: 'Good match — 25 to 32 gunas. Auspicious for marriage.', v_best: 'Excellent match — above 32 gunas.',
+      nadi_dosh: 'Nadi dosh present (same nadi).', bhakoot_dosh: 'Bhakoot dosh present.', parihar: 'A shastric cancellation (parihar) applies.',
+      mangl_both: 'Both are Manglik — the dosh cancels out.', mangl_one: 'Only the {who} is Manglik — Mangal dosh remedies needed.', mangl_none: 'Neither is Manglik.',
+      book_milan: 'Get a detailed match by Pandit ji', m_note: 'Guna matching is based on Moon nakshatras. For a marriage decision, have Pandit ji review both full charts (planets, dasha, 7th house).'
     }
   };
   function L(k) { return (T[X.lang] && T[X.lang][k]) || T.hi[k] || k; }
@@ -108,7 +132,7 @@
           '<div><dt>' + L('month_p') + '</dt><dd>' + n('masa')[p.purnimanta] + ', ' + L('vikram') + ' ' + p.vikram + '</dd></div>' +
         '</dl>' +
         (ev.length ? '<p class="ps-ev">🪔 ' + ev.map(function (e) { return X.esc(e[X.lang] || e.hi); }).join(' • ') + '</p>' : '') +
-        '<div class="ps-links"><a class="btn btn-primary btn-sm" href="#/panchang">' + L('p_full') + '</a><a class="btn btn-ghost btn-sm" href="#/kundli">' + L('k_title') + '</a><a class="btn btn-ghost btn-sm" href="#/rashifal">' + L('r_title') + '</a></div>' +
+        '<div class="ps-links"><a class="btn btn-primary btn-sm" href="#/panchang">' + L('p_full') + '</a><a class="btn btn-ghost btn-sm" href="#/kundli">' + L('k_title') + '</a><a class="btn btn-ghost btn-sm" href="#/milan">' + L('tab_m') + '</a><a class="btn btn-ghost btn-sm" href="#/rashifal">' + L('r_title') + '</a></div>' +
       '</div></section>';
     } catch (e) { return ''; }
   }
@@ -189,7 +213,7 @@
     var f = KS.form;
     X.$('#main').innerHTML = '<div class="wrap detail astro">' +
       '<nav class="crumbs"><a href="#/">' + X.u('home') + '</a> / ' + L('kundli') + '</nav>' +
-      '<h1>' + L('k_title') + '</h1><p class="lead-s">' + L('k_sub') + '</p>' +
+      tabsK('k') + '<h1>' + L('k_title') + '</h1><p class="lead-s">' + L('k_sub') + '</p>' +
       '<form id="kForm" class="kform" novalidate autocomplete="off">' +
         '<label class="f">' + L('name') + '<input name="name" value="' + X.esc(f.name || '') + '"></label>' +
         '<label class="f">' + L('dob') + '<input type="date" name="dob" value="' + X.esc(f.dob || '') + '" max="2100-12-31"></label>' +
@@ -287,6 +311,117 @@
     X.$('#kres').scrollIntoView({ behavior: 'smooth' });
   }
 
+  function tabsK(which) {
+    return '<div class="seg-tabs" style="display:inline-flex;margin-bottom:14px"><a href="#/kundli"' + (which === 'k' ? ' aria-current="page"' : '') + '>' + L('tab_k') + '</a><a href="#/milan"' + (which === 'm' ? ' aria-current="page"' : '') + '>' + L('tab_m') + '</a></div>';
+  }
+
+  /* generic place search: input + list element; calls setPlace(p) */
+  function placePicker(input, list, setPlace) {
+    var timer;
+    function show(arr) {
+      if (document.activeElement !== input) { list.innerHTML = ''; return; }
+      list.innerHTML = arr.length ? arr.map(function (p, i) { return '<button type="button" data-pi="' + i + '">' + X.esc(p.name) + ' <small>' + X.esc(p.admin) + '</small></button>'; }).join('') : '<span class="pl-msg">' + L('notfound') + '</span>';
+      X.$$('[data-pi]', list).forEach(function (b) { b.onclick = function () { var p = arr[+b.dataset.pi]; setPlace(p); input.value = p.name + (p.admin ? ', ' + p.admin : ''); list.innerHTML = ''; }; });
+    }
+    input.oninput = function () {
+      setPlace(null); var q = this.value.trim(); clearTimeout(timer);
+      if (q.length < 2) { list.innerHTML = ''; return; }
+      var local = CITIES.filter(function (c) { return c[0].indexOf(q) === 0 || c[1].toLowerCase().indexOf(q.toLowerCase()) === 0; }).slice(0, 4)
+        .map(function (c) { return { name: X.lang === 'en' ? c[1] : c[0], admin: 'India', lat: c[2], lon: c[3], tz: 'Asia/Kolkata' }; });
+      show(local);
+      timer = setTimeout(function () {
+        fetch('https://geocoding-api.open-meteo.com/v1/search?count=6&format=json&language=' + (X.lang === 'en' ? 'en' : 'hi') + '&name=' + encodeURIComponent(q))
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            var res = (j.results || []).map(function (r) { return { name: r.name, admin: [r.admin1, r.country].filter(Boolean).join(', '), lat: r.latitude, lon: r.longitude, tz: r.timezone }; });
+            show(local.concat(res.filter(function (r) { return !local.some(function (l) { return Math.abs(l.lat - r.lat) < .05 && Math.abs(l.lon - r.lon) < .05; }); })));
+          }).catch(function () { show(local); });
+      }, 350);
+    };
+  }
+  function guessPlace(txt) {
+    var c = CITIES.find(function (c) { return txt.indexOf(c[0]) === 0 || txt.toLowerCase().indexOf(c[1].toLowerCase()) === 0; });
+    return c ? { name: X.lang === 'en' ? c[1] : c[0], admin: 'India', lat: c[2], lon: c[3], tz: 'Asia/Kolkata' } : null;
+  }
+  function chartFor(fd, pl) {
+    var d = fd.dob.split('-').map(Number), tm = fd.tob.split(':').map(Number);
+    var off = VJ.tzOffset(pl.tz, d[0], d[1] - 1, d[2], tm[0], tm[1]);
+    return VJ.kundli(new Date(Date.UTC(d[0], d[1] - 1, d[2], tm[0], tm[1]) - off * 3600e3), pl.lat, pl.lon);
+  }
+
+  /* ---------------- milan page ---------------- */
+  var MS = { b: {}, g: {}, bp: null, gp: null };
+  function milanPage() {
+    var side = function (key, title) {
+      var f = MS[key];
+      return '<fieldset class="mside"><legend>' + title + '</legend>' +
+        '<label class="f">' + L('name') + '<input name="' + key + 'name" value="' + X.esc(f.name || '') + '"></label>' +
+        '<div class="mrow"><label class="f">' + L('dob') + '<input type="date" name="' + key + 'dob" value="' + X.esc(f.dob || '') + '"></label>' +
+        '<label class="f">' + L('tob') + '<input type="time" name="' + key + 'tob" value="' + X.esc(f.tob || '') + '"></label></div>' +
+        '<label class="f pob">' + L('pob') + '<input name="' + key + 'pob" placeholder="' + X.esc(L('pob_ph')) + '" value="' + X.esc(f.pob || '') + '"><span class="pob-list" id="' + key + 'List"></span></label></fieldset>';
+    };
+    X.$('#main').innerHTML = '<div class="wrap detail astro">' +
+      '<nav class="crumbs"><a href="#/">' + X.u('home') + '</a> / ' + L('tab_m') + '</nav>' + tabsK('m') +
+      '<h1>' + L('m_title') + '</h1><p class="lead-s">' + L('m_sub') + '</p>' +
+      '<form id="mForm" class="mform" novalidate autocomplete="off"><div class="mcols">' + side('b', L('boy')) + side('g', L('girl')) + '</div>' +
+      '<p class="err" id="mErr"></p><button class="btn btn-primary" type="submit">' + L('match') + '</button></form>' +
+      '<p class="astro-note">🔒 ' + L('privacy') + '</p><div id="mOut"></div></div>';
+    var form = X.$('#mForm');
+    placePicker(form.bpob, X.$('#bList'), function (p) { MS.bp = p; });
+    placePicker(form.gpob, X.$('#gList'), function (p) { MS.gp = p; });
+    form.onsubmit = function (e) {
+      e.preventDefault(); X.$('#bList').innerHTML = ''; X.$('#gList').innerHTML = '';
+      ['b', 'g'].forEach(function (k) { MS[k] = { name: form[k + 'name'].value.trim(), dob: form[k + 'dob'].value, tob: form[k + 'tob'].value, pob: form[k + 'pob'].value.trim() }; });
+      var miss = ['b', 'g'].some(function (k) { var f = MS[k]; return !f.name || !f.dob || !f.tob || !f.pob; });
+      if (miss) { X.$('#mErr').textContent = L('e_fill'); return; }
+      MS.bp = MS.bp || guessPlace(MS.b.pob); MS.gp = MS.gp || guessPlace(MS.g.pob);
+      if (!MS.bp || !MS.gp) { X.$('#mErr').textContent = L('pick'); (MS.bp ? form.gpob : form.bpob).dispatchEvent(new Event('input')); return; }
+      X.$('#mErr').textContent = '';
+      renderMilan(VJ.milan(chartFor(MS.b, MS.bp), chartFor(MS.g, MS.gp)));
+    };
+    window.scrollTo(0, 0);
+  }
+
+  function renderMilan(m) {
+    var lg = X.lang === 'en' ? 'en' : 'hi', gn = VJ.N.graha[lg];
+    var attr = function (k, which) {
+      var i = which === 'b' ? k.bi : k.gi;
+      if (k.lord) return gn[m.LORD_ID[i]];
+      if (k.id === 'tara') return (lg === 'hi' ? 'तारा ' : 'Tara ') + i;
+      if (k.rashi) return (lg === 'hi' ? 'भाव ' : 'House ') + i;
+      return k.b ? k.b[lg][i] : i;
+    };
+    var pct = Math.round(m.total / 36 * 100);
+    var verdict = m.total < 18 ? 'v_bad' : m.total <= 24 ? 'v_ok' : m.total <= 32 ? 'v_good' : 'v_best';
+    var cls = m.total < 18 ? 'bad' : m.total <= 24 ? 'ok' : 'good';
+    var notes = [];
+    m.kootas.forEach(function (k) { if (k.dosh) notes.push(L(k.id === 'nadi' ? 'nadi_dosh' : 'bhakoot_dosh') + (k.parihar ? ' ' + L('parihar') : '')); });
+    var mg = m.boy.manglik && m.girl.manglik ? L('mangl_both') : (m.boy.manglik || m.girl.manglik) ? L('mangl_one').replace('{who}', m.boy.manglik ? L('boy') : L('girl')) : L('mangl_none');
+    var tot = m.total % 1 ? m.total.toFixed(1) : m.total;
+    X.$('#mOut').innerHTML = '<div class="kres" id="mres">' +
+      '<div class="mhead"><div class="mscore ' + cls + '" style="--p:' + pct + '"><b>' + tot + '</b><span>/ 36 ' + L('gunas') + '</span></div>' +
+        '<div><h2>' + X.esc(MS.b.name) + ' ♥ ' + X.esc(MS.g.name) + '</h2><p class="mverdict ' + cls + '">' + L(verdict) + '</p>' +
+        '<p class="msub">' + L('boy') + ': ' + n('rashi')[m.boy.rashi] + ', ' + n('nak')[m.boy.nak] + ' • ' + L('girl') + ': ' + n('rashi')[m.girl.rashi] + ', ' + n('nak')[m.girl.nak] + '</p></div>' +
+        '<div class="kact"><button class="btn btn-ghost btn-sm" type="button" onclick="window.print()">' + L('print') + '</button></div></div>' +
+      '<div class="table-scroll"><table class="ktab mtab"><thead><tr><th>' + L('koota') + '</th><th>' + L('boy') + '</th><th>' + L('girl') + '</th><th>' + L('obtained') + '</th><th></th></tr></thead><tbody>' +
+        m.kootas.map(function (k) {
+          var w = Math.round(k.got / k.max * 100);
+          return '<tr' + (k.got === 0 ? ' class="zero"' : '') + '><td><b>' + L('k_' + k.id) + '</b><small>' + L('d_' + k.id) + '</small></td><td>' + X.esc(attr(k, 'b')) + '</td><td>' + X.esc(attr(k, 'g')) + '</td>' +
+            '<td><b>' + k.got + '</b> / ' + k.max + '</td><td class="kbar"><i style="width:' + w + '%"></i></td></tr>';
+        }).join('') +
+        '<tr class="tot"><td><b>' + L('total') + '</b></td><td></td><td></td><td><b>' + tot + '</b> / 36</td><td></td></tr>' +
+      '</tbody></table></div>' +
+      '<div class="kgrid"><div><h3>' + L('manglik') + '</h3><p class="mangl ' + ((m.boy.manglik !== m.girl.manglik) ? 'yes' : 'no') + '">' + mg + '</p>' +
+        (notes.length ? '<p class="mangl yes">' + notes.join('<br>') + '</p>' : '') + '</div>' +
+        '<div><p class="astro-note" style="margin-top:0">' + L('m_note') + '</p><button class="btn btn-primary" type="button" id="mBook">' + L('book_milan') + '</button></div></div>' +
+      '</div>';
+    X.$('#mBook').onclick = function () {
+      X.openBooking('kundli-milan', null, { name: MS.b.name, dob: MS.b.dob, tob: MS.b.tob, pob: MS.b.pob,
+        partner: MS.g.name + ' — ' + MS.g.dob + ' ' + MS.g.tob + ', ' + MS.g.pob + ' (' + tot + '/36)' });
+    };
+    X.$('#mres').scrollIntoView({ behavior: 'smooth' });
+  }
+
   /* ---------------- rashifal page ---------------- */
   var GOOD = { 1: 4, 2: 3, 3: 4, 4: 2, 5: 3, 6: 5, 7: 4, 8: 2, 9: 3, 10: 5, 11: 5, 12: 2 };
   var FAL = {
@@ -325,7 +460,7 @@
   window.VSSAstro = {
     init: function (ctx) { X = ctx; },
     strip: function () { return VJ ? strip() : ''; },
-    panchang: panchangPage, kundli: kundliPage, rashifal: rashifalPage,
+    panchang: panchangPage, kundli: kundliPage, rashifal: rashifalPage, milan: milanPage,
     available: function () { return !!(window.VJ && window.Astronomy); }
   };
 })();
