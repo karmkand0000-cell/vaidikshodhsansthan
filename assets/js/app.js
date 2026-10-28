@@ -200,7 +200,7 @@
   function svcCard(s) {
     var c = cat(s.cat);
     return '<article class="svc" data-cat="' + esc(s.cat) + '">' +
-      '<div class="svc-img">' + (s.image ? '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + (credOk(s) ? ' title="' + esc(u('photo') + ': ' + (s.imgCredit.artist || '') + ', ' + (s.imgCredit.license || '')) + '"' : '') + '>' : '<span class="svc-ph">' + (ICONS[c.icon] || ICONS.star) + '</span>') +
+      '<div class="svc-img">' + (s.image ? '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + '' + '>' : '<span class="svc-ph">' + (ICONS[c.icon] || ICONS.star) + '</span>') +
       '<span class="svc-cat">' + esc(t(c.name)) + '</span>' + (s.popular ? '<span class="tag">' + u('popular') + '</span>' : '') + '</div>' +
       '<div class="svc-body">' +
       '<h3><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></h3>' +
@@ -239,7 +239,7 @@
     var items = (P.services || []).map(svc).filter(Boolean);
     if (!items.length) return '';
     return '<section class="premium" id="premium"><div class="wrap prem-grid">' +
-      '<figure class="prem-art"><img src="' + esc(P.image || 'assets/img/gallery/havan-kund.svg') + '" alt="" loading="lazy">' + (credOk(P) ? '<figcaption>' + credit(P.imgCredit) + '</figcaption>' : '') + '</figure>' +
+      '<figure class="prem-art"><img src="' + esc(P.image || 'assets/img/gallery/havan-kund.svg') + '" alt="" loading="lazy">' + (false ? '<figcaption>' + credit(P.imgCredit) + '</figcaption>' : '') + '</figure>' +
       '<div><span class="eyebrow">' + (lang === 'en' ? 'Premium anushthan' : 'विशेष अनुष्ठान') + '</span><h2>' + esc(t(P.title)) + '</h2><p class="prem-sub">' + esc(t(P.subtitle)) + '</p>' +
       ((P.features || []).length ? '<ul class="prem-feat">' + P.features.map(function (f) { return '<li>' + ICONS.check + '<span>' + esc(t(f)) + '</span></li>'; }).join('') + '</ul>' : '') +
       '<div class="prem-list">' + items.map(function (s) {
@@ -263,7 +263,7 @@
 
   function openLightbox(i) {
     var G = (D.gallery || []).filter(function (g) { return g.src; }), dlg = $('#lbDlg');
-    var show = function () { var g = G[i]; $('#lbImg').src = g.src; $('#lbImg').alt = t(g.caption); $('#lbCap').innerHTML = esc(t(g.caption)) + '  (' + (i + 1) + '/' + G.length + ')' + (g.credit ? '<small>' + credit(g.credit) + '</small>' : ''); };
+    var show = function () { var g = G[i]; $('#lbImg').src = g.src; $('#lbImg').alt = t(g.caption); $('#lbCap').innerHTML = esc(t(g.caption)) + '  (' + (i + 1) + '/' + G.length + ')'; };
     show();
     $('#lbPrev').onclick = function () { i = (i - 1 + G.length) % G.length; show(); };
     $('#lbNext').onclick = function () { i = (i + 1) % G.length; show(); };
@@ -289,8 +289,7 @@
         '<div class="ctas"><a class="btn btn-gold" href="#/book" data-book="">' + u('book_puja') + '</a><a class="btn btn-ghost-light" href="' + telHref() + '">' + ICONS.phone.replace('<svg', '<svg width="18" height="18"') + ' ' + esc(D.settings.phone) + '</a></div>' +
         '<ul class="hero-trust"><li><b>' + D.services.filter(function (x) { return x.active !== false; }).length + '+</b> ' + u('svc_count') + '</li><li>' + u('h_s1') + '</li><li>' + u('h_s2') + '</li><li>' + u('h_s3') + '</li></ul>' +
         '</div></div>' +
-        (D.hero.image && credOk(D.hero) ? '<small class="hero-credit">' + credit(D.hero.imgCredit) + '</small>' : '') +
-      '</section>' +
+              '</section>' +
       '<div class="area-band"><div class="wrap">' + ICONS.pin.replace('<svg', '<svg width="18" height="18"') + '<span>' + esc(t(D.settings.serviceArea)) + '</span></div></div>' +
 
       (window.VSSAstro ? astroCtx() && window.VSSAstro.strip() : '') +
@@ -379,7 +378,7 @@
       '<nav class="crumbs"><a href="#/">' + u('home') + '</a> / <a href="#/cat/' + esc(s.cat) + '">' + esc(t(c.name)) + '</a> / ' + esc(t(s.name)) + '</nav>' +
       '<div class="detail-grid"><div>' +
         '<h1>' + esc(t(s.name)) + '</h1>' +
-        (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '">' + (credOk(s) ? '<figcaption>' + credit(s.imgCredit) + '</figcaption>' : '') + '</figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
+        (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '">' + (false ? '<figcaption>' + credit(s.imgCredit) + '</figcaption>' : '') + '</figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
         '<p style="font-size:1.1rem">' + esc(t(s.desc)) + '</p>' +
         (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
         (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +
@@ -407,7 +406,14 @@
     D.services.forEach(function (s) { if (s.active !== false && credOk(s)) add(t(s.name), s.imgCredit); });
     if (D.premium && credOk(D.premium)) add(t(D.premium.title), D.premium.imgCredit);
     (D.gallery || []).forEach(function (g) { if (g.credit) add(t(g.caption), g.credit); });
-    $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + u('credits') + '</h1><p>' + u('credits_p') + '</p><ul class="credits">' + rows.join('') + '</ul><p><a href="#/tirth">' + u('nav_tirth') + '</a> ' + (lang === 'en' ? 'pages carry their own photo credits.' : 'की तस्वीरों का श्रेय हर तीर्थ के पेज पर दिया गया है।') + '</p></div>';
+    var draw = function () { $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + u('credits') + '</h1><p>' + u('credits_p') + '</p><ul class="credits">' + rows.join('') + '</ul></div>'; };
+    draw();
+    Promise.all([fetch('data/tirth.json?v=2').then(function (r) { return r.json(); }).catch(function () { return null; }), fetch('data/mandal.json?v=2').then(function (r) { return r.json(); }).catch(function () { return null; })]).then(function (x) {
+      var T = x[0], M = x[1];
+      if (T) ['jyotirling', 'ashtavinayak', 'shaktipeeth'].forEach(function (g) { (T[g].items || []).forEach(function (it) { if (it.img) add(lang === 'en' ? (it.name_en || it.name_hi) : (it.name_hi || it.name_en), it.img); }); });
+      if (M && M.banner) add(u('nav_mandal'), M.banner);
+      if (location.hash.indexOf('credits') > -1) draw();
+    });
     window.scrollTo(0, 0);
   }
 

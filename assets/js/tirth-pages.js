@@ -167,7 +167,7 @@
         '<nav class="crumbs"><a href="#/">' + X.u('home') + '</a> / <a href="#/tirth">' + L('tirth') + '</a> / <a href="#/tirth/' + g + '">' + gname(g) + '</a> / ' + X.esc(f(it, 'name')) + '</nav>' +
         '<div class="detail-grid"><article>' +
           '<div class="t-hero"><span class="tg-ic big">' + GROUPS[g].icon + '</span><div><span class="t-badge">' + gname(g) + ' • ' + (it.n || idx + 1) + '</span><h1>' + X.esc(f(it, 'name')) + '</h1><p class="t-place">📍 ' + X.esc(placeOf(it)) + '</p></div></div>' +
-          (it.img ? '<figure class="t-photo"><img src="' + imgUrl(it, 1280) + '" alt="' + X.esc(f(it, 'name')) + '"><figcaption>' + credit(it) + '</figcaption></figure>' : '') +
+          (it.img ? '<figure class="t-photo"><img src="' + imgUrl(it, 1280) + '" alt="' + X.esc(f(it, 'name')) + '"></figure>' : '') +
           (g === 'shaktipeeth' ? '<dl class="sp-facts">' + row(L('part'), f(it, 'part')) + row(L('shakti'), f(it, 'shakti')) + row(L('bhairav'), f(it, 'bhairav')) + row(L('country'), it.country) + '</dl>' : '') +
           para(L('setting'), f(it, 'geography') || f(it, 'river_or_setting')) +
           para(L('legend'), f(it, 'legend')) +
