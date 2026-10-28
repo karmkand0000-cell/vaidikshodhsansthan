@@ -39,6 +39,7 @@
       <a href="#/#sevaen" data-ui="nav_services"></a>
       <a href="#/seva/kundli-vishleshan" data-ui="nav_jyotish"></a>
       <a href="#/#festivals" data-ui="nav_fest"></a>
+      <a href="#/#gallery" data-ui="nav_gallery"></a>
       <a href="#/track" data-ui="nav_track"></a>
       <a href="#/#contact" data-ui="nav_contact"></a>
       <button class="lang" id="langBtn" type="button"></button>
@@ -83,6 +84,12 @@
 <dialog id="bookDlg" aria-labelledby="bookTitle">
   <div class="dlg-head"><h2 id="bookTitle"></h2><button type="button" id="dlgClose" aria-label="बंद करें">×</button></div>
   <div class="dlg-body" id="dlgBody"></div>
+</dialog>
+
+<dialog id="lbDlg" class="lb" aria-label="Gallery">
+  <button type="button" class="lb-x" id="lbClose" aria-label="बंद करें">×</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-bar"><button type="button" id="lbPrev" aria-label="पिछली">‹</button><span id="lbCap"></span><button type="button" id="lbNext" aria-label="अगली">›</button></div>
 </dialog>
 
 <script src="assets/js/data-default.js"></script>
