@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 <a class="sr" href="#main">मुख्य सामग्री पर जाएँ</a>
@@ -37,8 +37,9 @@
     <nav class="main" id="nav">
       <a href="#/" data-ui="nav_home"></a>
       <a href="#/#sevaen" data-ui="nav_services"></a>
-      <a href="#/seva/kundli-vishleshan" data-ui="nav_jyotish"></a>
-      <a href="#/#festivals" data-ui="nav_fest"></a>
+      <a href="#/panchang" data-ui="nav_panchang"></a>
+      <a href="#/kundli" data-ui="nav_kundli"></a>
+      <a href="#/rashifal" data-ui="nav_rashifal"></a>
       <a href="#/#gallery" data-ui="nav_gallery"></a>
       <a href="#/track" data-ui="nav_track"></a>
       <a href="#/#contact" data-ui="nav_contact"></a>
@@ -64,6 +65,9 @@
     <div>
       <h3 data-ui="foot_info"></h3>
       <ul>
+        <li><a href="#/panchang" data-ui="nav_panchang"></a></li>
+        <li><a href="#/kundli" data-ui="nav_kundli"></a></li>
+        <li><a href="#/rashifal" data-ui="nav_rashifal"></a></li>
         <li><a href="#/page/terms" data-ui="terms"></a></li>
         <li><a href="#/page/refund" data-ui="refund"></a></li>
         <li><a href="#/page/privacy" data-ui="privacy"></a></li>
@@ -92,7 +96,10 @@
   <div class="lb-bar"><button type="button" id="lbPrev" aria-label="पिछली">‹</button><span id="lbCap"></span><button type="button" id="lbNext" aria-label="अगली">›</button></div>
 </dialog>
 
-<script src="assets/js/data-default.js?v=4"></script>
-<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/vendor/astronomy.browser.min.js?v=5"></script>
+<script src="assets/js/jyotish.js?v=5"></script>
+<script src="assets/js/astro-pages.js?v=5"></script>
+<script src="assets/js/data-default.js?v=5"></script>
+<script src="assets/js/app.js?v=5"></script>
 </body>
 </html>
