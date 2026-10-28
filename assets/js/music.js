@@ -3,7 +3,7 @@
    बटन से बंद करने पर पसंद याद रहती है। */
 (function () {
   'use strict';
-  var KEY = 'vss_music', VOL = 0.22;
+  var KEY = 'vss_music', VOL = 0.08;
   var get = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
   var set = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} };
   var a = new Audio('assets/audio/ambient.mp3?v=1');
