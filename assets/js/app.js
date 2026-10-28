@@ -6,7 +6,7 @@
   var UI = {
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
-      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', our_glimpse: 'हमारे अनुष्ठान की झलक', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
+      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', our_glimpse: 'हमारे अनुष्ठान की झलक', qa_h: 'प्रश्नोत्तर', about: 'संस्था परिचय', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
       show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', nav_books: 'पुस्तकालय', books_h: 'कर्मकांड पुस्तकालय', books_p: 'नित्यकर्म-पूजाप्रकाश, दुर्गासप्तशती, रुद्राष्टाध्यायी, वास्तु व गृहप्रवेश पद्धति — प्रामाणिक स्रोतों से, निःशुल्क पढ़ें।', books_btn: 'सभी पुस्तकें देखें', ey_books: 'ग्रंथ संग्रह', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
@@ -51,7 +51,7 @@
     },
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
-      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', our_glimpse: 'Glimpses from our rituals', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
+      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', our_glimpse: 'Glimpses from our rituals', qa_h: 'Questions & answers', about: 'About us', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
       show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', nav_books: 'Library', books_h: 'Karmkand library', books_p: 'Nitya Karma Puja Prakash, Durga Saptashati, Rudrashtadhyayi, Vastu and Griha Pravesh paddhatis — from authentic sources, free to read.', books_btn: 'See all books', ey_books: 'Granth Sangrah', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
@@ -390,6 +390,7 @@
         (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
         (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +
         (sam.length ? '<h2 style="font-size:1.5rem">' + u('samagri') + '</h2><p>' + sam.map(esc).join(', ') + '</p>' : '') +
+        '<div class="faq svc-qa"><h2 style="font-size:1.5rem">' + u('qa_h') + '</h2>' + svcQA(s, ben, sam).map(function (f) { return '<details><summary>' + esc(f[0]) + '</summary><p>' + esc(f[1]) + '</p></details>'; }).join('') + '</div>' +
       '</div><aside class="pkg-box"><h2 style="font-size:1.4rem">' + u('choose_pkg') + '</h2><form id="pkgForm">' +
         (s.packages || []).map(function (p, i) {
           return '<label class="pkg"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + ((p.popular || (i === 0 && !(s.packages || []).some(function (x) { return x.popular; }))) ? ' checked' : '') + '>' +
@@ -424,10 +425,28 @@
     window.scrollTo(0, 0);
   }
 
+  // पूजा-विशेष प्रश्नोत्तर (AI सर्च व Google के लिए साफ़ उत्तर; वही पाठ उपयोगकर्ता को भी दिखता है)
+  function svcQA(s, ben, sam) {
+    var n = t(s.name), hi = lang !== 'en', ph = (D.settings.phone || '9625004090');
+    var area = hi ? 'दिल्ली, नई दिल्ली, गुरुग्राम, नोएडा, फ़रीदाबाद व गाज़ियाबाद' : 'Delhi, New Delhi, Gurugram, Noida, Faridabad and Ghaziabad';
+    var q = [];
+    q.push([hi ? n + ' क्या है?' : 'What is ' + n + '?', t(s.desc)]);
+    if (s.duration) q.push([hi ? n + ' में कितना समय लगता है?' : 'How long does ' + n + ' take?', hi ? 'सामान्यतः लगभग ' + s.duration + '। सही समय विधि के विस्तार, यजमान की संख्या और मुहूर्त पर निर्भर करता है।' : 'Usually about ' + s.duration + '. The exact time depends on the extent of the vidhi and the muhurat.']);
+    if (ben.length) q.push([hi ? n + ' के क्या लाभ माने जाते हैं?' : 'What are the benefits of ' + n + '?', ben.join('; ') + (hi ? '।' : '.')]);
+    if (sam.length) q.push([hi ? n + ' के लिए कौन-सी पूजन सामग्री चाहिए?' : 'What samagri is needed for ' + n + '?', (hi ? 'मुख्य सामग्री: ' : 'Main samagri: ') + sam.join(', ') + (hi ? '। “सामग्री सहित” पैकेज में सम्पूर्ण सामग्री पंडित जी स्वयं लाते हैं।' : '. In the “With samagri” package Pandit ji brings everything.')]);
+    q.push([hi ? 'दिल्ली-एनसीआर में ' + n + ' के लिए पंडित जी कैसे बुक करें?' : 'How to book a pandit for ' + n + ' in Delhi NCR?', hi ? 'वैदिक शोध संस्थान (छतरपुर एक्सटेंशन, नई दिल्ली) ' + area + ' में घर पर शास्त्रोक्त विधि से ' + n + ' कराता है, और विदेश में रहने वालों के लिए ऑनलाइन पूजा भी। वेबसाइट पर “पूजा बुक करें” दबाकर नाम, मोबाइल व पता भेजें या ' + ph + ' पर कॉल/व्हाट्सऐप करें — पंडित जी मुहूर्त व दक्षिणा बताने हेतु कॉल करेंगे।' : 'Vaidik Shodh Sansthan (Chhatarpur Extension, New Delhi) performs ' + n + ' at home across ' + area + ', and online for families abroad. Press “Book a puja” and send your name, mobile and address, or call/WhatsApp ' + ph + ' — Pandit ji will call to fix the muhurat and dakshina.']);
+    return q;
+  }
+
+  var ABOUT = {
+    hi: 'वैदिक शोध संस्थान नई दिल्ली (F-171/27, छतरपुर एक्सटेंशन, छतरपुर, नई दिल्ली 110074) स्थित एक कर्मकांड व ज्योतिष सेवा संस्था है। संस्थान के अनुभवी वैदिक पंडित जी शास्त्रोक्त विधि से घर, दुकान, कार्यालय या मंदिर में पूजा, हवन, यज्ञ, संस्कार व अनुष्ठान कराते हैं।\nसेवा क्षेत्र: दिल्ली, नई दिल्ली, गुरुग्राम, नोएडा, फ़रीदाबाद व गाज़ियाबाद (दिल्ली-एनसीआर) में घर पर; भारत व विदेश में रहने वालों के लिए ऑनलाइन (वीडियो कॉल) पूजा।\nप्रमुख सेवाएँ: गृह प्रवेश पूजा, वास्तु शांति, भूमि पूजन, कार्यालय/दुकान उद्घाटन पूजा, नवग्रह शांति हवन, महामृत्युंजय हवन व जाप, रुद्राभिषेक, लक्ष्मी-कुबेर हवन, गायत्री यज्ञ, चंडी पाठ, सत्यनारायण कथा, सुंदरकांड पाठ, अखंड रामायण, नामकरण, मुंडन, जनेऊ (उपनयन), विवाह संस्कार, श्राद्ध, तेरहवीं, कालसर्प दोष, मांगलिक दोष, पितृ दोष, गंडमूल व शनि शांति पूजा, तथा कुंडली विश्लेषण, कुंडली मिलान, मुहूर्त व वास्तु परामर्श।\nबुकिंग: वेबसाइट पर “पूजा बुक करें” फ़ॉर्म, या फ़ोन/व्हाट्सऐप 9625004090, ईमेल karmkand0000@gmail.com। समय: प्रतिदिन सुबह 7 से रात 9 बजे।\nवेबसाइट पर निःशुल्क सामग्री: आज का पंचांग, जन्म कुंडली, कुंडली मिलान, दैनिक राशिफल, 12 ज्योतिर्लिंग, अष्टविनायक व 51 शक्तिपीठों की जानकारी, सभी पूजा मंडलों (सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु आदि) के चित्र व रचना, तथा कर्मकांड की प्रामाणिक पुस्तकों का पुस्तकालय।',
+    en: 'Vaidik Shodh Sansthan is a karmkand and Vedic astrology service based at F-171/27, Chhatarpur Extension, Chhatarpur, New Delhi 110074. Its experienced Vedic pandits perform puja, havan, yagya, sanskars and anushthans by the shastric method at homes, shops, offices and temples.\nService area: at home across Delhi, New Delhi, Gurugram, Noida, Faridabad and Ghaziabad (Delhi NCR); online (video call) puja for families elsewhere in India and abroad.\nMain services: Griha Pravesh, Vastu Shanti, Bhoomi Pujan, office/shop opening puja, Navagraha Shanti havan, Mahamrityunjay havan and jaap, Rudrabhishek, Lakshmi-Kuber havan, Gayatri yagya, Chandi path, Satyanarayan katha, Sundarkand path, Akhand Ramayan, Namkaran, Mundan, Janeu (Upanayan), Vivah, Shraddh, Terahvi, Kaal Sarp, Manglik, Pitra dosh, Gandmool and Shani shanti puja, plus kundli analysis, kundli matching, muhurat and Vastu consultation.\nBooking: the “Book a puja” form on the website, or phone/WhatsApp 9625004090, email karmkand0000@gmail.com. Hours: daily 7 am to 9 pm.\nFree on the website: daily Panchang, birth chart, kundli matching, daily rashifal, the 12 Jyotirlingas, Ashtavinayak and 51 Shaktipeeths, diagrams and structure of all puja mandals (Sarvatobhadra, Navagraha, Shodash Matrika, Vastu and more), and a library of authentic karmkand books.'
+  };
+
   function page(key) {
     if (key === 'credits') return credits();
-    var titles = { terms: u('terms'), refund: u('refund'), privacy: u('privacy') };
-    var txt = D.pages && D.pages[key] ? t(D.pages[key]) : '';
+    var titles = { terms: u('terms'), refund: u('refund'), privacy: u('privacy'), about: u('about') };
+    var txt = D.pages && D.pages[key] ? t(D.pages[key]) : (key === 'about' ? t(ABOUT) : '');
     $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + esc(titles[key] || '') + '</h1>' +
       txt.split(/\n+/).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
     window.scrollTo(0, 0);
