@@ -1,5 +1,21 @@
 <!doctype html>
-<html lang="hi"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>पेज नहीं मिला — वैदिक शोध संस्थान</title>
-<meta http-equiv="refresh" content="2;url=/vaidikshodhsansthan/">
+<html lang="hi"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>वैदिक शोध संस्थान</title>
+<script>
+/* पुराने / गलत लिंक को सही पेज पर भेजें: /vaidikshodhsansthan/seva/griha-pravesh/ → seva-griha-pravesh.html */
+(function () {
+  var B = '/vaidikshodhsansthan/';
+  var p = decodeURIComponent(location.pathname);
+  if (p.indexOf(B) === 0) p = p.slice(B.length); else p = p.replace(/^\/+/, '');
+  p = p.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/+$/, '');
+  var target = B;
+  if (p) target = B + p.replace(/\/+/g, '-') + '.html';
+  // पता करें कि सही पेज मौजूद है या नहीं; न हो तो मुखपृष्ठ
+  var x = new XMLHttpRequest();
+  x.open('HEAD', target, true);
+  x.onload = function () { location.replace((x.status === 200 ? target : B) + location.search + location.hash); };
+  x.onerror = function () { location.replace(B); };
+  x.send();
+})();
+</script>
 <style>body{font-family:system-ui,sans-serif;background:#FAF6EE;color:#2A1810;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#7E1F1A}</style></head>
-<body><div><h1>यह पेज नहीं मिला</h1><p>आपको मुखपृष्ठ पर ले जाया जा रहा है… <a href="/vaidikshodhsansthan/">वैदिक शोध संस्थान</a></p></div></body></html>
+<body><div><p>पेज खुल रहा है… <a href="/vaidikshodhsansthan/">वैदिक शोध संस्थान</a></p></div></body></html>
