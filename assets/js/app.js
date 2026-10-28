@@ -6,7 +6,7 @@
   var UI = {
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
-      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
+      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
       show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
@@ -51,7 +51,7 @@
     },
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
-      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
+      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
       show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
@@ -427,7 +427,7 @@
     $('#main').innerHTML = '<div class="wrap detail page-text"><h1>' + u('track_h') + '</h1><p>' + u('track_p') + '</p><div class="track-list">' +
       (list.length ? list.slice().reverse().map(function (b) {
         return '<div class="track-item" data-id="' + esc(b.id) + '"><b class="bid" style="font-size:1.2rem">' + esc(b.id) + '</b><br>' +
-          esc(b.serviceName) + ' — ' + esc(b.packageName) + (showP() ? ' (' + inr(b.price) + ')' : '') + '<br>' + esc(b.date) + ' • ' + esc(b.time) +
+          esc(b.serviceName) + (b.packageName ? ' — ' + esc(b.packageName) : '') + (showP() && b.price ? ' (' + inr(b.price) + ')' : '') + '<br>' + [b.date, b.time].filter(Boolean).map(esc).join(' • ') +
           '<br><span class="st">' + u('status') + ': <b>' + u('st_' + (b.status || 'new')) + '</b></span> ' +
           (D.settings.bookingEndpoint ? '<button class="btn btn-ghost btn-sm" data-check="' + esc(b.id) + '" data-phone="' + esc(b.phone) + '">' + u('check_status') + '</button>' : '') +
           ' <a class="btn btn-ghost btn-sm" href="' + mailHref(b) + '">' + u('email_btn') + '</a></div>';
@@ -467,7 +467,7 @@
     var s = svc(id); if (!s) return;
     var pk = (s.packages || []).find(function (p) { return p.popular; }) || (s.packages || [])[0] || { id: 'std' };
     collect(); B.s = s; B.data.pkg = pk.id; B.data.mode = isJyotish(s) ? 'phone' : 'home';
-    $('#bookTitle').textContent = t(s.name); drawStep();
+    $('#bookTitle').textContent = t(s.name); setErr('svcPick', '');
   }
   function svcPicker() {
     var list = D.services.filter(function (x) { return x.active !== false; });
@@ -512,53 +512,20 @@
   function drawStep() {
     var s = B.s, jy = s ? isJyotish(s) : false, body = '';
     var prog = '<div class="progress">' + [1, 2, 3].map(function (i) { return '<i class="' + (i <= B.step ? 'on' : '') + '"></i>'; }).join('') + '</div>';
-    if (B.step === 1 && !s) {
-      body = '<form id="stepForm" novalidate><div class="form-grid">' + svcPicker() + '</div><div class="dlg-actions"><span></span><button class="btn btn-primary" type="submit">' + u('next') + '</button></div></form>';
-    } else if (B.step === 1) {
-      body = '<form id="stepForm" novalidate><div class="form-grid">' + (B.general ? svcPicker() : '') +
-        '<div class="full"><b>' + u('choose_pkg') + '</b>' +
-        (s.packages || []).map(function (p) {
-          return '<label class="pkg" style="margin-top:8px"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + (B.data.pkg === p.id ? ' checked' : '') + '>' +
-            '<span class="top"><span>' + esc(t(p.name)) + '</span><span>' + pr(p.price) + '</span></span><small>' + esc(t(p.features)) + '</small></label>';
-        }).join('') + '</div>' +
-        '<div class="full"><b>' + u('mode') + '</b>' + (jy ? seg('mode', [['phone', u('mode_phone')], ['visit', u('mode_visit')]]) : seg('mode', [['home', u('mode_home')], ['online', u('mode_online')]])) + '</div>' +
-        field('date', u('date'), 'date', { attrs: ' min="' + todayISO() + '" required' }) +
-        '<label class="f">' + u('time') + '<select name="time">' +
-          [['muhurat', u('t_muhurat')], ['morning', u('t_morning')], ['noon', u('t_noon')], ['evening', u('t_evening')]].map(function (o) { return '<option value="' + o[0] + '"' + (B.data.time === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join('') +
-        '</select></label>' +
-        '</div><div class="dlg-actions"><span></span><button class="btn btn-primary" type="submit">' + u('next') + '</button></div></form>';
-    } else if (B.step === 2) {
-      body = '<form id="stepForm" novalidate><div class="form-grid">' +
-        field('name', u('name'), 'text', { attrs: ' autocomplete="name" required' }) +
-        field('phone', u('mobile'), 'tel', { attrs: ' inputmode="numeric" autocomplete="tel" maxlength="13" required' }) +
-        field('email', u('email_opt'), 'email', { optional: true, attrs: ' autocomplete="email"' }) +
-        field('gotra', u('gotra'), 'text', { optional: true, hint: u('gotra_hint') }) +
-        (jy ? field('dob', u('dob'), 'date', {}) + field('tob', u('tob'), 'time', {}) + field('pob', u('pob'), 'text', { full: true }) +
-              (s.id === 'kundli-milan' ? field('partner', u('partner'), 'textarea', { full: true }) : '') +
-              field('question', u('question'), 'textarea', { full: true, optional: true })
-            : '') +
-        ((!jy && B.data.mode === 'home') || (jy && B.data.mode === 'visit') ? field('address', u('addr'), 'textarea', { full: true }) + field('city', u('city'), 'text', {}) + field('pincode', u('pincode'), 'text', { attrs: ' inputmode="numeric" maxlength="6"' }) : field('city', u('city'), 'text', { optional: true })) +
-        (!jy ? field('lang', u('lang_pref'), 'select', { options: ['हिंदी', 'संस्कृत + हिंदी', 'भोजपुरी', 'मैथिली', 'पंजाबी', 'English'] }) : '') +
-        field('notes', u('notes'), 'textarea', { full: true, optional: true }) +
-        '</div><div class="dlg-actions"><button class="btn btn-ghost" type="button" id="backBtn">' + u('back') + '</button><button class="btn btn-primary" type="submit">' + u('next') + '</button></div></form>';
-    } else if (B.step === 3) {
-      var p = curPkg(), d = B.data;
-      var timeLbl = { muhurat: u('t_muhurat'), morning: u('t_morning'), noon: u('t_noon'), evening: u('t_evening') }[d.time];
-      var modeLbl = { home: u('mode_home'), online: u('mode_online'), phone: u('mode_phone'), visit: u('mode_visit') }[d.mode];
-      var rows = [[u('service'), t(s.name)], [u('package'), t(p.name) + pr(p.price, ' — ')], [u('mode'), modeLbl], [u('date'), d.date + ' • ' + timeLbl], [u('name'), d.name], [u('mobile'), d.phone]];
-      if (d.gotra) rows.push([u('gotra'), d.gotra]);
-      if (d.dob) rows.push([u('dob'), d.dob + (d.tob ? ' ' + d.tob : '') + (d.pob ? ', ' + d.pob : '')]);
-      if (d.address) rows.push([u('addr'), d.address + (d.city ? ', ' + d.city : '') + (d.pincode ? ' – ' + d.pincode : '')]);
-      body = '<form id="stepForm" novalidate><h3>' + u('review') + '</h3><div class="summary"><dl>' + rows.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl></div>' +
-        '<label style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="consent" style="margin-top:6px;width:18px;height:18px"' + (d.consent ? ' checked' : '') + '><span>' + u('consent') + '</span></label><span class="err" data-err="consent" style="color:#B00020"></span>' +
-        '<div class="dlg-actions"><button class="btn btn-ghost" type="button" id="backBtn">' + u('back') + '</button><button class="btn btn-primary" type="submit" id="sendBtn">' + u('send') + '</button></div></form>';
+    if (B.step < 4) {
+      prog = '';
+      body = '<form id="stepForm" novalidate><div class="form-grid">' + svcPicker() +
+        field('name', u('name'), 'text', { full: true, attrs: ' autocomplete="name" required' }) +
+        field('phone', u('mobile'), 'tel', { full: true, attrs: ' inputmode="numeric" autocomplete="tel" maxlength="13" required' }) +
+        field('address', u('addr'), 'textarea', { full: true }) +
+        '</div><p class="form-note">' + u('simple_note') + '</p><div class="dlg-actions"><span></span><button class="btn btn-primary" type="submit" id="sendBtn">' + u('send') + '</button></div></form>';
     } else {
       var b = B.saved, pp = curPkg(), adv = Math.round((Number(pp.price) || 0) * (Number(D.settings.advancePercent) || 0) / 100);
       var upi = D.settings.upiId ? 'upi://pay?pa=' + encodeURIComponent(D.settings.upiId) + '&pn=' + encodeURIComponent(t(D.settings.siteName)) + '&am=' + adv + '&cu=INR&tn=' + encodeURIComponent(b.id) : '';
       body = '<div class="done"><div class="ok">' + ICONS.check.replace('<svg', '<svg width="40" height="40"') + '</div><h3 style="font-size:1.5rem">' + u('done_h') + '</h3>' +
         '<p>' + u('booking_id') + '</p><p class="bid">' + esc(b.id) + '</p><p style="color:var(--ink-2)">' + u('done_p') + '</p>' +
-        '<p class="mailst ' + (B.mailed ? 'ok' : 'warn') + '">' + (B.mailed ? ICONS.check.replace('<svg', '<svg width="20" height="20"') + ' ' + u('email_sent') : u('email_fail')) + '</p>' +
-        (bookEmail() ? '<a class="btn ' + (B.mailed ? 'btn-ghost' : 'btn-primary') + '" style="width:100%" href="' + mailHref(b) + '">' + ICONS.mail.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_email') + '</a>' : '') +
+        '<p class="mailst ' + (B.mailed ? 'is-ok' : 'is-warn') + '">' + (B.mailed ? ICONS.check.replace('<svg', '<svg width="20" height="20"') + ' ' + u('email_sent') : u('email_fail')) + '</p>' +
+        (bookEmail() && !B.mailed ? '<a class="btn ' + (B.mailed ? 'btn-ghost' : 'btn-primary') + '" style="width:100%" href="' + mailHref(b) + '">' + ICONS.mail.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_email') + '</a>' : '') +
         (upi && adv && showP() ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
         '<div class="dlg-actions" style="justify-content:center"><button class="btn btn-ghost" type="button" id="doneClose">' + u('close') + '</button></div></div>';
     }
@@ -584,31 +551,15 @@
 
   function onStep(e) {
     e.preventDefault(); collect();
-    if (!B.s) { setErr('svcPick', u('e_svc')); return; }
-    var d = B.data, ok = true, jy = isJyotish(B.s);
+    var d = B.data, ok = true;
     $$('[data-err]').forEach(function (el) { el.textContent = ''; });
-    if (B.step === 1) {
-      if (!d.date || d.date < todayISO()) { setErr('date', u('e_date')); ok = false; }
-    } else if (B.step === 2) {
-      if (!d.name) { setErr('name', u('e_req')); ok = false; }
-      var ph = digits(d.phone); if (ph.length > 10 && ph.indexOf('91') === 0) ph = ph.slice(2);
-      if (!/^[6-9]\d{9}$/.test(ph)) { setErr('phone', u('e_mobile')); ok = false; } else d.phone = ph;
-      var needAddr = (!jy && d.mode === 'home') || (jy && d.mode === 'visit');
-      if (needAddr) {
-        if (!d.address) { setErr('address', u('e_req')); ok = false; }
-        if (!d.city) { setErr('city', u('e_req')); ok = false; }
-        if (!/^\d{6}$/.test(d.pincode || '')) { setErr('pincode', u('e_pin')); ok = false; }
-      }
-      if (jy) {
-        if (!d.dob) { setErr('dob', u('e_req')); ok = false; }
-        if (!d.pob) { setErr('pob', u('e_req')); ok = false; }
-      }
-    } else if (B.step === 3) {
-      if (!d.consent) { setErr('consent', u('e_consent')); ok = false; }
-      if (ok) return submit();
-    }
+    if (!B.s) { setErr('svcPick', u('e_svc')); ok = false; }
+    if (!d.name) { setErr('name', u('e_req')); ok = false; }
+    var ph = digits(d.phone); if (ph.length > 10 && ph.indexOf('91') === 0) ph = ph.slice(2);
+    if (!/^[6-9]\d{9}$/.test(ph)) { setErr('phone', u('e_mobile')); ok = false; } else d.phone = ph;
+    if (!d.address) { setErr('address', u('e_req')); ok = false; }
     if (!ok) { var firstErr = $$('[data-err]').find(function (el) { return el.textContent; }); if (firstErr) firstErr.parentNode.scrollIntoView({ block: 'center' }); return; }
-    B.step++; drawStep();
+    submit();
   }
 
   function waText(b) {
@@ -630,9 +581,9 @@
     var modeLbl = { home: UI.hi.mode_home, online: UI.hi.mode_online, phone: UI.hi.mode_phone, visit: UI.hi.mode_visit }[d.mode];
     var b = {
       id: newId(), createdAt: new Date().toISOString(), type: isJyotish(s) ? 'jyotish' : 'puja',
-      serviceId: s.id, serviceName: s.name.hi, packageName: p.name ? p.name.hi : '', price: Number(p.price) || 0,
-      mode: modeLbl, date: d.date, time: timeLbl, name: d.name, phone: d.phone, email: d.email || '', gotra: d.gotra || '',
-      address: d.address || '', city: d.city || '', pincode: d.pincode || '', lang: d.lang || '',
+      serviceId: s.id, serviceName: s.name.hi, packageName: '', price: 0,
+      mode: '', date: d.date || '', time: '', name: d.name, phone: d.phone, email: d.email || '', gotra: d.gotra || '',
+      address: d.address || '', city: d.city || '', pincode: d.pincode || '', lang: '',
       dob: d.dob || '', tob: d.tob || '', pob: d.pob || '', partner: d.partner || '', question: d.question || '', notes: d.notes || '',
       status: 'new', source: location.hostname || 'local'
     };
