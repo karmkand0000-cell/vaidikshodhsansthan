@@ -230,7 +230,7 @@
     testimonials: [],
     faqs: [
       { q: { hi: 'पूजा की बुकिंग कैसे करें?', en: 'How do I book a puja?' },
-        a: { hi: 'पूजा चुनें, पैकेज चुनें, तिथि व पता भरें और “बुकिंग भेजें” दबाएँ। हमारी टीम 2 घंटे के भीतर कॉल करके मुहूर्त व विवरण पक्का करेगी।', en: 'Choose the puja and package, fill the date and address, and press “Send booking”. Our team calls within 2 hours to confirm the muhurat and details.' } },
+        a: { hi: '“पूजा बुक करें” दबाएँ, पूजा चुनें और अपना नाम, मोबाइल नंबर व पता भरकर “बुकिंग भेजें” दबाएँ। हमारी टीम 2 घंटे के भीतर कॉल करके मुहूर्त, तिथि व दक्षिणा की जानकारी देगी।', en: 'Press “Book a puja”, choose the puja, fill in your name, mobile number and address, and press “Send booking”. Our team will call within 2 hours to confirm the muhurat, date and dakshina.' } },
       { q: { hi: 'क्या पूजा सामग्री आप लाएँगे?', en: 'Will you bring the samagri?' },
         a: { hi: '“सामग्री सहित” पैकेज में सम्पूर्ण सामग्री हम लाते हैं। “सामान्य” पैकेज में हम आपको सामग्री सूची भेज देते हैं।', en: 'In the “With samagri” package we bring everything. With “Basic” we send you the samagri list.' } },
       { q: { hi: 'मुहूर्त कौन निकालेगा?', en: 'Who decides the muhurat?' },

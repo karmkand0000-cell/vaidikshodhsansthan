@@ -419,7 +419,7 @@
       var T = x[0], M = x[1];
       if (T) ['jyotirling', 'ashtavinayak', 'shaktipeeth'].forEach(function (g) { (T[g].items || []).forEach(function (it) { if (it.img) add(lang === 'en' ? (it.name_en || it.name_hi) : (it.name_hi || it.name_en), it.img); }); });
       if (M && M.banner) add(u('nav_mandal'), M.banner);
-      if (location.hash.indexOf('credits') > -1) draw();
+      if ((location.hash || window.VSS_ROUTE || '').indexOf('credits') > -1) draw();
     });
     window.scrollTo(0, 0);
   }
@@ -628,8 +628,14 @@
   function qsOf(h) { var o = {}, i = h.indexOf('?'); if (i > -1) new URLSearchParams(h.slice(i + 1)).forEach(function (v, k) { o[k] = v; }); return o; }
 
   /* ---------------- router ---------------- */
+  // स्थिर SEO पेजों पर (जैसे /seva/griha-pravesh/) पेज का SEO शीर्षक बना रहे
+  var SEO_TITLE = window.VSS_ROUTE ? document.title : null;
   function route() {
-    var h = location.hash || '#/';
+    routeInner();
+    if (SEO_TITLE && !location.hash) { document.title = SEO_TITLE; setTimeout(function () { if (!location.hash) document.title = SEO_TITLE; }, 1500); }
+  }
+  function routeInner() {
+    var h = location.hash || window.VSS_ROUTE || '#/';
     if (/^#\/tirth/.test(h) && window.VSSTirth) {
       $('#nav').classList.remove('open');
       window.VSSTirth.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
