@@ -1,0 +1,561 @@
+/* वैदिक शोध संस्थान — public site */
+(function () {
+  'use strict';
+
+  /* ---------------- UI text ---------------- */
+  var UI = {
+    hi: {
+      nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
+      lang_btn: 'English', book_puja: 'पूजा बुक करें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
+      show_all: 'सभी {n} सेवाएँ देखें',
+      search_ph: 'पूजा खोजें — जैसे गृह प्रवेश, हवन, सुंदरकांड…', search: 'खोजें', all: 'सभी',
+      services_h: 'पूजा, हवन, यज्ञ व ज्योतिष सेवाएँ', services_p: 'पूजा चुनें, पैकेज चुनें और तिथि भरें — पंडित जी का मुहूर्त व विवरण हम फ़ोन पर पक्का करेंगे।',
+      from: 'दक्षिणा', starting: 'से आरंभ', details: 'विवरण देखें', book: 'बुक करें', popular: 'लोकप्रिय', duration: 'अवधि',
+      no_results: 'इस खोज से कोई पूजा नहीं मिली। दूसरा शब्द लिखें या हमें कॉल करें — हर प्रकार का कर्मकांड कराया जाता है।',
+      purpose_h: 'किस कामना हेतु पूजा करानी है?', purpose_p: 'अपनी आवश्यकता चुनें, उसके अनुसार उपयुक्त अनुष्ठान देखें।',
+      steps_h: 'बुकिंग कैसे होती है',
+      s1h: 'पूजा चुनें', s1p: 'सेवा व पैकेज — सामग्री सहित या बिना सामग्री।',
+      s2h: 'विवरण भरें', s2p: 'नाम, गोत्र, पता और अपनी पसंद की तिथि।',
+      s3h: 'मुहूर्त पक्का', s3p: 'पंडित जी पंचांग देखकर कॉल पर मुहूर्त व समय तय करेंगे।',
+      s4h: 'पूजा सम्पन्न', s4p: 'पंडित जी नियत समय पर आपके घर या वीडियो कॉल पर।',
+      promise_h: 'हमारा संकल्प',
+      fest_h: 'आगामी पर्व व शुभ अवसर', fest_p: 'इन तिथियों के लिए बुकिंग पहले से कर लें — पर्व के दिन पंडित जी की माँग अधिक रहती है।', fest_book: 'इस पर्व हेतु बुक करें',
+      pandits_h: 'हमारे विद्वान पंडित जी', exp: 'वर्ष अनुभव',
+      testi_h: 'यजमानों की राय',
+      faq_h: 'अक्सर पूछे जाने वाले प्रश्न',
+      contact_h: 'संपर्क करें', address: 'पता', phone: 'फ़ोन', hours: 'समय', email: 'ईमेल', area: 'सेवा क्षेत्र',
+      foot_links: 'पूजा श्रेणियाँ', foot_info: 'जानकारी', terms: 'नियम व शर्तें', refund: 'रद्दीकरण व धनवापसी', privacy: 'गोपनीयता नीति', admin: 'प्रबंधन',
+      rights: 'सर्वाधिकार सुरक्षित',
+      home: 'मुखपृष्ठ', benefits: 'लाभ', samagri: 'मुख्य पूजन सामग्री', choose_pkg: 'पैकेज चुनें', book_this: 'यह पूजा बुक करें', ask_wa: 'व्हाट्सऐप पर पूछें',
+      related: 'संबंधित पूजाएँ', not_found: 'यह पूजा नहीं मिली।', back_home: 'मुखपृष्ठ पर जाएँ',
+      mode: 'पूजा कहाँ होगी?', mode_home: 'मेरे घर/स्थान पर', mode_online: 'ऑनलाइन (वीडियो कॉल)', mode_phone: 'फ़ोन / वीडियो कॉल', mode_visit: 'प्रत्यक्ष भेंट',
+      date: 'पसंदीदा तिथि', time: 'समय', t_morning: 'प्रातः', t_noon: 'मध्याह्न', t_evening: 'सायं', t_muhurat: 'मुहूर्त अनुसार',
+      name: 'यजमान का नाम', mobile: 'मोबाइल नंबर', email_opt: 'ईमेल', optional: '(वैकल्पिक)', gotra: 'गोत्र', gotra_hint: 'पता न हो तो “कश्यप” लिखा जाता है',
+      addr: 'पूरा पता', city: 'शहर', pincode: 'पिन कोड', lang_pref: 'पंडित जी की भाषा', notes: 'विशेष निवेदन',
+      dob: 'जन्म तिथि', tob: 'जन्म समय', pob: 'जन्म स्थान', question: 'आपका प्रश्न', partner: 'दूसरे व्यक्ति का जन्म विवरण (कुंडली मिलान हेतु)',
+      next: 'आगे बढ़ें', back: 'पीछे', send: 'बुकिंग भेजें', sending: 'भेजी जा रही है…',
+      review: 'बुकिंग की जाँच करें', consent: 'मैं सहमत हूँ कि पंडित जी की उपलब्धता व मुहूर्त की पुष्टि फ़ोन पर होगी।',
+      e_req: 'यह भरना आवश्यक है', e_mobile: '10 अंकों का सही मोबाइल नंबर लिखें', e_pin: '6 अंकों का पिन कोड लिखें', e_date: 'आज या आगे की तिथि चुनें', e_consent: 'आगे बढ़ने के लिए सहमति दें',
+      done_h: 'आपकी बुकिंग प्राप्त हो गई', done_p: 'हमारी टीम शीघ्र ही कॉल करके मुहूर्त व विवरण पक्का करेगी। तुरंत पुष्टि के लिए विवरण व्हाट्सऐप पर भी भेजें।',
+      booking_id: 'बुकिंग संख्या', send_wa: 'विवरण व्हाट्सऐप पर भेजें', close: 'बंद करें', pay_upi: 'UPI से अग्रिम दक्षिणा दें', advance: 'अग्रिम',
+      upi_note: 'अग्रिम भुगतान वैकल्पिक है — मुहूर्त पक्का होने के बाद भी दे सकते हैं।',
+      track_h: 'मेरी बुकिंग', track_p: 'इस फ़ोन/ब्राउज़र से की गई बुकिंग यहाँ दिखती हैं।', track_empty: 'अभी कोई बुकिंग नहीं है।', check_status: 'स्थिति जानें',
+      st_new: 'नई', st_confirmed: 'पक्की', st_done: 'सम्पन्न', st_cancelled: 'रद्द', status: 'स्थिति',
+      package: 'पैकेज', service: 'सेवा', wa_greet: 'नमस्ते पंडित जी, मैं यह पूजा बुक करना चाहता/चाहती हूँ:',
+      wa_ask: 'नमस्ते, मुझे इस पूजा के बारे में जानकारी चाहिए:', fallback_jyotish: 'ज्योतिष',
+      preview_bar: 'पूर्वावलोकन — यह डैशबोर्ड का बिना-प्रकाशित ड्राफ़्ट है'
+    },
+    en: {
+      nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
+      lang_btn: 'हिंदी', book_puja: 'Book a puja', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
+      show_all: 'See all {n} services',
+      search_ph: 'Search a puja — e.g. Griha Pravesh, havan, Sundarkand…', search: 'Search', all: 'All',
+      services_h: 'Puja, havan, yagya & jyotish', services_p: 'Pick a puja and package and enter a date — we confirm Pandit ji’s muhurat and details on the phone.',
+      from: 'Dakshina', starting: 'onwards', details: 'View details', book: 'Book', popular: 'Popular', duration: 'Duration',
+      no_results: 'No puja matches that search. Try another word or call us — every kind of karmkand is performed.',
+      purpose_h: 'What is the puja for?', purpose_p: 'Pick your need and see the rituals suited to it.',
+      steps_h: 'How booking works',
+      s1h: 'Choose a puja', s1p: 'Service and package — with or without samagri.',
+      s2h: 'Fill details', s2p: 'Name, gotra, address and your preferred date.',
+      s3h: 'Muhurat confirmed', s3p: 'Pandit ji checks the panchang and fixes the time on a call.',
+      s4h: 'Puja performed', s4p: 'Pandit ji arrives on time at your home, or joins on video.',
+      promise_h: 'Our commitment',
+      fest_h: 'Upcoming festivals & occasions', fest_p: 'Book early for these dates — pandits are in high demand on festival days.', fest_book: 'Book for this festival',
+      pandits_h: 'Our learned pandits', exp: 'years experience',
+      testi_h: 'What yajmans say',
+      faq_h: 'Frequently asked questions',
+      contact_h: 'Contact us', address: 'Address', phone: 'Phone', hours: 'Hours', email: 'Email', area: 'Service area',
+      foot_links: 'Puja categories', foot_info: 'Information', terms: 'Terms & conditions', refund: 'Cancellation & refund', privacy: 'Privacy policy', admin: 'Admin',
+      rights: 'All rights reserved',
+      home: 'Home', benefits: 'Benefits', samagri: 'Main puja samagri', choose_pkg: 'Choose a package', book_this: 'Book this puja', ask_wa: 'Ask on WhatsApp',
+      related: 'Related pujas', not_found: 'This puja was not found.', back_home: 'Go to home',
+      mode: 'Where will the puja happen?', mode_home: 'At my home / place', mode_online: 'Online (video call)', mode_phone: 'Phone / video call', mode_visit: 'In-person visit',
+      date: 'Preferred date', time: 'Time', t_morning: 'Morning', t_noon: 'Midday', t_evening: 'Evening', t_muhurat: 'As per muhurat',
+      name: 'Yajman’s name', mobile: 'Mobile number', email_opt: 'Email', optional: '(optional)', gotra: 'Gotra', gotra_hint: 'If unknown, “Kashyap” is used',
+      addr: 'Full address', city: 'City', pincode: 'PIN code', lang_pref: 'Pandit ji’s language', notes: 'Special request',
+      dob: 'Date of birth', tob: 'Time of birth', pob: 'Place of birth', question: 'Your question', partner: 'Second person’s birth details (for matching)',
+      next: 'Continue', back: 'Back', send: 'Send booking', sending: 'Sending…',
+      review: 'Review your booking', consent: 'I agree that pandit availability and muhurat will be confirmed on the phone.',
+      e_req: 'This is required', e_mobile: 'Enter a valid 10-digit mobile number', e_pin: 'Enter a 6-digit PIN code', e_date: 'Choose today or a later date', e_consent: 'Please agree to continue',
+      done_h: 'Your booking is received', done_p: 'Our team will call shortly to confirm the muhurat and details. For instant confirmation, also send the details on WhatsApp.',
+      booking_id: 'Booking number', send_wa: 'Send details on WhatsApp', close: 'Close', pay_upi: 'Pay advance via UPI', advance: 'Advance',
+      upi_note: 'Advance payment is optional — you can also pay after the muhurat is confirmed.',
+      track_h: 'My bookings', track_p: 'Bookings made from this phone/browser appear here.', track_empty: 'No bookings yet.', check_status: 'Check status',
+      st_new: 'New', st_confirmed: 'Confirmed', st_done: 'Completed', st_cancelled: 'Cancelled', status: 'Status',
+      package: 'Package', service: 'Service', wa_greet: 'Namaste Pandit ji, I would like to book this puja:',
+      wa_ask: 'Namaste, I would like to know about this puja:', fallback_jyotish: 'Jyotish',
+      preview_bar: 'Preview — this is an unpublished draft from the dashboard'
+    }
+  };
+
+  var ICONS = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>',
+    fire: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3c3 4 6 6.5 6 10.5a6 6 0 0 1-12 0C6 10 8 8 9 6c.5 2 1.5 3 3 3-1-2 0-4 0-6z"/><path d="M4 21h16"/></svg>',
+    kalash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M8 7h8"/><path d="M9 7c-3 2-4 5-3 8s3 5 6 5 5-2 6-5-0-6-3-8"/><path d="M12 7V4M9 4c1 1 5 1 6 0"/><circle cx="12" cy="13" r="1.5"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/></svg>',
+    planet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10" ry="3.5" transform="rotate(-20 12 12)"/></svg>',
+    diya: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 14h18c-1 4-5 6-9 6s-8-2-9-6z"/><path d="M12 4c2 2.5 3 4 3 5.5a3 3 0 0 1-6 0C9 8 10 6.5 12 4z"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    phone: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>',
+    wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.1-.1z"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>'
+  };
+
+  /* ---------------- state ---------------- */
+  var D = null;
+  var lang = localStorage.getItem('vss_lang') || 'hi';
+  var state = { cat: 'all', q: '' };
+  var params = new URLSearchParams(location.search);
+  var PREVIEW = params.get('preview') === '1';
+
+  function u(k) { return (UI[lang] && UI[lang][k]) || UI.hi[k] || k; }
+  function t(o) { if (o == null) return ''; if (typeof o === 'string') return o; return o[lang] || o.hi || o.en || ''; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function inr(n) { n = Number(n) || 0; return '₹' + n.toLocaleString('en-IN'); }
+  function $(s, el) { return (el || document).querySelector(s); }
+  function $$(s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); }
+  function digits(s) { return String(s || '').replace(/\D/g, ''); }
+  function telHref() { return 'tel:+91' + digits(D.settings.phone).slice(-10); }
+  function waHref(text) { var n = digits(D.settings.whatsapp || ('91' + D.settings.phone)); return 'https://wa.me/' + n + (text ? '?text=' + encodeURIComponent(text) : ''); }
+  function svc(id) { return D.services.find(function (s) { return s.id === id && s.active !== false; }); }
+  function cat(id) { return D.categories.find(function (c) { return c.id === id; }) || { name: { hi: '', en: '' }, icon: 'star' }; }
+  function minPrice(s) { var p = (s.packages || []).map(function (x) { return Number(x.price) || 0; }).filter(Boolean); return p.length ? Math.min.apply(null, p) : Number(s.price) || 0; }
+  function lines(o) { return t(o).split(/\n|•/).map(function (x) { return x.trim(); }).filter(Boolean); }
+  function toast(msg) { var el = document.createElement('div'); el.className = 'toast'; el.textContent = msg; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 2600); }
+  function isJyotish(s) { return s && s.cat === 'jyotish'; }
+  function todayISO() { var d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); }
+
+  /* ---------------- load data ---------------- */
+  function load() {
+    if (PREVIEW) {
+      try { var draft = JSON.parse(localStorage.getItem('vss_draft') || 'null'); if (draft) return Promise.resolve(draft); } catch (e) {}
+    }
+    return fetch('data/site-data.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch(function () { return window.DEFAULT_DATA; });
+  }
+
+  /* ---------------- chrome ---------------- */
+  function chrome() {
+    document.documentElement.lang = lang;
+    document.title = t(D.settings.siteName) + ' — ' + t(D.settings.tagline);
+    $$('[data-t]').forEach(function (el) { el.textContent = t(D.settings[el.getAttribute('data-t')]); });
+    $$('[data-ui]').forEach(function (el) { el.textContent = u(el.getAttribute('data-ui')); });
+    $('#langBtn').textContent = u('lang_btn');
+    $('#ticker').textContent = t(D.settings.ticker);
+    var ph = $('#top-phone'); ph.href = telHref(); ph.textContent = '☎ ' + D.settings.phone;
+    $('#fab-call').href = telHref(); $('#fab-call').innerHTML = ICONS.phone;
+    $('#fab-wa').href = waHref(); $('#fab-wa').innerHTML = ICONS.wa;
+    $('#mb-call').href = telHref(); $('#mb-call').textContent = u('call');
+    $('#mb-wa').href = waHref(); $('#mb-wa').textContent = u('whatsapp');
+    $('#foot-addr').innerHTML = esc(t(D.settings.address)) + '<br><a href="' + telHref() + '">' + esc(D.settings.phone) + '</a>' + (D.settings.email ? ' • <a href="mailto:' + esc(D.settings.email) + '">' + esc(D.settings.email) + '</a>' : '');
+    var so = D.settings.social || {}, sl = [];
+    if (so.facebook) sl.push('<a href="' + esc(so.facebook) + '" target="_blank" rel="noopener">Facebook</a>');
+    if (so.instagram) sl.push('<a href="' + esc(so.instagram) + '" target="_blank" rel="noopener">Instagram</a>');
+    if (so.youtube) sl.push('<a href="' + esc(so.youtube) + '" target="_blank" rel="noopener">YouTube</a>');
+    $('#foot-social').innerHTML = sl.join(' • ');
+    $('#foot-cats').innerHTML = D.categories.map(function (c) { return '<li><a href="#/cat/' + esc(c.id) + '">' + esc(t(c.name)) + '</a></li>'; }).join('');
+    $('#copy').textContent = '© ' + new Date().getFullYear() + ' ' + t(D.settings.siteName) + ' — ' + u('rights');
+    if (PREVIEW && !$('#pv')) {
+      var b = document.createElement('div'); b.id = 'pv';
+      b.style.cssText = 'background:#F2B705;color:#231815;text-align:center;padding:6px;font-weight:600';
+      b.textContent = u('preview_bar'); document.body.prepend(b);
+    } else if ($('#pv')) $('#pv').textContent = u('preview_bar');
+  }
+
+  /* ---------------- views ---------------- */
+  var YANTRA = '<svg class="yantra" viewBox="0 0 400 400" aria-hidden="true">' +
+    '<g class="spin" fill="none" stroke="#9E1B1B" stroke-width="1.4">' +
+    (function () { var s = ''; for (var i = 0; i < 16; i++) { s += '<path transform="rotate(' + (i * 22.5) + ' 200 200)" d="M200 26c18 26 18 52 0 72-18-20-18-46 0-72z" fill="#E8871E" fill-opacity=".14"/>'; } return s; })() +
+    '<circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="142"/>' +
+    (function () { var s = ''; for (var i = 0; i < 8; i++) { s += '<path transform="rotate(' + (i * 45) + ' 200 200)" d="M200 66c12 16 12 32 0 44-12-12-12-28 0-44z" fill="#F2B705" fill-opacity=".35"/>'; } return s; })() +
+    '</g>' +
+    '<g fill="none" stroke-width="2"><path d="M200 92 L302 268 L98 268 Z" stroke="#9E1B1B"/><path d="M200 308 L98 132 L302 132 Z" stroke="#9E1B1B"/>' +
+    '<path d="M200 130 L262 236 L138 236 Z" stroke="#2E6B3A"/><path d="M200 270 L138 164 L262 164 Z" stroke="#2E6B3A"/></g>' +
+    '<rect x="70" y="70" width="260" height="260" fill="none" stroke="#7A1313" stroke-width="2"/>' +
+    '<path d="M180 70h40v-10h-40zM180 330h40v10h-40zM70 180v40H60v-40zM330 180v40h10v-40z" fill="#7A1313"/>' +
+    '<g class="flame"><path d="M200 162c12 16 20 26 20 40a20 20 0 0 1-40 0c0-14 8-24 20-40z" fill="#E8871E"/><path d="M200 182c6 8 10 13 10 20a10 10 0 0 1-20 0c0-7 4-12 10-20z" fill="#F2B705"/></g>' +
+    '<path d="M174 226h52l-6 12h-40z" fill="#7A1313"/></svg>';
+
+  function svcCard(s) {
+    var c = cat(s.cat);
+    return '<article class="svc" data-cat="' + esc(s.cat) + '">' +
+      (s.image ? '<div class="img" style="background-image:url(\'' + esc(s.image) + '\')"></div>' : '') +
+      (s.popular ? '<span class="tag">' + u('popular') + '</span>' : '') +
+      '<span class="meta">' + esc(t(c.name)) + (s.duration ? ' • ' + esc(s.duration) : '') + '</span>' +
+      '<h3><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></h3>' +
+      '<p>' + esc(t(s.desc)) + '</p>' +
+      '<div class="foot"><span class="price">' + inr(minPrice(s)) + '<small>' + u('from') + ' ' + u('starting') + '</small></span>' +
+      '<button class="btn btn-primary btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div></article>';
+  }
+
+  function filtered() {
+    var q = state.q.trim().toLowerCase();
+    return D.services.filter(function (s) {
+      if (s.active === false) return false;
+      if (state.cat !== 'all' && s.cat !== state.cat) return false;
+      if (!q) return true;
+      var hay = [s.name.hi, s.name.en, s.desc.hi, s.desc.en, t(cat(s.cat).name)].join(' ').toLowerCase();
+      return hay.indexOf(q) > -1;
+    });
+  }
+
+  function renderServices() {
+    var list = filtered(), more = '';
+    if (state.cat === 'all' && !state.q.trim() && !state.all && list.length > 8) {
+      var pop = list.filter(function (s) { return s.popular; });
+      var show = pop.concat(list.filter(function (s) { return !s.popular; })).slice(0, Math.max(8, Math.min(pop.length, 12)));
+      more = '<div style="grid-column:1/-1;text-align:center"><button class="btn btn-ghost" id="showAll" type="button">' + u('show_all').replace('{n}', list.length) + '</button></div>';
+      list = show;
+    }
+    $('#svcGrid').innerHTML = (list.length ? list.map(svcCard).join('') : '<div class="empty" style="grid-column:1/-1">' + u('no_results') + '</div>') + more;
+    if ($('#showAll')) $('#showAll').onclick = function () { state.all = true; renderServices(); };
+    $$('.cat').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-cat') === state.cat ? 'true' : 'false'); });
+  }
+
+  function home(anchor) {
+    var today = todayISO();
+    var fests = (D.festivals || []).filter(function (f) { return f.date >= today; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+    var pandits = D.pandits || [], testi = D.testimonials || [];
+    var mapSrc = 'https://maps.google.com/maps?q=' + encodeURIComponent(D.settings.mapQuery || t(D.settings.address)) + '&z=15&output=embed';
+
+    var html =
+      '<section class="hero" style="padding:0"><div class="wrap">' +
+        '<div><h1>' + esc(t(D.hero.title)) + '</h1><p class="lead">' + esc(t(D.hero.subtitle)) + '</p>' +
+        '<form class="finder" id="finder" role="search"><label class="sr" for="q">' + u('search') + '</label><input id="q" type="search" placeholder="' + esc(u('search_ph')) + '" value="' + esc(state.q) + '"><button class="btn btn-primary btn-sm">' + u('search') + '</button></form>' +
+        '<div class="ctas"><a class="btn btn-primary" href="#sevaen">' + u('book_puja') + '</a><a class="btn btn-ghost" href="' + telHref() + '">' + u('call_now') + ' ' + esc(D.settings.phone) + '</a></div>' +
+        '<p class="area">' + ICONS.pin.replace('<svg', '<svg width="20" height="20" style="flex:none;margin-top:3px"') + '<span>' + esc(t(D.settings.serviceArea)) + '</span></p></div>' +
+        '<div>' + YANTRA + '</div>' +
+      '</div></section>' +
+
+      '<section id="sevaen"><div class="wrap">' +
+        '<div class="sec-head"><div><h2>' + u('services_h') + '</h2><p>' + u('services_p') + '</p></div></div>' +
+        '<div class="cats" role="toolbar">' +
+          '<button class="cat" data-cat="all">' + ICONS.kalash + u('all') + '</button>' +
+          D.categories.map(function (c) { return '<button class="cat" data-cat="' + esc(c.id) + '">' + (ICONS[c.icon] || ICONS.star) + esc(t(c.name)) + '</button>'; }).join('') +
+        '</div>' +
+        '<div class="services" id="svcGrid" aria-live="polite"></div>' +
+      '</div></section>' +
+
+      ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div><h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
+        D.purposes.map(function (p) {
+          var items = (p.services || []).map(svc).filter(Boolean);
+          if (!items.length) return '';
+          return '<div class="purpose"><h3>' + esc(t(p.name)) + '</h3><ul>' + items.map(function (s) { return '<li><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></li>'; }).join('') + '</ul></div>';
+        }).join('') + '</div></div></section>' : '') +
+
+      '<section><div class="wrap"><h2>' + u('steps_h') + '</h2><ol class="steps" style="padding:0;margin:20px 0 0">' +
+        [1, 2, 3, 4].map(function (i) { return '<li><h3>' + u('s' + i + 'h') + '</h3><p>' + u('s' + i + 'p') + '</p></li>'; }).join('') +
+      '</ol></div></section>' +
+
+      ((D.promises || []).length ? '<section class="alt"><div class="wrap"><h2>' + u('promise_h') + '</h2><ul class="promises">' +
+        D.promises.map(function (p) { return '<li>' + ICONS.check + '<span>' + esc(t(p)) + '</span></li>'; }).join('') + '</ul></div></section>' : '') +
+
+      (fests.length ? '<section id="festivals"><div class="wrap"><div class="sec-head"><div><h2>' + u('fest_h') + '</h2><p>' + u('fest_p') + '</p></div></div><div class="fests">' +
+        fests.map(function (f) {
+          var d = new Date(f.date + 'T00:00:00');
+          var mon = d.toLocaleDateString(lang === 'hi' ? 'hi-IN' : 'en-IN', { month: 'short', year: 'numeric' });
+          return '<div class="fest"><div class="d"><b>' + d.getDate() + '</b><span>' + esc(mon) + '</span></div><div><h3>' + esc(t(f.name)) + '</h3><p>' + esc(t(f.note)) + '</p>' +
+            (f.service && svc(f.service) ? '<a href="#/seva/' + esc(f.service) + '">' + u('fest_book') + '</a>' : '') + '</div></div>';
+        }).join('') + '</div></div></section>' : '<span id="festivals"></span>') +
+
+      (pandits.length ? '<section class="alt"><div class="wrap"><h2>' + u('pandits_h') + '</h2><div class="people">' +
+        pandits.map(function (p) { return '<div class="person"><div class="ph"' + (p.photo ? ' style="background-image:url(\'' + esc(p.photo) + '\')"' : '') + '></div><h3>' + esc(t(p.name)) + '</h3><p>' + esc(t(p.spec)) + '</p>' + (p.exp ? '<p>' + esc(p.exp) + ' ' + u('exp') + '</p>' : '') + '</div>'; }).join('') +
+        '</div></div></section>' : '') +
+
+      (testi.length ? '<section><div class="wrap"><h2>' + u('testi_h') + '</h2><div class="people">' +
+        testi.map(function (q) { return '<blockquote class="quote"><div class="stars" aria-label="' + (q.rating || 5) + '/5">' + '★★★★★'.slice(0, q.rating || 5) + '</div><p>' + esc(t(q.text)) + '</p><footer>' + esc(q.name) + (q.city ? ', ' + esc(q.city) : '') + '</footer></blockquote>'; }).join('') +
+        '</div></div></section>' : '') +
+
+      '<section class="alt" id="contact"><div class="wrap two-col">' +
+        '<div class="faq"><h2>' + u('faq_h') + '</h2>' + (D.faqs || []).map(function (f) { return '<details><summary>' + esc(t(f.q)) + '</summary><p>' + esc(t(f.a)) + '</p></details>'; }).join('') + '</div>' +
+        '<div style="display:grid;gap:18px"><div class="contact-card"><h3 style="margin:0;font-family:var(--f-display);font-size:1.6rem">' + u('contact_h') + '</h3>' +
+          '<div class="row">' + ICONS.pin + '<div><b>' + u('address') + '</b><br>' + esc(t(D.settings.address)) + '</div></div>' +
+          '<div class="row">' + ICONS.phone + '<div><b>' + u('phone') + '</b><br><a href="' + telHref() + '">' + esc(D.settings.phone) + '</a> • <a href="' + waHref() + '" target="_blank" rel="noopener">' + u('whatsapp') + '</a></div></div>' +
+          (D.settings.email ? '<div class="row">' + ICONS.mail + '<div><b>' + u('email') + '</b><br><a href="mailto:' + esc(D.settings.email) + '">' + esc(D.settings.email) + '</a></div></div>' : '') +
+          '<div class="row">' + ICONS.clock + '<div><b>' + u('hours') + '</b><br>' + esc(t(D.settings.hours)) + '</div></div>' +
+          '<div class="row">' + ICONS.globe + '<div><b>' + u('area') + '</b><br>' + esc(t(D.settings.serviceArea)) + '</div></div>' +
+        '</div><iframe class="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="' + mapSrc + '"></iframe></div>' +
+      '</div></section>';
+
+    $('#main').innerHTML = html;
+    renderServices();
+    $('#finder').addEventListener('submit', function (e) { e.preventDefault(); state.q = $('#q').value; state.cat = 'all'; renderServices(); $('#sevaen').scrollIntoView(); });
+    $('#q').addEventListener('input', function () { state.q = this.value; renderServices(); });
+    $$('.cat').forEach(function (b) { b.addEventListener('click', function () { state.cat = b.getAttribute('data-cat'); renderServices(); }); });
+    if (anchor) { var el = document.getElementById(anchor); if (el) setTimeout(function () { el.scrollIntoView(); }, 30); }
+    else window.scrollTo(0, 0);
+  }
+
+  function detail(id) {
+    var s = svc(id);
+    if (!s) { $('#main').innerHTML = '<div class="wrap detail"><p>' + u('not_found') + '</p><a class="btn btn-primary" href="#/">' + u('back_home') + '</a></div>'; return; }
+    var c = cat(s.cat), ben = lines(s.benefits), sam = lines(s.samagri);
+    var rel = D.services.filter(function (x) { return x.cat === s.cat && x.id !== s.id && x.active !== false; }).slice(0, 3);
+    document.title = t(s.name) + ' — ' + t(D.settings.siteName);
+    $('#main').innerHTML = '<div class="wrap detail">' +
+      '<nav class="crumbs"><a href="#/">' + u('home') + '</a> / <a href="#/cat/' + esc(s.cat) + '">' + esc(t(c.name)) + '</a> / ' + esc(t(s.name)) + '</nav>' +
+      '<div class="detail-grid"><div>' +
+        '<h1>' + esc(t(s.name)) + '</h1>' +
+        '<div class="hero-img"' + (s.image ? ' style="background-image:url(\'' + esc(s.image) + '\')"' : '') + '>' + (s.image ? '' : (ICONS[c.icon] || ICONS.star)) + '</div>' +
+        '<p style="font-size:1.1rem">' + esc(t(s.desc)) + '</p>' +
+        (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
+        (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +
+        (sam.length ? '<h2 style="font-size:1.5rem">' + u('samagri') + '</h2><p>' + sam.map(esc).join(', ') + '</p>' : '') +
+      '</div><aside class="pkg-box"><h2 style="font-size:1.4rem">' + u('choose_pkg') + '</h2><form id="pkgForm">' +
+        (s.packages || []).map(function (p, i) {
+          return '<label class="pkg"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + ((p.popular || (i === 0 && !(s.packages || []).some(function (x) { return x.popular; }))) ? ' checked' : '') + '>' +
+            '<span class="top"><span>' + esc(t(p.name)) + (p.popular ? '<span class="pop">' + u('popular') + '</span>' : '') + '</span><span>' + inr(p.price) + '</span></span>' +
+            '<small>' + esc(t(p.features)) + '</small></label>';
+        }).join('') +
+        '<button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">' + u('book_this') + '</button>' +
+        '<a class="btn btn-wa" style="width:100%;margin-top:10px" target="_blank" rel="noopener" href="' + waHref(u('wa_ask') + ' ' + t(s.name)) + '">' + u('ask_wa') + '</a>' +
+      '</form></aside></div>' +
+      (rel.length ? '<section style="padding:48px 0 0"><h2>' + u('related') + '</h2><div class="services">' + rel.map(svcCard).join('') + '</div></section>' : '') +
+    '</div>';
+    $('#pkgForm').addEventListener('submit', function (e) { e.preventDefault(); var v = (new FormData(this)).get('pkg'); openBooking(s.id, v); });
+    window.scrollTo(0, 0);
+  }
+
+  function page(key) {
+    var titles = { terms: u('terms'), refund: u('refund'), privacy: u('privacy') };
+    var txt = D.pages && D.pages[key] ? t(D.pages[key]) : '';
+    $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + esc(titles[key] || '') + '</h1>' +
+      txt.split(/\n+/).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
+    window.scrollTo(0, 0);
+  }
+
+  function myBookings() { try { return JSON.parse(localStorage.getItem('vss_my_bookings') || '[]'); } catch (e) { return []; } }
+
+  function track() {
+    var list = myBookings();
+    $('#main').innerHTML = '<div class="wrap detail page-text"><h1>' + u('track_h') + '</h1><p>' + u('track_p') + '</p><div class="track-list">' +
+      (list.length ? list.slice().reverse().map(function (b) {
+        return '<div class="track-item" data-id="' + esc(b.id) + '"><b class="bid" style="font-size:1.2rem">' + esc(b.id) + '</b><br>' +
+          esc(b.serviceName) + ' — ' + esc(b.packageName) + ' (' + inr(b.price) + ')<br>' + esc(b.date) + ' • ' + esc(b.time) +
+          '<br><span class="st">' + u('status') + ': <b>' + u('st_' + (b.status || 'new')) + '</b></span> ' +
+          (D.settings.bookingEndpoint ? '<button class="btn btn-ghost btn-sm" data-check="' + esc(b.id) + '" data-phone="' + esc(b.phone) + '">' + u('check_status') + '</button>' : '') +
+          ' <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + u('whatsapp') + '</a></div>';
+      }).join('') : '<div class="empty">' + u('track_empty') + ' <a href="#/#sevaen">' + u('book_puja') + '</a></div>') +
+      '</div></div>';
+    $$('[data-check]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-check');
+        fetch(D.settings.bookingEndpoint + '?action=status&id=' + encodeURIComponent(id) + '&phone=' + encodeURIComponent(btn.getAttribute('data-phone')))
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (j && j.status) {
+              var all = myBookings(); all.forEach(function (b) { if (b.id === id) b.status = j.status; });
+              localStorage.setItem('vss_my_bookings', JSON.stringify(all)); track();
+            }
+          }).catch(function () { toast('—'); });
+      });
+    });
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------------- booking wizard ---------------- */
+  var B = null;
+  function newId() {
+    var d = new Date(), p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return 'VSS' + String(d.getFullYear()).slice(2) + p(d.getMonth() + 1) + p(d.getDate()) + '-' + Math.floor(1000 + Math.random() * 9000);
+  }
+
+  function openBooking(id, pkgId) {
+    var s = svc(id); if (!s) return;
+    var pk = (s.packages || []).find(function (p) { return p.id === pkgId; }) || (s.packages || []).find(function (p) { return p.popular; }) || (s.packages || [])[0] || { id: 'std', name: { hi: 'मानक', en: 'Standard' }, price: s.price };
+    B = { step: 1, s: s, data: { pkg: pk.id, mode: isJyotish(s) ? 'phone' : 'home', time: 'muhurat', lang: 'हिंदी' } };
+    $('#bookTitle').textContent = t(s.name);
+    drawStep();
+    var dlg = $('#bookDlg');
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+
+  function field(name, label, type, opts) {
+    opts = opts || {};
+    var v = B.data[name] != null ? B.data[name] : '';
+    var lab = '<label class="f' + (opts.full ? ' full' : '') + '">' + label + (opts.optional ? ' <span class="opt">' + u('optional') + '</span>' : '');
+    var input;
+    if (type === 'textarea') input = '<textarea name="' + name + '" rows="3">' + esc(v) + '</textarea>';
+    else if (type === 'select') input = '<select name="' + name + '">' + opts.options.map(function (o) { return '<option' + (o === v ? ' selected' : '') + '>' + esc(o) + '</option>'; }).join('') + '</select>';
+    else input = '<input name="' + name + '" type="' + type + '" value="' + esc(v) + '"' + (opts.attrs || '') + '>';
+    return lab + input + (opts.hint ? '<span class="opt" style="font-weight:400;color:var(--ink-2);font-size:.82rem">' + opts.hint + '</span>' : '') + '<span class="err" data-err="' + name + '"></span></label>';
+  }
+
+  function seg(name, items) {
+    return '<div class="seg" role="radiogroup">' + items.map(function (it) {
+      return '<label><input type="radio" name="' + name + '" value="' + it[0] + '"' + (B.data[name] === it[0] ? ' checked' : '') + '>' + it[1] + '</label>';
+    }).join('') + '</div>';
+  }
+
+  function curPkg() { return (B.s.packages || []).find(function (p) { return p.id === B.data.pkg; }) || { name: { hi: 'मानक', en: 'Standard' }, price: B.s.price }; }
+
+  function drawStep() {
+    var s = B.s, jy = isJyotish(s), body = '';
+    var prog = '<div class="progress">' + [1, 2, 3].map(function (i) { return '<i class="' + (i <= B.step ? 'on' : '') + '"></i>'; }).join('') + '</div>';
+    if (B.step === 1) {
+      body = '<form id="stepForm" novalidate><div class="form-grid">' +
+        '<div class="full"><b>' + u('choose_pkg') + '</b>' +
+        (s.packages || []).map(function (p) {
+          return '<label class="pkg" style="margin-top:8px"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + (B.data.pkg === p.id ? ' checked' : '') + '>' +
+            '<span class="top"><span>' + esc(t(p.name)) + '</span><span>' + inr(p.price) + '</span></span><small>' + esc(t(p.features)) + '</small></label>';
+        }).join('') + '</div>' +
+        '<div class="full"><b>' + u('mode') + '</b>' + (jy ? seg('mode', [['phone', u('mode_phone')], ['visit', u('mode_visit')]]) : seg('mode', [['home', u('mode_home')], ['online', u('mode_online')]])) + '</div>' +
+        field('date', u('date'), 'date', { attrs: ' min="' + todayISO() + '" required' }) +
+        '<label class="f">' + u('time') + '<select name="time">' +
+          [['muhurat', u('t_muhurat')], ['morning', u('t_morning')], ['noon', u('t_noon')], ['evening', u('t_evening')]].map(function (o) { return '<option value="' + o[0] + '"' + (B.data.time === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join('') +
+        '</select></label>' +
+        '</div><div class="dlg-actions"><span></span><button class="btn btn-primary" type="submit">' + u('next') + '</button></div></form>';
+    } else if (B.step === 2) {
+      body = '<form id="stepForm" novalidate><div class="form-grid">' +
+        field('name', u('name'), 'text', { attrs: ' autocomplete="name" required' }) +
+        field('phone', u('mobile'), 'tel', { attrs: ' inputmode="numeric" autocomplete="tel" maxlength="13" required' }) +
+        field('email', u('email_opt'), 'email', { optional: true, attrs: ' autocomplete="email"' }) +
+        field('gotra', u('gotra'), 'text', { optional: true, hint: u('gotra_hint') }) +
+        (jy ? field('dob', u('dob'), 'date', {}) + field('tob', u('tob'), 'time', {}) + field('pob', u('pob'), 'text', { full: true }) +
+              (s.id === 'kundli-milan' ? field('partner', u('partner'), 'textarea', { full: true }) : '') +
+              field('question', u('question'), 'textarea', { full: true, optional: true })
+            : '') +
+        ((!jy && B.data.mode === 'home') || (jy && B.data.mode === 'visit') ? field('address', u('addr'), 'textarea', { full: true }) + field('city', u('city'), 'text', {}) + field('pincode', u('pincode'), 'text', { attrs: ' inputmode="numeric" maxlength="6"' }) : field('city', u('city'), 'text', { optional: true })) +
+        (!jy ? field('lang', u('lang_pref'), 'select', { options: ['हिंदी', 'संस्कृत + हिंदी', 'भोजपुरी', 'मैथिली', 'पंजाबी', 'English'] }) : '') +
+        field('notes', u('notes'), 'textarea', { full: true, optional: true }) +
+        '</div><div class="dlg-actions"><button class="btn btn-ghost" type="button" id="backBtn">' + u('back') + '</button><button class="btn btn-primary" type="submit">' + u('next') + '</button></div></form>';
+    } else if (B.step === 3) {
+      var p = curPkg(), d = B.data;
+      var timeLbl = { muhurat: u('t_muhurat'), morning: u('t_morning'), noon: u('t_noon'), evening: u('t_evening') }[d.time];
+      var modeLbl = { home: u('mode_home'), online: u('mode_online'), phone: u('mode_phone'), visit: u('mode_visit') }[d.mode];
+      var rows = [[u('service'), t(s.name)], [u('package'), t(p.name) + ' — ' + inr(p.price)], [u('mode'), modeLbl], [u('date'), d.date + ' • ' + timeLbl], [u('name'), d.name], [u('mobile'), d.phone]];
+      if (d.gotra) rows.push([u('gotra'), d.gotra]);
+      if (d.dob) rows.push([u('dob'), d.dob + (d.tob ? ' ' + d.tob : '') + (d.pob ? ', ' + d.pob : '')]);
+      if (d.address) rows.push([u('addr'), d.address + (d.city ? ', ' + d.city : '') + (d.pincode ? ' – ' + d.pincode : '')]);
+      body = '<form id="stepForm" novalidate><h3>' + u('review') + '</h3><div class="summary"><dl>' + rows.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl></div>' +
+        '<label style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="consent" style="margin-top:6px;width:18px;height:18px"' + (d.consent ? ' checked' : '') + '><span>' + u('consent') + '</span></label><span class="err" data-err="consent" style="color:#B00020"></span>' +
+        '<div class="dlg-actions"><button class="btn btn-ghost" type="button" id="backBtn">' + u('back') + '</button><button class="btn btn-primary" type="submit" id="sendBtn">' + u('send') + '</button></div></form>';
+    } else {
+      var b = B.saved, pp = curPkg(), adv = Math.round((Number(pp.price) || 0) * (Number(D.settings.advancePercent) || 0) / 100);
+      var upi = D.settings.upiId ? 'upi://pay?pa=' + encodeURIComponent(D.settings.upiId) + '&pn=' + encodeURIComponent(t(D.settings.siteName)) + '&am=' + adv + '&cu=INR&tn=' + encodeURIComponent(b.id) : '';
+      body = '<div class="done"><div class="ok">' + ICONS.check.replace('<svg', '<svg width="40" height="40"') + '</div><h3 style="font-size:1.5rem">' + u('done_h') + '</h3>' +
+        '<p>' + u('booking_id') + '</p><p class="bid">' + esc(b.id) + '</p><p style="color:var(--ink-2)">' + u('done_p') + '</p>' +
+        '<a class="btn btn-wa" style="width:100%" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + ICONS.wa.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_wa') + '</a>' +
+        (upi && adv ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
+        '<div class="dlg-actions" style="justify-content:center"><button class="btn btn-ghost" type="button" id="doneClose">' + u('close') + '</button></div></div>';
+    }
+    $('#dlgBody').innerHTML = prog + body;
+    var f = $('#stepForm');
+    if (f) {
+      f.addEventListener('submit', onStep);
+      f.addEventListener('change', function (e) { if (e.target.name === 'pkg' || e.target.name === 'mode') B.data[e.target.name] = e.target.value; });
+    }
+    if ($('#backBtn')) $('#backBtn').addEventListener('click', function () { collect(); B.step--; drawStep(); });
+    if ($('#doneClose')) $('#doneClose').addEventListener('click', closeDlg);
+    var first = $('#dlgBody input:not([type=radio]), #dlgBody select'); if (first && B.step === 2) first.focus();
+  }
+
+  function collect() {
+    var f = $('#stepForm'); if (!f) return;
+    var fd = new FormData(f);
+    fd.forEach(function (v, k) { B.data[k] = typeof v === 'string' ? v.trim() : v; });
+    if (B.step === 3) B.data.consent = !!f.consent.checked;
+  }
+
+  function setErr(name, msg) { var el = $('[data-err="' + name + '"]'); if (el) el.textContent = msg || ''; }
+
+  function onStep(e) {
+    e.preventDefault(); collect();
+    var d = B.data, ok = true, jy = isJyotish(B.s);
+    $$('[data-err]').forEach(function (el) { el.textContent = ''; });
+    if (B.step === 1) {
+      if (!d.date || d.date < todayISO()) { setErr('date', u('e_date')); ok = false; }
+    } else if (B.step === 2) {
+      if (!d.name) { setErr('name', u('e_req')); ok = false; }
+      var ph = digits(d.phone); if (ph.length > 10 && ph.indexOf('91') === 0) ph = ph.slice(2);
+      if (!/^[6-9]\d{9}$/.test(ph)) { setErr('phone', u('e_mobile')); ok = false; } else d.phone = ph;
+      var needAddr = (!jy && d.mode === 'home') || (jy && d.mode === 'visit');
+      if (needAddr) {
+        if (!d.address) { setErr('address', u('e_req')); ok = false; }
+        if (!d.city) { setErr('city', u('e_req')); ok = false; }
+        if (!/^\d{6}$/.test(d.pincode || '')) { setErr('pincode', u('e_pin')); ok = false; }
+      }
+      if (jy) {
+        if (!d.dob) { setErr('dob', u('e_req')); ok = false; }
+        if (!d.pob) { setErr('pob', u('e_req')); ok = false; }
+      }
+    } else if (B.step === 3) {
+      if (!d.consent) { setErr('consent', u('e_consent')); ok = false; }
+      if (ok) return submit();
+    }
+    if (!ok) { var firstErr = $$('[data-err]').find(function (el) { return el.textContent; }); if (firstErr) firstErr.parentNode.scrollIntoView({ block: 'center' }); return; }
+    B.step++; drawStep();
+  }
+
+  function waText(b) {
+    var L = [u('wa_greet'), '', u('booking_id') + ': ' + b.id, u('service') + ': ' + b.serviceName, u('package') + ': ' + b.packageName + ' (' + inr(b.price) + ')',
+      u('date') + ': ' + b.date + ' • ' + b.time, u('mode') + ': ' + b.mode, u('name') + ': ' + b.name, u('mobile') + ': ' + b.phone];
+    if (b.gotra) L.push(u('gotra') + ': ' + b.gotra);
+    if (b.dob) L.push(u('dob') + ': ' + b.dob + ' ' + (b.tob || '') + ' ' + (b.pob || ''));
+    if (b.partner) L.push(u('partner') + ': ' + b.partner);
+    if (b.address) L.push(u('addr') + ': ' + b.address + ', ' + (b.city || '') + ' ' + (b.pincode || ''));
+    if (b.question) L.push(u('question') + ': ' + b.question);
+    if (b.notes) L.push(u('notes') + ': ' + b.notes);
+    return L.join('\n');
+  }
+
+  function submit() {
+    var btn = $('#sendBtn'); btn.disabled = true; btn.textContent = u('sending');
+    var d = B.data, s = B.s, p = curPkg();
+    var timeLbl = { muhurat: UI.hi.t_muhurat, morning: UI.hi.t_morning, noon: UI.hi.t_noon, evening: UI.hi.t_evening }[d.time];
+    var modeLbl = { home: UI.hi.mode_home, online: UI.hi.mode_online, phone: UI.hi.mode_phone, visit: UI.hi.mode_visit }[d.mode];
+    var b = {
+      id: newId(), createdAt: new Date().toISOString(), type: isJyotish(s) ? 'jyotish' : 'puja',
+      serviceId: s.id, serviceName: s.name.hi, packageName: p.name ? p.name.hi : '', price: Number(p.price) || 0,
+      mode: modeLbl, date: d.date, time: timeLbl, name: d.name, phone: d.phone, email: d.email || '', gotra: d.gotra || '',
+      address: d.address || '', city: d.city || '', pincode: d.pincode || '', lang: d.lang || '',
+      dob: d.dob || '', tob: d.tob || '', pob: d.pob || '', partner: d.partner || '', question: d.question || '', notes: d.notes || '',
+      status: 'new', source: location.hostname || 'local'
+    };
+    var all = myBookings(); all.push(b); localStorage.setItem('vss_my_bookings', JSON.stringify(all));
+    var done = function () { B.saved = b; B.step = 4; drawStep(); };
+    if (D.settings.bookingEndpoint && !PREVIEW) {
+      fetch(D.settings.bookingEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(b) })
+        .then(done, done);
+    } else done();
+  }
+
+  function closeDlg() { var dlg = $('#bookDlg'); if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+
+  /* ---------------- router ---------------- */
+  function route() {
+    var h = location.hash || '#/';
+    $('#nav').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded', 'false');
+    var m;
+    if ((m = h.match(/^#\/seva\/([\w-]+)/))) return detail(m[1]);
+    if ((m = h.match(/^#\/cat\/([\w-]+)/))) { state.cat = m[1]; state.q = ''; return home('sevaen'); }
+    if ((m = h.match(/^#\/page\/(\w+)/))) return page(m[1]);
+    if (h.indexOf('#/track') === 0) return track();
+    if ((m = h.match(/^#\/#([\w-]+)/))) return home(m[1]);
+    if (/^#[\w-]+$/.test(h) && h !== '#/') { var el = document.getElementById(h.slice(1)); if (el) { el.scrollIntoView(); return; } return home(h.slice(1)); }
+    document.title = t(D.settings.siteName) + ' — ' + t(D.settings.tagline);
+    home();
+  }
+
+  /* ---------------- boot ---------------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-book]');
+    if (b) { e.preventDefault(); openBooking(b.getAttribute('data-book')); }
+  });
+  $('#dlgClose').addEventListener('click', closeDlg);
+  $('#bookDlg').addEventListener('click', function (e) { if (e.target === this) closeDlg(); });
+  $('#menuBtn').addEventListener('click', function () { var n = $('#nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open')); });
+  $('#langBtn').addEventListener('click', function () { lang = lang === 'hi' ? 'en' : 'hi'; localStorage.setItem('vss_lang', lang); chrome(); route(); });
+  window.addEventListener('hashchange', route);
+
+  load().then(function (data) {
+    D = data || window.DEFAULT_DATA;
+    D.services = D.services || []; D.categories = D.categories || [];
+    chrome(); route();
+  });
+})();
