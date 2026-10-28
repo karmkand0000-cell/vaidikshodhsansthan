@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /vaidikshodhsansthan/admin.html
+Sitemap: https://karmkand0000-cell.github.io/vaidikshodhsansthan/sitemap.xml
