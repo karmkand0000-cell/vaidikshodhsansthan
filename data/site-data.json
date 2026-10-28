@@ -508,7 +508,7 @@
       "cat": "yagya",
       "active": true,
       "popular": true,
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1%20Brahmin%20performing%20homa%20fire%20yajna%20sacrifice%2C%20offerings%20in%20a%20Hindu%20ritual.jpg?width=960",
+      "image": "assets/img/seva/mahamrityunjay-havan.jpg",
       "name": {
         "hi": "महामृत्युंजय हवन",
         "en": "Maha Mrityunjaya Havan"
@@ -566,11 +566,12 @@
         "hi": "",
         "en": ""
       },
-      "imgCredit": {
-        "file": "1 Brahmin performing homa fire yajna sacrifice, offerings in a Hindu ritual.jpg",
-        "license": "CC BY 2.0",
-        "artist": "Onkar Hoysala"
-      }
+      "imgCredit": null,
+      "video": "assets/video/mahamrityunjay-havan.mp4",
+      "videoPoster": "assets/img/seva/mahamrityunjay-havan-poster.jpg",
+      "photos": [
+        "assets/img/seva/shivling-pujan.jpg"
+      ]
     },
     {
       "id": "rudrabhishek",
@@ -1336,7 +1337,7 @@
       "cat": "path",
       "active": true,
       "popular": true,
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sundarkand%2002.jpg?width=960",
+      "image": "assets/img/seva/sundarkand.jpg",
       "name": {
         "hi": "सुंदरकांड पाठ",
         "en": "Sundarkand Path"
@@ -1394,11 +1395,11 @@
         "hi": "",
         "en": ""
       },
-      "imgCredit": {
-        "file": "Sundarkand 02.jpg",
-        "license": "CC BY-SA 4.0",
-        "artist": "The open draft"
-      }
+      "imgCredit": null,
+      "imgPos": "50% 35%",
+      "video": "assets/video/sundarkand.mp4",
+      "videoPortrait": true,
+      "videoPoster": "assets/img/seva/sundarkand.jpg"
     },
     {
       "id": "akhand-ramayan",
