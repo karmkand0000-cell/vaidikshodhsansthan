@@ -53,6 +53,9 @@
         LIVE_STR = JSON.stringify(live);
         var draft = lsGet('vss_draft', null);
         D = draft || clone(live);
+        var DEF = window.DEFAULT_DATA;
+        Object.keys(DEF).forEach(function (k) { if (D[k] === undefined) D[k] = clone(DEF[k]); });
+        Object.keys(DEF.settings).forEach(function (k) { if (D.settings[k] === undefined) D.settings[k] = clone(DEF.settings[k]); });
       });
   }
 
@@ -85,7 +88,7 @@
   /* ---------------- tabs ---------------- */
   var TABS = [
     ['overview', 'अवलोकन'], ['bookings', 'बुकिंग'], ['services', 'पूजा सेवाएँ'], ['categories', 'श्रेणियाँ'],
-    ['purposes', 'कामना अनुसार'], ['festivals', 'आगामी पर्व'], ['pandits', 'पंडित जी'], ['testimonials', 'यजमानों की राय'],
+    ['purposes', 'कामना अनुसार'], ['festivals', 'आगामी पर्व'], ['premium', 'प्रीमियम अनुष्ठान'], ['gallery', 'फ़ोटो गैलरी'], ['pandits', 'पंडित जी'], ['testimonials', 'यजमानों की राय'],
     ['faqs', 'प्रश्नोत्तर'], ['promises', 'हमारा संकल्प'], ['settings', 'वेबसाइट सेटिंग'], ['publish', 'प्रकाशन व बैकअप']
   ];
   var current = 'overview';
@@ -110,6 +113,7 @@
     else if (tab === 'bookings') bookings(v);
     else if (tab === 'settings') settings(v);
     else if (tab === 'publish') publishTab(v);
+    else if (tab === 'premium') premiumTab(v);
     else if (COLS[tab]) collection(v, tab);
     window.scrollTo(0, 0);
   }
@@ -160,6 +164,13 @@
       blank: function () { return { id: '', date: today(), name: { hi: '', en: '' }, note: { hi: '', en: '' }, service: '' }; },
       fields: [{ k: 'date', t: 'date', l: 'तिथि', req: true }, { k: 'service', t: 'select', l: 'बुकिंग हेतु पूजा', opts: svcOpts },
         { k: 'name', t: 'bi', l: 'पर्व का नाम', req: true, full: true }, { k: 'note', t: 'bi', l: 'छोटी टिप्पणी', full: true }]
+    },
+    gallery: {
+      path: 'gallery', one: 'फ़ोटो',
+      note: 'फ़ोटो जोड़ने का तरीका: GitHub पर अपनी repository में <b>assets/img/gallery</b> फ़ोल्डर खोलें → Add file → Upload files → फ़ोटो डालें → Commit। फिर यहाँ “फ़ोटो का पता” में <code>assets/img/gallery/फ़ाइल-का-नाम.jpg</code> लिखें। (या किसी इंटरनेट फ़ोटो का पूरा लिंक।) पहली फ़ोटो गैलरी में बड़ी दिखती है — क्रम ↑↓ से बदलें।',
+      label: function (x) { return x.caption ? x.caption.hi : ''; }, sub: function (x) { return x.src; },
+      blank: function () { return { id: '', src: 'assets/img/gallery/', caption: { hi: '', en: '' } }; },
+      fields: [{ k: 'src', t: 'url', l: 'फ़ोटो का पता (URL)', req: true, full: true }, { k: 'caption', t: 'bi', l: 'फ़ोटो का विवरण', req: true, full: true }]
     },
     pandits: {
       path: 'pandits', one: 'पंडित जी',
@@ -434,7 +445,7 @@
   /* ---------------- settings ---------------- */
   var SETTINGS = [
     ['पहचान', [{ k: 'settings.siteName', t: 'bi', l: 'संस्थान का नाम' }, { k: 'settings.tagline', t: 'bi', l: 'टैगलाइन' }, { k: 'hero.title', t: 'bi', l: 'मुख्य शीर्षक (होमपेज)', full: true }, { k: 'hero.subtitle', t: 'bitext', l: 'उप-शीर्षक', full: true }, { k: 'settings.ticker', t: 'bitext', l: 'ऊपर चलने वाली सूचना पट्टी', full: true }]],
-    ['संपर्क', [{ k: 'settings.phone', t: 'text', l: 'फ़ोन नंबर' }, { k: 'settings.whatsapp', t: 'text', l: 'व्हाट्सऐप नंबर (91 सहित)', help: 'जैसे 919625004090' }, { k: 'settings.email', t: 'text', l: 'ईमेल' }, { k: 'settings.mapQuery', t: 'text', l: 'नक्शे के लिए पता/स्थान' },
+    ['संपर्क', [{ k: 'settings.phone', t: 'text', l: 'फ़ोन नंबर' }, { k: 'settings.whatsapp', t: 'text', l: 'व्हाट्सऐप नंबर (91 सहित)', help: 'जैसे 919625004090' }, { k: 'settings.email', t: 'text', l: 'संपर्क ईमेल (वेबसाइट पर दिखेगा)' }, { k: 'settings.bookingEmail', t: 'text', l: 'बुकिंग किस ईमेल पर आए', help: 'हर नई बुकिंग इस ईमेल पर आएगी (FormSubmit द्वारा, मुफ़्त)। पहली बुकिंग पर FormSubmit एक “Activate” ईमेल भेजेगा — उसे एक बार क्लिक करें।' }, { k: 'settings.mapQuery', t: 'text', l: 'नक्शे के लिए पता/स्थान' },
       { k: 'settings.address', t: 'bitext', l: 'पूरा पता', full: true }, { k: 'settings.hours', t: 'bi', l: 'समय', full: true }, { k: 'settings.serviceArea', t: 'bi', l: 'सेवा क्षेत्र', full: true }]],
     ['सोशल मीडिया', [{ k: 'settings.social.facebook', t: 'url', l: 'Facebook लिंक' }, { k: 'settings.social.instagram', t: 'url', l: 'Instagram लिंक' }, { k: 'settings.social.youtube', t: 'url', l: 'YouTube लिंक' }]],
     ['भुगतान', [{ k: 'settings.upiId', t: 'text', l: 'UPI आईडी', help: 'जैसे name@okhdfcbank — भरने पर बुकिंग के बाद “UPI से अग्रिम दें” बटन दिखेगा' }, { k: 'settings.advancePercent', t: 'number', l: 'अग्रिम राशि (%)' }]],
@@ -451,6 +462,27 @@
           else { var el = $('[data-k="' + f.k + '"]', v); setP(D, f.k, f.t === 'number' ? Number(el.value) || 0 : el.value.trim()); }
         });
       });
+      save(); toast('सहेजा गया — वेबसाइट पर लाने के लिए “प्रकाशित करें” दबाएँ');
+    };
+  }
+
+  /* ---------------- premium ---------------- */
+  function premiumTab(v) {
+    var P = D.premium || (D.premium = { title: { hi: '', en: '' }, subtitle: { hi: '', en: '' }, features: [], services: [] });
+    var feat = { hi: (P.features || []).map(function (f) { return f.hi; }).join('\n'), en: (P.features || []).map(function (f) { return f.en; }).join('\n') };
+    var tmp = { title: P.title, subtitle: P.subtitle, feat: feat, services: P.services || [] };
+    var F = [{ k: 'title', t: 'bi', l: 'शीर्षक', full: true }, { k: 'subtitle', t: 'bitext', l: 'विवरण', full: true },
+      { k: 'feat', t: 'bitext', l: 'प्रीमियम में क्या शामिल है (हर पंक्ति में एक)', full: true },
+      { k: 'services', t: 'multi', l: 'इस सेक्शन में दिखने वाले अनुष्ठान (कोई न चुनें तो सेक्शन छिप जाएगा)', opts: function () { return svcOpts().slice(1); }, full: true }];
+    v.innerHTML = '<div class="note">होमपेज पर मरून-सुनहरे रंग का “प्रीमियम” सेक्शन, चलती हवन-अग्नि के साथ। यहाँ से उसका शीर्षक, सुविधाएँ और अनुष्ठान चुनें।</div>' +
+      '<form id="premForm" class="panel"><div class="grid2">' + F.map(function (f) { return fieldHTML(f, tmp); }).join('') + '</div><button class="btn btn-primary" type="submit" style="margin-top:12px">बदलाव सहेजें</button></form>';
+    $('#premForm').onsubmit = function (e) {
+      e.preventDefault();
+      var get = function (k) { var o = {}; $$('[data-k="' + k + '"]', v).forEach(function (el) { o[el.dataset.lang] = el.value.trim(); }); return o; };
+      P.title = get('title'); P.subtitle = get('subtitle');
+      var fe = get('feat'), hi = fe.hi.split('\n').filter(Boolean), en = fe.en.split('\n');
+      P.features = hi.map(function (h, i) { return { hi: h.trim(), en: (en[i] || '').trim() }; });
+      P.services = $$('[data-multi="services"]:checked', v).map(function (el) { return el.value; });
       save(); toast('सहेजा गया — वेबसाइट पर लाने के लिए “प्रकाशित करें” दबाएँ');
     };
   }

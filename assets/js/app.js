@@ -8,6 +8,10 @@
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
       lang_btn: 'English', book_puja: 'पूजा बुक करें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
       show_all: 'सभी {n} सेवाएँ देखें',
+      nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
+      premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
+      email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
+      send_email: 'विवरण ईमेल से भेजें', email_btn: 'ईमेल', email_subject: 'पूजा बुकिंग',
       search_ph: 'पूजा खोजें — जैसे गृह प्रवेश, हवन, सुंदरकांड…', search: 'खोजें', all: 'सभी',
       services_h: 'पूजा, हवन, यज्ञ व ज्योतिष सेवाएँ', services_p: 'पूजा चुनें, पैकेज चुनें और तिथि भरें — पंडित जी का मुहूर्त व विवरण हम फ़ोन पर पक्का करेंगे।',
       from: 'दक्षिणा', starting: 'से आरंभ', details: 'विवरण देखें', book: 'बुक करें', popular: 'लोकप्रिय', duration: 'अवधि',
@@ -36,7 +40,7 @@
       next: 'आगे बढ़ें', back: 'पीछे', send: 'बुकिंग भेजें', sending: 'भेजी जा रही है…',
       review: 'बुकिंग की जाँच करें', consent: 'मैं सहमत हूँ कि पंडित जी की उपलब्धता व मुहूर्त की पुष्टि फ़ोन पर होगी।',
       e_req: 'यह भरना आवश्यक है', e_mobile: '10 अंकों का सही मोबाइल नंबर लिखें', e_pin: '6 अंकों का पिन कोड लिखें', e_date: 'आज या आगे की तिथि चुनें', e_consent: 'आगे बढ़ने के लिए सहमति दें',
-      done_h: 'आपकी बुकिंग प्राप्त हो गई', done_p: 'हमारी टीम शीघ्र ही कॉल करके मुहूर्त व विवरण पक्का करेगी। तुरंत पुष्टि के लिए विवरण व्हाट्सऐप पर भी भेजें।',
+      done_h: 'आपकी बुकिंग प्राप्त हो गई', done_p: 'हमारी टीम शीघ्र ही कॉल करके मुहूर्त व विवरण पक्का करेगी।',
       booking_id: 'बुकिंग संख्या', send_wa: 'विवरण व्हाट्सऐप पर भेजें', close: 'बंद करें', pay_upi: 'UPI से अग्रिम दक्षिणा दें', advance: 'अग्रिम',
       upi_note: 'अग्रिम भुगतान वैकल्पिक है — मुहूर्त पक्का होने के बाद भी दे सकते हैं।',
       track_h: 'मेरी बुकिंग', track_p: 'इस फ़ोन/ब्राउज़र से की गई बुकिंग यहाँ दिखती हैं।', track_empty: 'अभी कोई बुकिंग नहीं है।', check_status: 'स्थिति जानें',
@@ -49,6 +53,10 @@
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
       lang_btn: 'हिंदी', book_puja: 'Book a puja', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
       show_all: 'See all {n} services',
+      nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
+      premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
+      email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
+      send_email: 'Send details by email', email_btn: 'Email', email_subject: 'Puja booking',
       search_ph: 'Search a puja — e.g. Griha Pravesh, havan, Sundarkand…', search: 'Search', all: 'All',
       services_h: 'Puja, havan, yagya & jyotish', services_p: 'Pick a puja and package and enter a date — we confirm Pandit ji’s muhurat and details on the phone.',
       from: 'Dakshina', starting: 'onwards', details: 'View details', book: 'Book', popular: 'Popular', duration: 'Duration',
@@ -77,7 +85,7 @@
       next: 'Continue', back: 'Back', send: 'Send booking', sending: 'Sending…',
       review: 'Review your booking', consent: 'I agree that pandit availability and muhurat will be confirmed on the phone.',
       e_req: 'This is required', e_mobile: 'Enter a valid 10-digit mobile number', e_pin: 'Enter a 6-digit PIN code', e_date: 'Choose today or a later date', e_consent: 'Please agree to continue',
-      done_h: 'Your booking is received', done_p: 'Our team will call shortly to confirm the muhurat and details. For instant confirmation, also send the details on WhatsApp.',
+      done_h: 'Your booking is received', done_p: 'Our team will call shortly to confirm the muhurat and details.',
       booking_id: 'Booking number', send_wa: 'Send details on WhatsApp', close: 'Close', pay_upi: 'Pay advance via UPI', advance: 'Advance',
       upi_note: 'Advance payment is optional — you can also pay after the muhurat is confirmed.',
       track_h: 'My bookings', track_p: 'Bookings made from this phone/browser appear here.', track_empty: 'No bookings yet.', check_status: 'Check status',
@@ -121,6 +129,8 @@
   function digits(s) { return String(s || '').replace(/\D/g, ''); }
   function telHref() { return 'tel:+91' + digits(D.settings.phone).slice(-10); }
   function waHref(text) { var n = digits(D.settings.whatsapp || ('91' + D.settings.phone)); return 'https://wa.me/' + n + (text ? '?text=' + encodeURIComponent(text) : ''); }
+  function bookEmail() { return (D.settings.bookingEmail || D.settings.email || '').trim(); }
+  function mailHref(b) { return 'mailto:' + bookEmail() + '?subject=' + encodeURIComponent(u('email_subject') + ' ' + b.id + ' — ' + b.serviceName) + '&body=' + encodeURIComponent(waText(b)); }
   function svc(id) { return D.services.find(function (s) { return s.id === id && s.active !== false; }); }
   function cat(id) { return D.categories.find(function (c) { return c.id === id; }) || { name: { hi: '', en: '' }, icon: 'star' }; }
   function minPrice(s) { var p = (s.packages || []).map(function (x) { return Number(x.price) || 0; }).filter(Boolean); return p.length ? Math.min.apply(null, p) : Number(s.price) || 0; }
@@ -217,6 +227,45 @@
     $$('.cat').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-cat') === state.cat ? 'true' : 'false'); });
   }
 
+  function premiumHTML() {
+    var P = D.premium; if (!P) return '';
+    var items = (P.services || []).map(svc).filter(Boolean);
+    if (!items.length) return '';
+    return '<section class="premium" id="premium"><div class="wrap prem-grid">' +
+      '<div class="prem-art"><img src="assets/img/gallery/havan-kund.svg" alt="" width="800" height="600"></div>' +
+      '<div><h2>' + esc(t(P.title)) + '</h2><p class="prem-sub">' + esc(t(P.subtitle)) + '</p>' +
+      ((P.features || []).length ? '<ul class="prem-feat">' + P.features.map(function (f) { return '<li>' + ICONS.check + '<span>' + esc(t(f)) + '</span></li>'; }).join('') + '</ul>' : '') +
+      '<div class="prem-list">' + items.map(function (s) {
+        return '<div class="prem-item"><div><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a><small>' + esc(s.duration || '') + '</small></div>' +
+          '<span class="prem-price">' + inr(minPrice(s)) + '<small>' + u('starting') + '</small></span>' +
+          '<button class="btn btn-gold btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div>';
+      }).join('') + '</div>' +
+      '<a class="btn btn-ghost-light" href="tel:+91' + digits(D.settings.phone).slice(-10) + '">' + u('premium_enquire') + ' — ' + esc(D.settings.phone) + '</a>' +
+      '</div></div></section>';
+  }
+
+  function galleryHTML() {
+    var G = (D.gallery || []).filter(function (g) { return g.src; });
+    if (!G.length) return '<span id="gallery"></span>';
+    return '<section class="alt" id="gallery"><div class="wrap"><div class="sec-head"><div><h2>' + u('gallery_h') + '</h2><p>' + u('gallery_p') + '</p></div></div>' +
+      '<div class="gallery">' + G.map(function (g, i) {
+        var rem = (G.length + 3) % 4, span = (i === G.length - 1 && G.length > 1 && rem) ? ' style="grid-column:span ' + (5 - rem) + '"' : '';
+        return '<figure class="gi' + (i === 0 ? ' big' : '') + '"' + span + '><button type="button" data-lb="' + i + '" aria-label="' + esc(t(g.caption)) + '"><img loading="lazy" src="' + esc(g.src) + '" alt="' + esc(t(g.caption)) + '"></button><figcaption>' + esc(t(g.caption)) + '</figcaption></figure>';
+      }).join('') + '</div></div></section>';
+  }
+
+  function openLightbox(i) {
+    var G = (D.gallery || []).filter(function (g) { return g.src; }), dlg = $('#lbDlg');
+    var show = function () { var g = G[i]; $('#lbImg').src = g.src; $('#lbImg').alt = t(g.caption); $('#lbCap').textContent = t(g.caption) + '  (' + (i + 1) + '/' + G.length + ')'; };
+    show();
+    $('#lbPrev').onclick = function () { i = (i - 1 + G.length) % G.length; show(); };
+    $('#lbNext').onclick = function () { i = (i + 1) % G.length; show(); };
+    $('#lbClose').onclick = function () { dlg.close(); };
+    dlg.onclick = function (e) { if (e.target === dlg) dlg.close(); };
+    dlg.onkeydown = function (e) { if (e.key === 'ArrowLeft') $('#lbPrev').click(); if (e.key === 'ArrowRight') $('#lbNext').click(); };
+    dlg.showModal();
+  }
+
   function home(anchor) {
     var today = todayISO();
     var fests = (D.festivals || []).filter(function (f) { return f.date >= today; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
@@ -241,6 +290,8 @@
         '<div class="services" id="svcGrid" aria-live="polite"></div>' +
       '</div></section>' +
 
+      premiumHTML() +
+
       ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div><h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
         D.purposes.map(function (p) {
           var items = (p.services || []).map(svc).filter(Boolean);
@@ -262,6 +313,8 @@
           return '<div class="fest"><div class="d"><b>' + d.getDate() + '</b><span>' + esc(mon) + '</span></div><div><h3>' + esc(t(f.name)) + '</h3><p>' + esc(t(f.note)) + '</p>' +
             (f.service && svc(f.service) ? '<a href="#/seva/' + esc(f.service) + '">' + u('fest_book') + '</a>' : '') + '</div></div>';
         }).join('') + '</div></div></section>' : '<span id="festivals"></span>') +
+
+      galleryHTML() +
 
       (pandits.length ? '<section class="alt"><div class="wrap"><h2>' + u('pandits_h') + '</h2><div class="people">' +
         pandits.map(function (p) { return '<div class="person"><div class="ph"' + (p.photo ? ' style="background-image:url(\'' + esc(p.photo) + '\')"' : '') + '></div><h3>' + esc(t(p.name)) + '</h3><p>' + esc(t(p.spec)) + '</p>' + (p.exp ? '<p>' + esc(p.exp) + ' ' + u('exp') + '</p>' : '') + '</div>'; }).join('') +
@@ -339,7 +392,7 @@
           esc(b.serviceName) + ' — ' + esc(b.packageName) + ' (' + inr(b.price) + ')<br>' + esc(b.date) + ' • ' + esc(b.time) +
           '<br><span class="st">' + u('status') + ': <b>' + u('st_' + (b.status || 'new')) + '</b></span> ' +
           (D.settings.bookingEndpoint ? '<button class="btn btn-ghost btn-sm" data-check="' + esc(b.id) + '" data-phone="' + esc(b.phone) + '">' + u('check_status') + '</button>' : '') +
-          ' <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + u('whatsapp') + '</a></div>';
+          ' <a class="btn btn-ghost btn-sm" href="' + mailHref(b) + '">' + u('email_btn') + '</a></div>';
       }).join('') : '<div class="empty">' + u('track_empty') + ' <a href="#/#sevaen">' + u('book_puja') + '</a></div>') +
       '</div></div>';
     $$('[data-check]').forEach(function (btn) {
@@ -440,7 +493,8 @@
       var upi = D.settings.upiId ? 'upi://pay?pa=' + encodeURIComponent(D.settings.upiId) + '&pn=' + encodeURIComponent(t(D.settings.siteName)) + '&am=' + adv + '&cu=INR&tn=' + encodeURIComponent(b.id) : '';
       body = '<div class="done"><div class="ok">' + ICONS.check.replace('<svg', '<svg width="40" height="40"') + '</div><h3 style="font-size:1.5rem">' + u('done_h') + '</h3>' +
         '<p>' + u('booking_id') + '</p><p class="bid">' + esc(b.id) + '</p><p style="color:var(--ink-2)">' + u('done_p') + '</p>' +
-        '<a class="btn btn-wa" style="width:100%" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + ICONS.wa.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_wa') + '</a>' +
+        '<p class="mailst ' + (B.mailed ? 'ok' : 'warn') + '">' + (B.mailed ? ICONS.check.replace('<svg', '<svg width="20" height="20"') + ' ' + u('email_sent') : u('email_fail')) + '</p>' +
+        (bookEmail() ? '<a class="btn ' + (B.mailed ? 'btn-ghost' : 'btn-primary') + '" style="width:100%" href="' + mailHref(b) + '">' + ICONS.mail.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_email') + '</a>' : '') +
         (upi && adv ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
         '<div class="dlg-actions" style="justify-content:center"><button class="btn btn-ghost" type="button" id="doneClose">' + u('close') + '</button></div></div>';
     }
@@ -518,11 +572,21 @@
       status: 'new', source: location.hostname || 'local'
     };
     var all = myBookings(); all.push(b); localStorage.setItem('vss_my_bookings', JSON.stringify(all));
+    B.mailed = false;
     var done = function () { B.saved = b; B.step = 4; drawStep(); };
+    var jobs = [];
     if (D.settings.bookingEndpoint && !PREVIEW) {
-      fetch(D.settings.bookingEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(b) })
-        .then(done, done);
-    } else done();
+      jobs.push(fetch(D.settings.bookingEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(b) }).catch(function () {}));
+    }
+    if (bookEmail() && !PREVIEW) {
+      var mail = { _subject: 'नई बुकिंग ' + b.id + ' — ' + b.serviceName + ' — ' + b.name, _template: 'table', _captcha: 'false' };
+      var lab = { id: 'बुकिंग संख्या', serviceName: 'पूजा', packageName: 'पैकेज', price: 'दक्षिणा (₹)', mode: 'स्थान', date: 'तिथि', time: 'समय', name: 'यजमान', phone: 'मोबाइल', email: 'ईमेल', gotra: 'गोत्र', address: 'पता', city: 'शहर', pincode: 'पिन', lang: 'भाषा', dob: 'जन्म तिथि', tob: 'जन्म समय', pob: 'जन्म स्थान', partner: 'दूसरा व्यक्ति', question: 'प्रश्न', notes: 'निवेदन' };
+      Object.keys(lab).forEach(function (k) { if (b[k]) mail[lab[k]] = String(b[k]); });
+      if (b.email) mail._replyto = b.email;
+      jobs.push(fetch('https://formsubmit.co/ajax/' + encodeURIComponent(bookEmail()), { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(mail) })
+        .then(function (r) { return r.json(); }).then(function (j) { B.mailed = j && (j.success === true || j.success === 'true'); }).catch(function () {}));
+    }
+    Promise.all(jobs).then(done, done);
   }
 
   function closeDlg() { var dlg = $('#bookDlg'); if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
@@ -545,7 +609,9 @@
   /* ---------------- boot ---------------- */
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-book]');
-    if (b) { e.preventDefault(); openBooking(b.getAttribute('data-book')); }
+    if (b) { e.preventDefault(); openBooking(b.getAttribute('data-book')); return; }
+    var lb = e.target.closest('[data-lb]');
+    if (lb) openLightbox(+lb.getAttribute('data-lb'));
   });
   $('#dlgClose').addEventListener('click', closeDlg);
   $('#bookDlg').addEventListener('click', function (e) { if (e.target === this) closeDlg(); });
