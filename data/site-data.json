@@ -38,7 +38,8 @@
     "ticker": {
       "hi": "दीपावली लक्ष्मी पूजन की बुकिंग आरंभ • गृह प्रवेश हेतु शुभ मुहूर्त जानने के लिए कॉल करें • सभी पूजाओं में यजमान के नाम व गोत्र से संकल्प",
       "en": "Diwali Lakshmi Pujan bookings open • Call to know auspicious Griha Pravesh muhurat • Every puja begins with sankalp in your name and gotra"
-    }
+    },
+    "showPrices": false
   },
   "hero": {
     "title": {
@@ -48,6 +49,12 @@
     "subtitle": {
       "hi": "गृह प्रवेश, हवन, यज्ञ, संस्कार और ज्योतिष परामर्श। विद्वान पंडित जी आपके नाम-गोत्र से संकल्प लेकर सम्पूर्ण वैदिक विधि से अनुष्ठान कराएँगे।",
       "en": "Griha Pravesh, havan, yagya, sanskars and astrology. Learned pandits perform the complete Vedic ritual with sankalp in your name and gotra."
+    },
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brahmana%20performing%20fire%20sacrifice.JPG?width=1920",
+    "imgCredit": {
+      "file": "Brahmana performing fire sacrifice.JPG",
+      "license": "CC BY-SA 3.0",
+      "artist": "Ilya Mauter"
     }
   },
   "categories": [
@@ -57,6 +64,12 @@
       "name": {
         "hi": "गृह प्रवेश व वास्तु",
         "en": "Griha Pravesh & Vastu"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Griha-Pravesh-ritual.JPG?width=640",
+      "imgCredit": {
+        "file": "Griha-Pravesh-ritual.JPG",
+        "license": "CC BY-SA 3.0",
+        "artist": "Aruna at ml.wikipedia"
       }
     },
     {
@@ -65,6 +78,12 @@
       "name": {
         "hi": "यज्ञ एवं हवन",
         "en": "Yagya & Havan"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gayatri%20yagya.jpg?width=640",
+      "imgCredit": {
+        "file": "Gayatri yagya.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Anjalikaushal1910"
       }
     },
     {
@@ -73,6 +92,12 @@
       "name": {
         "hi": "कर्मकांड व संस्कार",
         "en": "Karmkand & Sanskar"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shree%20Satyanarayan%20Bhagwan%20Puja.jpg?width=640",
+      "imgCredit": {
+        "file": "Shree Satyanarayan Bhagwan Puja.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Subhmanish"
       }
     },
     {
@@ -81,6 +106,12 @@
       "name": {
         "hi": "पाठ एवं जाप",
         "en": "Path & Jaap"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sundarkand%2002.jpg?width=640",
+      "imgCredit": {
+        "file": "Sundarkand 02.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "The open draft"
       }
     },
     {
@@ -89,6 +120,12 @@
       "name": {
         "hi": "दोष निवारण",
         "en": "Dosh Nivaran"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Navgrah%20idols%20at%20Maa%20Durga%20Sai%20Baba%20Temple%20in%20Orlando.jpg?width=640",
+      "imgCredit": {
+        "file": "Navgrah idols at Maa Durga Sai Baba Temple in Orlando.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kiran891"
       }
     },
     {
@@ -97,6 +134,12 @@
       "name": {
         "hi": "त्योहार पूजा",
         "en": "Festival Puja"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Diwali%20Lakshmi%20Poojan.jpg?width=640",
+      "imgCredit": {
+        "file": "Diwali Lakshmi Poojan.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Tamilmama"
       }
     },
     {
@@ -105,6 +148,12 @@
       "name": {
         "hi": "ज्योतिष परामर्श",
         "en": "Jyotish Consultation"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Horoscope%20of%20Lehna%20Singh%20Majithia%2C%20folio%20of%20the%20work%20'Sarvasiddh%C4%81ntatattva-cu%E1%B8%8D%C4%81ma%E1%B9%87i'%20(%E2%80%9CThe%20Jewel%20of%20the%20Essence%20of%20All%20Sciences%E2%80%9D)%2C%201840.jpg?width=640",
+      "imgCredit": {
+        "file": "Horoscope of Lehna Singh Majithia, folio of the work 'Sarvasiddhāntatattva-cuḍāmaṇi' (“The Jewel of the Essence of All Sciences”), 1840.jpg",
+        "license": "Public domain",
+        "artist": "अज्ञात (1840)"
       }
     }
   ],
@@ -114,7 +163,7 @@
       "cat": "griha",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Griha-Pravesh-ritual.JPG?width=960",
       "name": {
         "hi": "गृह प्रवेश पूजा",
         "en": "Griha Pravesh Puja"
@@ -171,6 +220,11 @@
       "samagri": {
         "hi": "कलश, आम के पत्ते, नारियल, रोली, मौली, अक्षत, हवन सामग्री, घी, समिधा, पंचमेवा, फल, फूल-माला",
         "en": "Kalash, mango leaves, coconut, roli, moli, akshat, havan samagri, ghee, samidha, dry fruits, fruits, flowers"
+      },
+      "imgCredit": {
+        "file": "Griha-Pravesh-ritual.JPG",
+        "license": "CC BY-SA 3.0",
+        "artist": "Aruna at ml.wikipedia"
       }
     },
     {
@@ -178,7 +232,7 @@
       "cat": "griha",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Griha%20Pravesh%20Puja%20Ceremony.jpg?width=960",
       "name": {
         "hi": "वास्तु शांति पूजा",
         "en": "Vastu Shanti Puja"
@@ -235,6 +289,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Griha Pravesh Puja Ceremony.jpg",
+        "license": "CC0",
+        "artist": "AditiChintarevula"
       }
     },
     {
@@ -242,7 +301,7 @@
       "cat": "griha",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhoomi%20Pooja%203.jpg?width=960",
       "name": {
         "hi": "भूमि पूजन",
         "en": "Bhoomi Pujan"
@@ -299,6 +358,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Bhoomi Pooja 3.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Yakshitha"
       }
     },
     {
@@ -306,7 +370,7 @@
       "cat": "griha",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vishwakarma%20Puja%20Celebrations%202024%20at%20Oil%20India%20Limited%2C%20Human%20Resources%20Office%2C%20Duliajan%2003.jpg?width=960",
       "name": {
         "hi": "दुकान / कार्यालय उद्घाटन पूजा",
         "en": "Shop / Office Opening Puja"
@@ -363,6 +427,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Vishwakarma Puja Celebrations 2024 at Oil India Limited, Human Resources Office, Duliajan 03.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "AjayDas"
       }
     },
     {
@@ -370,7 +439,7 @@
       "cat": "yagya",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Navgrah%20idols%20at%20Maa%20Durga%20Sai%20Baba%20Temple%20in%20Orlando.jpg?width=960",
       "name": {
         "hi": "नवग्रह शांति हवन",
         "en": "Navagraha Shanti Havan"
@@ -427,6 +496,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Navgrah idols at Maa Durga Sai Baba Temple in Orlando.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kiran891"
       }
     },
     {
@@ -434,7 +508,7 @@
       "cat": "yagya",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1%20Brahmin%20performing%20homa%20fire%20yajna%20sacrifice%2C%20offerings%20in%20a%20Hindu%20ritual.jpg?width=960",
       "name": {
         "hi": "महामृत्युंजय हवन",
         "en": "Maha Mrityunjaya Havan"
@@ -491,6 +565,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "1 Brahmin performing homa fire yajna sacrifice, offerings in a Hindu ritual.jpg",
+        "license": "CC BY 2.0",
+        "artist": "Onkar Hoysala"
       }
     },
     {
@@ -498,7 +577,7 @@
       "cat": "yagya",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rudrabhishake%20Structure.jpg?width=960",
       "name": {
         "hi": "रुद्राभिषेक",
         "en": "Rudrabhishek"
@@ -555,6 +634,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Rudrabhishake Structure.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Anush Singh"
       }
     },
     {
@@ -562,7 +646,7 @@
       "cat": "yagya",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lakshmi%20Pujan.jpg?width=960",
       "name": {
         "hi": "लक्ष्मी-कुबेर हवन",
         "en": "Lakshmi-Kuber Havan"
@@ -619,6 +703,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Lakshmi Pujan.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Harshada raut"
       }
     },
     {
@@ -626,7 +715,7 @@
       "cat": "yagya",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gayatri%20yagya.jpg?width=960",
       "name": {
         "hi": "गायत्री महायज्ञ",
         "en": "Gayatri Mahayagya"
@@ -683,6 +772,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Gayatri yagya.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Anjalikaushal1910"
       }
     },
     {
@@ -690,7 +784,7 @@
       "cat": "yagya",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/16th-century%2C%20Devi%20Mahatmya%20Narayani%20Stutti%2C%20Sanskrit%2C%20Devanagari%2C%20Det%20Kongelige%20Bibliotek%2C%20Copenhagen%20University%2C%20Denmark.jpg?width=960",
       "name": {
         "hi": "दुर्गा सप्तशती पाठ एवं चंडी हवन",
         "en": "Durga Saptashati & Chandi Havan"
@@ -747,6 +841,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "16th-century, Devi Mahatmya Narayani Stutti, Sanskrit, Devanagari, Det Kongelige Bibliotek, Copenhagen University, Denmark.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Ms Sarah Welch"
       }
     },
     {
@@ -754,7 +853,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shree%20Satyanarayan%20Bhagwan%20Puja.jpg?width=960",
       "name": {
         "hi": "श्री सत्यनारायण कथा",
         "en": "Shri Satyanarayan Katha"
@@ -811,6 +910,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Shree Satyanarayan Bhagwan Puja.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Subhmanish"
       }
     },
     {
@@ -818,7 +922,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/NoolKettu.JPG?width=960",
       "name": {
         "hi": "नामकरण संस्कार",
         "en": "Namkaran Sanskar"
@@ -875,6 +979,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "NoolKettu.JPG",
+        "license": "CC BY-SA 3.0",
+        "artist": "Sandeepndas"
       }
     },
     {
@@ -882,7 +991,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MundanOfMathil.jpg?width=960",
       "name": {
         "hi": "मुंडन संस्कार",
         "en": "Mundan Sanskar"
@@ -939,6 +1048,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "MundanOfMathil.jpg",
+        "license": "Public domain",
+        "artist": "Anand Jha"
       }
     },
     {
@@ -946,7 +1060,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20yagyopaveet%20sanskar%20upanayana%20samskara.jpg?width=960",
       "name": {
         "hi": "यज्ञोपवीत (जनेऊ) संस्कार",
         "en": "Yagyopavit (Janeu) Sanskar"
@@ -1003,6 +1117,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "A yagyopaveet sanskar upanayana samskara.jpg",
+        "license": "CC BY 2.0",
+        "artist": "vinodbahal from Shimla, India"
       }
     },
     {
@@ -1010,7 +1129,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saat%20phere.jpg?width=960",
       "name": {
         "hi": "विवाह संस्कार",
         "en": "Vivah Sanskar"
@@ -1067,6 +1186,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Saat phere.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Bhumish143"
       }
     },
     {
@@ -1074,7 +1198,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20man%20and%20a%20Brahmin%20performing%20Shraddha%20ceremony%20in%20Nepal.jpg?width=960",
       "name": {
         "hi": "श्राद्ध एवं पितृ पूजा",
         "en": "Shraddh & Pitru Puja"
@@ -1131,6 +1255,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "A man and a Brahmin performing Shraddha ceremony in Nepal.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "9n2nk"
       }
     },
     {
@@ -1138,7 +1267,7 @@
       "cat": "karmkand",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghats%20of%20Varanasi%20and%20Hindu%20rituals%2040.jpg?width=960",
       "name": {
         "hi": "शांति पाठ एवं तेरहवीं",
         "en": "Shanti Path & Terahvi"
@@ -1195,6 +1324,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Ghats of Varanasi and Hindu rituals 40.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Goutam1962"
       }
     },
     {
@@ -1202,7 +1336,7 @@
       "cat": "path",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sundarkand%2002.jpg?width=960",
       "name": {
         "hi": "सुंदरकांड पाठ",
         "en": "Sundarkand Path"
@@ -1259,6 +1393,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Sundarkand 02.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "The open draft"
       }
     },
     {
@@ -1266,7 +1405,7 @@
       "cat": "path",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramcharitmanas%20Verses%20-%20III.jpg?width=960",
       "name": {
         "hi": "अखंड रामायण पाठ",
         "en": "Akhand Ramayan Path"
@@ -1323,6 +1462,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Ramcharitmanas Verses - III.jpg",
+        "license": "CC BY-SA 3.0",
+        "artist": "Nmisra"
       }
     },
     {
@@ -1330,7 +1474,7 @@
       "cat": "path",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanuman%20Chalisa%20at%20Hanuman%20Jayanti.jpg?width=960",
       "name": {
         "hi": "हनुमान चालीसा 108 पाठ",
         "en": "Hanuman Chalisa 108 Path"
@@ -1387,6 +1531,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Hanuman Chalisa at Hanuman Jayanti.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Suyash Dwivedi"
       }
     },
     {
@@ -1394,7 +1543,7 @@
       "cat": "path",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/108%2B1%20five%20mukhi%20Rudraksha%20mala.jpg?width=960",
       "name": {
         "hi": "महामृत्युंजय जाप (सवा लाख)",
         "en": "Maha Mrityunjaya Jaap (1.25 lakh)"
@@ -1451,6 +1600,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "108+1 five mukhi Rudraksha mala.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "शिव साहिल"
       }
     },
     {
@@ -1458,7 +1612,7 @@
       "cat": "dosh",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20.17b%20Nagakal%20Kaladi.png?width=960",
       "name": {
         "hi": "कालसर्प दोष निवारण पूजा",
         "en": "Kaal Sarp Dosh Nivaran"
@@ -1515,6 +1669,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "20.17b Nagakal Kaladi.png",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kharmacher"
       }
     },
     {
@@ -1522,7 +1681,7 @@
       "cat": "dosh",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangal%20Graha%20(Mars)%20at%20Navagraha%20mandapam%2C%20Shani%20Shingnapur.jpg?width=960",
       "name": {
         "hi": "मांगलिक दोष शांति",
         "en": "Manglik Dosh Shanti"
@@ -1579,6 +1738,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Mangal Graha (Mars) at Navagraha mandapam, Shani Shingnapur.jpg",
+        "license": "CC0",
+        "artist": "K.Venkataramana"
       }
     },
     {
@@ -1586,7 +1750,7 @@
       "cat": "dosh",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Perform%20Pinda%20Dana.jpg?width=960",
       "name": {
         "hi": "पितृ दोष निवारण",
         "en": "Pitru Dosh Nivaran"
@@ -1643,6 +1807,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Perform Pinda Dana.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "TAPAS KUMAR HALDER"
       }
     },
     {
@@ -1650,7 +1819,7 @@
       "cat": "dosh",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalash%20puja.jpg?width=960",
       "name": {
         "hi": "गंडमूल नक्षत्र शांति",
         "en": "Gandmool Nakshatra Shanti"
@@ -1707,6 +1876,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Kalash puja.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Abhya2022"
       }
     },
     {
@@ -1714,7 +1888,7 @@
       "cat": "dosh",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pouring%20Til%20oil%20on%20the%20Shani%20idol%20at%20Shani%20Shingnapur%2C%20maharastra.jpg?width=960",
       "name": {
         "hi": "शनि साढ़ेसाती / ढैय्या शांति",
         "en": "Shani Sade Sati / Dhaiya Shanti"
@@ -1771,6 +1945,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Pouring Til oil on the Shani idol at Shani Shingnapur, maharastra.jpg",
+        "license": "CC0",
+        "artist": "K.Venkataramana"
       }
     },
     {
@@ -1778,7 +1957,7 @@
       "cat": "festival",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Diwali%20Lakshmi%20Poojan.jpg?width=960",
       "name": {
         "hi": "दीपावली लक्ष्मी-गणेश पूजन",
         "en": "Diwali Lakshmi-Ganesh Pujan"
@@ -1835,6 +2014,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Diwali Lakshmi Poojan.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Tamilmama"
       }
     },
     {
@@ -1842,7 +2026,7 @@
       "cat": "festival",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%E0%A4%98%E0%A4%9F%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%AA%E0%A4%A8%E0%A4%BE.jpg?width=960",
       "name": {
         "hi": "नवरात्रि घट स्थापना व पाठ",
         "en": "Navratri Ghat Sthapana & Path"
@@ -1899,6 +2083,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "घटस्थापना.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "उज्ज्वला संजय पवार"
       }
     },
     {
@@ -1906,7 +2095,7 @@
       "cat": "jyotish",
       "active": true,
       "popular": true,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Horoscope%20of%20Lehna%20Singh%20Majithia%2C%20folio%20of%20the%20work%20'Sarvasiddh%C4%81ntatattva-cu%E1%B8%8D%C4%81ma%E1%B9%87i'%20(%E2%80%9CThe%20Jewel%20of%20the%20Essence%20of%20All%20Sciences%E2%80%9D)%2C%201840.jpg?width=960",
       "name": {
         "hi": "जन्म कुंडली विश्लेषण",
         "en": "Birth Chart Analysis"
@@ -1951,6 +2140,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Horoscope of Lehna Singh Majithia, folio of the work 'Sarvasiddhāntatattva-cuḍāmaṇi' (“The Jewel of the Essence of All Sciences”), 1840.jpg",
+        "license": "Public domain",
+        "artist": "अज्ञात (1840)"
       }
     },
     {
@@ -1958,7 +2152,7 @@
       "cat": "jyotish",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Astrologer%20of%20the%20Brahmin%20caste%2C%20India%2C%20c%201825%20Wellcome%20L0035997.jpg?width=960",
       "name": {
         "hi": "कुंडली मिलान (गुण मिलान)",
         "en": "Kundli Matching"
@@ -2003,6 +2197,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Astrologer of the Brahmin caste, India, c 1825 Wellcome L0035997.jpg",
+        "license": "CC BY 4.0",
+        "artist": "Wellcome Collection"
       }
     },
     {
@@ -2010,7 +2209,7 @@
       "cat": "jyotish",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamil%20panchangam%20inside.JPG?width=960",
       "name": {
         "hi": "शुभ मुहूर्त निकलवाएँ",
         "en": "Get an Auspicious Muhurat"
@@ -2043,6 +2242,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "Tamil panchangam inside.JPG",
+        "license": "CC BY-SA 3.0",
+        "artist": "Azhagiya manavalan"
       }
     },
     {
@@ -2050,7 +2254,7 @@
       "cat": "jyotish",
       "active": true,
       "popular": false,
-      "image": "",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20folio%20from%20Vastu%20sastra%20hiti%20dayeka%20manuscript%2C%20water%20spout%20design%2C%20Sanskrit%20language%2C%20Newari%20script%20-%203.jpg?width=960",
       "name": {
         "hi": "वास्तु परामर्श",
         "en": "Vastu Consultation"
@@ -2095,6 +2299,11 @@
       "samagri": {
         "hi": "",
         "en": ""
+      },
+      "imgCredit": {
+        "file": "A folio from Vastu sastra hiti dayeka manuscript, water spout design, Sanskrit language, Newari script - 3.jpg",
+        "license": "CC0",
+        "artist": "Ms Sarah Welch"
       }
     }
   ],
@@ -2334,74 +2543,124 @@
       "mahamrityunjay-jaap",
       "akhand-ramayan",
       "chandi-path-havan"
-    ]
+    ],
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Homam%20for%20lord%20Ganesha.jpg?width=1100",
+    "imgCredit": {
+      "file": "Homam for lord Ganesha.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Chandu7299"
+    }
   },
   "gallery": [
     {
       "id": "g1",
-      "src": "assets/img/gallery/havan-kund.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Homam%20(246246081).jpg?width=1280",
+      "credit": {
+        "file": "Homam (246246081).jpg",
+        "license": "CC BY-SA 2.0",
+        "artist": "Rakesh from Bangalore"
+      },
       "caption": {
-        "hi": "हवन — अग्नि देव को आहुति",
-        "en": "Havan — offerings to Agni Dev"
+        "hi": "घर पर हवन — अग्नि देव को आहुति",
+        "en": "Havan at home — offerings to Agni"
       }
     },
     {
       "id": "g2",
-      "src": "assets/img/gallery/kalash-sthapana.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Overflowing%20boiling%20milk%20during%20gruhapravesam.jpg?width=1280",
+      "credit": {
+        "file": "Overflowing boiling milk during gruhapravesam.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Bssasidhar"
+      },
       "caption": {
-        "hi": "कलश स्थापना",
-        "en": "Kalash sthapana"
+        "hi": "गृह प्रवेश — नए घर में दूध उफनाने की रस्म",
+        "en": "Griha Pravesh — the milk-boiling ritual"
       }
     },
     {
       "id": "g3",
-      "src": "assets/img/gallery/griha-pravesh.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Satyanarayan%20Pooja.jpg?width=1280",
+      "credit": {
+        "file": "Satyanarayan Pooja.jpg",
+        "license": "CC BY-SA 3.0",
+        "artist": "Coolgama"
+      },
       "caption": {
-        "hi": "गृह प्रवेश — तोरण व रंगोली",
-        "en": "Griha Pravesh — toran & rangoli"
+        "hi": "सत्यनारायण पूजा की वेदी",
+        "en": "Satyanarayan puja altar"
       }
     },
     {
       "id": "g4",
-      "src": "assets/img/gallery/rudrabhishek.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pooja%20ki%20thaal%20rudrabhishek.jpg?width=1280",
+      "credit": {
+        "file": "Pooja ki thaal rudrabhishek.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Saumya.st"
+      },
       "caption": {
-        "hi": "रुद्राभिषेक",
-        "en": "Rudrabhishek"
+        "hi": "रुद्राभिषेक की पूजा थाली",
+        "en": "Puja thali for Rudrabhishek"
       }
     },
     {
       "id": "g5",
-      "src": "assets/img/gallery/deepawali-diye.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Samuhik%20Yagya.jpg?width=1280",
+      "credit": {
+        "file": "Samuhik Yagya.jpg",
+        "license": "CC BY-SA 3.0",
+        "artist": "All World Gayatri Pariwar, Shantikunj"
+      },
       "caption": {
-        "hi": "दीपावली दीपोत्सव",
-        "en": "Deepawali deepotsav"
+        "hi": "सामूहिक यज्ञ",
+        "en": "Collective yagya"
       }
     },
     {
       "id": "g6",
-      "src": "assets/img/gallery/navgrah.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Diwali%20Oil%20lamps%20Darjeeling.jpg?width=1280",
+      "credit": {
+        "file": "Diwali Oil lamps Darjeeling.jpg",
+        "license": "CC BY-SA 3.0",
+        "artist": "Benoy"
+      },
       "caption": {
-        "hi": "नवग्रह शांति",
-        "en": "Navagraha shanti"
+        "hi": "दीपावली के दीप",
+        "en": "Diwali lamps"
       }
     },
     {
       "id": "g7",
-      "src": "assets/img/gallery/rangoli.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Devi%20jawaraa.png?width=1280",
+      "credit": {
+        "file": "Devi jawaraa.png",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kim Hyul Seok"
+      },
       "caption": {
-        "hi": "मांगलिक रंगोली",
-        "en": "Auspicious rangoli"
+        "hi": "नवरात्रि — जवारे",
+        "en": "Navratri — jawara"
       }
     },
     {
       "id": "g8",
-      "src": "assets/img/gallery/kundli.svg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacred%20Flames%20of%20Devotion%20%E2%80%93%20The%20Ganga%20Aarti%20at%20Dashashwamedh%20Ghat.jpg?width=1280",
+      "credit": {
+        "file": "Sacred Flames of Devotion – The Ganga Aarti at Dashashwamedh Ghat.jpg",
+        "license": "CC BY-SA 4.0",
+        "artist": "Subhranilbasak0"
+      },
       "caption": {
-        "hi": "जन्म कुंडली विश्लेषण",
-        "en": "Birth chart analysis"
+        "hi": "गंगा आरती, काशी",
+        "en": "Ganga Aarti, Kashi"
       }
     }
   ],
+  "rashifal": {
+    "date": "",
+    "items": {}
+  },
   "pandits": [],
   "testimonials": [],
   "faqs": [
