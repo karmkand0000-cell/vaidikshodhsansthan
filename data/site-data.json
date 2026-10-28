@@ -1,0 +1,2382 @@
+{
+  "version": 1,
+  "settings": {
+    "siteName": {
+      "hi": "वैदिक शोध संस्थान",
+      "en": "Vaidik Shodh Sansthan"
+    },
+    "tagline": {
+      "hi": "कर्मकांड • यज्ञ • हवन • ज्योतिष",
+      "en": "Karmkand • Yagya • Havan • Jyotish"
+    },
+    "phone": "9625004090",
+    "whatsapp": "919625004090",
+    "email": "",
+    "address": {
+      "hi": "एफ-171/27, छतरपुर एक्सटेंशन, छतरपुर, नई दिल्ली – 110074",
+      "en": "F-171/27, Chhatarpur Extension, Chhatarpur, New Delhi – 110074"
+    },
+    "hours": {
+      "hi": "प्रतिदिन प्रातः 7 बजे से रात्रि 9 बजे तक",
+      "en": "Daily, 7 am to 9 pm"
+    },
+    "serviceArea": {
+      "hi": "दिल्ली-एनसीआर में घर पर पूजा • पूरे विश्व में ऑनलाइन (वीडियो) पूजा",
+      "en": "Home puja across Delhi-NCR • Online (video) puja worldwide"
+    },
+    "bookingEndpoint": "",
+    "upiId": "",
+    "advancePercent": 25,
+    "mapQuery": "Chhatarpur Extension, New Delhi 110074",
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": ""
+    },
+    "adminHash": "",
+    "ticker": {
+      "hi": "दीपावली लक्ष्मी पूजन की बुकिंग आरंभ • गृह प्रवेश हेतु शुभ मुहूर्त जानने के लिए कॉल करें • सभी पूजाओं में यजमान के नाम व गोत्र से संकल्प",
+      "en": "Diwali Lakshmi Pujan bookings open • Call to know auspicious Griha Pravesh muhurat • Every puja begins with sankalp in your name and gotra"
+    }
+  },
+  "hero": {
+    "title": {
+      "hi": "आपके घर, आपके मुहूर्त पर — शास्त्रोक्त विधि से पूजा",
+      "en": "Puja at your home, on your muhurat — performed by the shastras"
+    },
+    "subtitle": {
+      "hi": "गृह प्रवेश, हवन, यज्ञ, संस्कार और ज्योतिष परामर्श। विद्वान पंडित जी आपके नाम-गोत्र से संकल्प लेकर सम्पूर्ण वैदिक विधि से अनुष्ठान कराएँगे।",
+      "en": "Griha Pravesh, havan, yagya, sanskars and astrology. Learned pandits perform the complete Vedic ritual with sankalp in your name and gotra."
+    }
+  },
+  "categories": [
+    {
+      "id": "griha",
+      "icon": "home",
+      "name": {
+        "hi": "गृह प्रवेश व वास्तु",
+        "en": "Griha Pravesh & Vastu"
+      }
+    },
+    {
+      "id": "yagya",
+      "icon": "fire",
+      "name": {
+        "hi": "यज्ञ एवं हवन",
+        "en": "Yagya & Havan"
+      }
+    },
+    {
+      "id": "karmkand",
+      "icon": "kalash",
+      "name": {
+        "hi": "कर्मकांड व संस्कार",
+        "en": "Karmkand & Sanskar"
+      }
+    },
+    {
+      "id": "path",
+      "icon": "book",
+      "name": {
+        "hi": "पाठ एवं जाप",
+        "en": "Path & Jaap"
+      }
+    },
+    {
+      "id": "dosh",
+      "icon": "planet",
+      "name": {
+        "hi": "दोष निवारण",
+        "en": "Dosh Nivaran"
+      }
+    },
+    {
+      "id": "festival",
+      "icon": "diya",
+      "name": {
+        "hi": "त्योहार पूजा",
+        "en": "Festival Puja"
+      }
+    },
+    {
+      "id": "jyotish",
+      "icon": "star",
+      "name": {
+        "hi": "ज्योतिष परामर्श",
+        "en": "Jyotish Consultation"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "griha-pravesh",
+      "cat": "griha",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "गृह प्रवेश पूजा",
+        "en": "Griha Pravesh Puja"
+      },
+      "desc": {
+        "hi": "नए घर में प्रथम प्रवेश के समय गणेश पूजन, कलश स्थापना, नवग्रह पूजन, वास्तु पूजन और हवन। घर में सुख, शांति व समृद्धि के लिए।",
+        "en": "Ganesh pujan, kalash sthapana, Navagraha and Vastu pujan with havan when entering a new home — for peace and prosperity."
+      },
+      "duration": "3–4 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "घर की नकारात्मक ऊर्जा का शमन\nवास्तु दोषों की शांति\nपरिवार के सुख-समृद्धि हेतु आशीर्वाद",
+        "en": "Clears negative energy\nPacifies vastu doshas\nBlessings for family prosperity"
+      },
+      "samagri": {
+        "hi": "कलश, आम के पत्ते, नारियल, रोली, मौली, अक्षत, हवन सामग्री, घी, समिधा, पंचमेवा, फल, फूल-माला",
+        "en": "Kalash, mango leaves, coconut, roli, moli, akshat, havan samagri, ghee, samidha, dry fruits, fruits, flowers"
+      }
+    },
+    {
+      "id": "vastu-shanti",
+      "cat": "griha",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "वास्तु शांति पूजा",
+        "en": "Vastu Shanti Puja"
+      },
+      "desc": {
+        "hi": "घर या कार्यालय के वास्तु दोषों के शमन हेतु वास्तु पुरुष पूजन, नवग्रह शांति एवं हवन।",
+        "en": "Vastu Purush pujan, Navagraha shanti and havan to pacify vastu defects of a home or office."
+      },
+      "duration": "3–4 घंटे",
+      "price": 7100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 7100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 10300,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 15600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "bhoomi-pujan",
+      "cat": "griha",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "भूमि पूजन",
+        "en": "Bhoomi Pujan"
+      },
+      "desc": {
+        "hi": "निर्माण कार्य आरंभ करने से पहले धरती माता, गणेश जी व वास्तु देवता का पूजन।",
+        "en": "Worship of Mother Earth, Ganesh ji and Vastu Devta before starting construction."
+      },
+      "duration": "1–2 घंटे",
+      "price": 3100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 3100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 4500,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 6800,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "office-pujan",
+      "cat": "griha",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "दुकान / कार्यालय उद्घाटन पूजा",
+        "en": "Shop / Office Opening Puja"
+      },
+      "desc": {
+        "hi": "नए व्यापार, दुकान या कार्यालय के शुभारंभ पर गणेश-लक्ष्मी पूजन व हवन।",
+        "en": "Ganesh-Lakshmi pujan and havan for the opening of a new business, shop or office."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "navgrah-havan",
+      "cat": "yagya",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "नवग्रह शांति हवन",
+        "en": "Navagraha Shanti Havan"
+      },
+      "desc": {
+        "hi": "नौ ग्रहों की शांति हेतु वैदिक मंत्रों से पूजन व हवन। ग्रहों की प्रतिकूलता दूर करने के लिए।",
+        "en": "Vedic pujan and havan for all nine planets to ease adverse planetary influences."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mahamrityunjay-havan",
+      "cat": "yagya",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "महामृत्युंजय हवन",
+        "en": "Maha Mrityunjaya Havan"
+      },
+      "desc": {
+        "hi": "भगवान शिव के महामृत्युंजय मंत्र से जाप व हवन — आरोग्य, दीर्घायु और संकट निवारण हेतु।",
+        "en": "Jaap and havan with the Maha Mrityunjaya mantra of Lord Shiva — for health, long life and protection."
+      },
+      "duration": "3–4 घंटे",
+      "price": 11000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 11000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 16000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 24200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rudrabhishek",
+      "cat": "yagya",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "रुद्राभिषेक",
+        "en": "Rudrabhishek"
+      },
+      "desc": {
+        "hi": "शिवलिंग का दूध, दही, घी, शहद, गंगाजल आदि से रुद्री पाठ सहित अभिषेक।",
+        "en": "Abhishek of the Shivling with milk, curd, ghee, honey and Gangajal along with Rudri path."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "lakshmi-kuber-havan",
+      "cat": "yagya",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "लक्ष्मी-कुबेर हवन",
+        "en": "Lakshmi-Kuber Havan"
+      },
+      "desc": {
+        "hi": "धन, व्यापार वृद्धि और आर्थिक स्थिरता के लिए माँ लक्ष्मी व कुबेर देव का हवन।",
+        "en": "Havan for Maa Lakshmi and Kuber Dev for wealth, business growth and financial stability."
+      },
+      "duration": "2–3 घंटे",
+      "price": 7100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 7100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 10300,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 15600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "gayatri-yagya",
+      "cat": "yagya",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "गायत्री महायज्ञ",
+        "en": "Gayatri Mahayagya"
+      },
+      "desc": {
+        "hi": "गायत्री मंत्र के जाप व आहुतियों के साथ सामूहिक यज्ञ — बुद्धि, शुद्धि और लोक-कल्याण हेतु।",
+        "en": "Gayatri mantra jaap and offerings in a grand yagya — for wisdom, purification and collective welfare."
+      },
+      "duration": "5–6 घंटे",
+      "price": 21000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 21000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 30500,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 46200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "chandi-path-havan",
+      "cat": "yagya",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "दुर्गा सप्तशती पाठ एवं चंडी हवन",
+        "en": "Durga Saptashati & Chandi Havan"
+      },
+      "desc": {
+        "hi": "माँ दुर्गा की कृपा, शत्रु बाधा व भय निवारण के लिए सप्तशती पाठ और चंडी हवन।",
+        "en": "Saptashati path and Chandi havan for Maa Durga’s grace and protection from fear and obstacles."
+      },
+      "duration": "4–5 घंटे",
+      "price": 11000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 11000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 16000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 24200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "satyanarayan-katha",
+      "cat": "karmkand",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "श्री सत्यनारायण कथा",
+        "en": "Shri Satyanarayan Katha"
+      },
+      "desc": {
+        "hi": "पूर्णिमा, गृह प्रवेश, जन्मदिन या किसी भी शुभ अवसर पर भगवान सत्यनारायण की कथा एवं पूजन।",
+        "en": "Katha and pujan of Lord Satyanarayan on Purnima, a new home, birthday or any auspicious occasion."
+      },
+      "duration": "2 घंटे",
+      "price": 2100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 2100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 3000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 4600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "namkaran",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "नामकरण संस्कार",
+        "en": "Namkaran Sanskar"
+      },
+      "desc": {
+        "hi": "नवजात शिशु का नक्षत्र के अनुसार नाम अक्षर निकालकर नामकरण संस्कार।",
+        "en": "Naming ceremony of a newborn with the name syllable chosen from the birth nakshatra."
+      },
+      "duration": "1–2 घंटे",
+      "price": 2100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 2100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 3000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 4600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mundan",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "मुंडन संस्कार",
+        "en": "Mundan Sanskar"
+      },
+      "desc": {
+        "hi": "शिशु के प्रथम केश कर्तन का शास्त्रीय संस्कार, शुभ मुहूर्त सहित।",
+        "en": "The shastric first-haircut sanskar of a child, on an auspicious muhurat."
+      },
+      "duration": "1–2 घंटे",
+      "price": 2100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 2100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 3000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 4600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "janeu",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "यज्ञोपवीत (जनेऊ) संस्कार",
+        "en": "Yagyopavit (Janeu) Sanskar"
+      },
+      "desc": {
+        "hi": "उपनयन संस्कार — गायत्री दीक्षा, यज्ञोपवीत धारण व हवन।",
+        "en": "Upanayan sanskar — Gayatri diksha, wearing of the sacred thread and havan."
+      },
+      "duration": "4–5 घंटे",
+      "price": 11000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 11000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 16000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 24200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vivah",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "विवाह संस्कार",
+        "en": "Vivah Sanskar"
+      },
+      "desc": {
+        "hi": "वैदिक रीति से सम्पूर्ण विवाह — गणेश पूजन, कन्यादान, सप्तपदी, फेरे। कुंडली मिलान अलग से उपलब्ध।",
+        "en": "Complete Vedic wedding — Ganesh pujan, kanyadan, saptapadi, pheras. Kundli matching available separately."
+      },
+      "duration": "4–6 घंटे",
+      "price": 21000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 21000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 30500,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 46200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pitra-shraddh",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "श्राद्ध एवं पितृ पूजा",
+        "en": "Shraddh & Pitru Puja"
+      },
+      "desc": {
+        "hi": "पितरों की शांति हेतु श्राद्ध, तर्पण, पिंडदान एवं ब्राह्मण भोजन की व्यवस्था।",
+        "en": "Shraddh, tarpan, pind daan and Brahmin bhoj for the peace of ancestors."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "terahvi",
+      "cat": "karmkand",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "शांति पाठ एवं तेरहवीं",
+        "en": "Shanti Path & Terahvi"
+      },
+      "desc": {
+        "hi": "दिवंगत आत्मा की शांति हेतु गरुड़ पुराण पाठ, शांति हवन एवं तेरहवीं के सभी कर्म।",
+        "en": "Garud Puran path, shanti havan and all Terahvi rites for the peace of the departed soul."
+      },
+      "duration": "3–4 घंटे",
+      "price": 11000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 11000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 16000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 24200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "sundarkand",
+      "cat": "path",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "सुंदरकांड पाठ",
+        "en": "Sundarkand Path"
+      },
+      "desc": {
+        "hi": "संगीतमय सुंदरकांड पाठ — संकट निवारण और हनुमान जी की कृपा हेतु।",
+        "en": "Musical Sundarkand path — for removal of troubles and Hanuman ji’s blessings."
+      },
+      "duration": "3 घंटे",
+      "price": 3100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 3100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 4500,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 6800,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "akhand-ramayan",
+      "cat": "path",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "अखंड रामायण पाठ",
+        "en": "Akhand Ramayan Path"
+      },
+      "desc": {
+        "hi": "श्री रामचरितमानस का 24 घंटे निरंतर पाठ, समापन पर हवन व आरती।",
+        "en": "Continuous 24-hour recital of Shri Ramcharitmanas, ending with havan and aarti."
+      },
+      "duration": "24 घंटे",
+      "price": 11000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 11000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 16000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 24200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hanuman-chalisa-108",
+      "cat": "path",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "हनुमान चालीसा 108 पाठ",
+        "en": "Hanuman Chalisa 108 Path"
+      },
+      "desc": {
+        "hi": "हनुमान चालीसा के 108 पाठ — मंगलवार या शनिवार को विशेष फलदायी।",
+        "en": "108 recitations of Hanuman Chalisa — especially fruitful on Tuesday or Saturday."
+      },
+      "duration": "3 घंटे",
+      "price": 2100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 2100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 3000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 4600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mahamrityunjay-jaap",
+      "cat": "path",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "महामृत्युंजय जाप (सवा लाख)",
+        "en": "Maha Mrityunjaya Jaap (1.25 lakh)"
+      },
+      "desc": {
+        "hi": "सवा लाख महामृत्युंजय मंत्र जाप, दशांश हवन सहित — गंभीर रोग व संकट में।",
+        "en": "1.25 lakh Maha Mrityunjaya mantra jaap with dashansh havan — during serious illness or crisis."
+      },
+      "duration": "7–11 दिन",
+      "price": 51000,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 51000,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 74000,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 112200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "kaalsarp",
+      "cat": "dosh",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "कालसर्प दोष निवारण पूजा",
+        "en": "Kaal Sarp Dosh Nivaran"
+      },
+      "desc": {
+        "hi": "जन्म कुंडली में कालसर्प योग होने पर राहु-केतु शांति, नाग पूजन व हवन।",
+        "en": "Rahu-Ketu shanti, Naag pujan and havan when Kaal Sarp yoga is present in the birth chart."
+      },
+      "duration": "3 घंटे",
+      "price": 7100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 7100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 10300,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 15600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "manglik",
+      "cat": "dosh",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "मांगलिक दोष शांति",
+        "en": "Manglik Dosh Shanti"
+      },
+      "desc": {
+        "hi": "विवाह में बाधा देने वाले मंगल दोष की शांति हेतु मंगल पूजन, जाप व हवन।",
+        "en": "Mangal pujan, jaap and havan to pacify Manglik dosh that delays marriage."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pitra-dosh",
+      "cat": "dosh",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "पितृ दोष निवारण",
+        "en": "Pitru Dosh Nivaran"
+      },
+      "desc": {
+        "hi": "पितृ दोष के शमन हेतु नारायण बलि, तर्पण एवं विशेष हवन।",
+        "en": "Narayan Bali, tarpan and special havan to pacify Pitru dosh."
+      },
+      "duration": "3 घंटे",
+      "price": 7100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 7100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 10300,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 15600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "gandmool",
+      "cat": "dosh",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "गंडमूल नक्षत्र शांति",
+        "en": "Gandmool Nakshatra Shanti"
+      },
+      "desc": {
+        "hi": "गंडमूल नक्षत्र में जन्मे शिशु के लिए 27वें दिन या शुभ मुहूर्त में शांति पूजा।",
+        "en": "Shanti puja for a child born in a Gandmool nakshatra, on the 27th day or an auspicious muhurat."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shani-shanti",
+      "cat": "dosh",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "शनि साढ़ेसाती / ढैय्या शांति",
+        "en": "Shani Sade Sati / Dhaiya Shanti"
+      },
+      "desc": {
+        "hi": "शनि देव के तेलाभिषेक, जाप व हवन द्वारा साढ़ेसाती और ढैय्या के कष्टों में राहत।",
+        "en": "Relief from Sade Sati and Dhaiya through Shani Dev tel-abhishek, jaap and havan."
+      },
+      "duration": "2–3 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "diwali-lakshmi",
+      "cat": "festival",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "दीपावली लक्ष्मी-गणेश पूजन",
+        "en": "Diwali Lakshmi-Ganesh Pujan"
+      },
+      "desc": {
+        "hi": "प्रदोष काल / स्थिर लग्न में घर या दुकान पर लक्ष्मी-गणेश, कुबेर व बही-खाता पूजन।",
+        "en": "Lakshmi-Ganesh, Kuber and account-book pujan at home or shop in the auspicious lagna."
+      },
+      "duration": "2 घंटे",
+      "price": 5100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 5100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 7400,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 11200,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "navratri-path",
+      "cat": "festival",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "नवरात्रि घट स्थापना व पाठ",
+        "en": "Navratri Ghat Sthapana & Path"
+      },
+      "desc": {
+        "hi": "घट स्थापना से कन्या पूजन तक नवरात्रि के नौ दिन दुर्गा सप्तशती पाठ।",
+        "en": "Durga Saptashati path for all nine days of Navratri, from ghat sthapana to kanya pujan."
+      },
+      "duration": "9 दिन",
+      "price": 7100,
+      "packages": [
+        {
+          "id": "basic",
+          "name": {
+            "hi": "सामान्य",
+            "en": "Basic"
+          },
+          "price": 7100,
+          "features": {
+            "hi": "1 पंडित जी • पूर्ण वैदिक विधि • सामग्री यजमान द्वारा",
+            "en": "1 Pandit ji • Full Vedic vidhi • Samagri by yajman"
+          }
+        },
+        {
+          "id": "samagri",
+          "name": {
+            "hi": "सामग्री सहित",
+            "en": "With samagri"
+          },
+          "price": 10300,
+          "popular": true,
+          "features": {
+            "hi": "1–2 पंडित जी • सम्पूर्ण पूजन सामग्री हम लाएँगे • हवन कुंड",
+            "en": "1–2 Pandits • Complete samagri brought by us • Havan kund"
+          }
+        },
+        {
+          "id": "vishesh",
+          "name": {
+            "hi": "विशेष अनुष्ठान",
+            "en": "Vishesh"
+          },
+          "price": 15600,
+          "features": {
+            "hi": "3+ पंडित जी • सामग्री सहित • विस्तृत जाप व हवन • प्रसाद व्यवस्था",
+            "en": "3+ Pandits • Samagri included • Extended jaap & havan • Prasad arrangement"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "kundli-vishleshan",
+      "cat": "jyotish",
+      "active": true,
+      "popular": true,
+      "image": "",
+      "name": {
+        "hi": "जन्म कुंडली विश्लेषण",
+        "en": "Birth Chart Analysis"
+      },
+      "desc": {
+        "hi": "आपकी जन्म कुंडली का विस्तृत अध्ययन — करियर, विवाह, स्वास्थ्य, धन व ग्रह दशा और उपाय।",
+        "en": "Detailed study of your birth chart — career, marriage, health, wealth, dashas and remedies."
+      },
+      "duration": "30 मिनट",
+      "price": 1100,
+      "packages": [
+        {
+          "id": "phone",
+          "name": {
+            "hi": "फ़ोन / वीडियो परामर्श",
+            "en": "Phone / video call"
+          },
+          "price": 1100,
+          "popular": true,
+          "features": {
+            "hi": "30 मिनट • कुंडली विश्लेषण • उपाय",
+            "en": "30 min • Chart reading • Remedies"
+          }
+        },
+        {
+          "id": "report",
+          "name": {
+            "hi": "लिखित रिपोर्ट + परामर्श",
+            "en": "Written report + call"
+          },
+          "price": 2200,
+          "features": {
+            "hi": "विस्तृत PDF रिपोर्ट • 45 मिनट परामर्श",
+            "en": "Detailed PDF report • 45 min call"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "kundli-milan",
+      "cat": "jyotish",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "कुंडली मिलान (गुण मिलान)",
+        "en": "Kundli Matching"
+      },
+      "desc": {
+        "hi": "वर-वधू की कुंडली का 36 गुण मिलान, मांगलिक विचार और विवाह मुहूर्त सुझाव।",
+        "en": "36-guna matching of bride and groom charts, Manglik check and wedding muhurat suggestions."
+      },
+      "duration": "30 मिनट",
+      "price": 1100,
+      "packages": [
+        {
+          "id": "phone",
+          "name": {
+            "hi": "फ़ोन / वीडियो परामर्श",
+            "en": "Phone / video call"
+          },
+          "price": 1100,
+          "popular": true,
+          "features": {
+            "hi": "30 मिनट • कुंडली विश्लेषण • उपाय",
+            "en": "30 min • Chart reading • Remedies"
+          }
+        },
+        {
+          "id": "report",
+          "name": {
+            "hi": "लिखित रिपोर्ट + परामर्श",
+            "en": "Written report + call"
+          },
+          "price": 2200,
+          "features": {
+            "hi": "विस्तृत PDF रिपोर्ट • 45 मिनट परामर्श",
+            "en": "Detailed PDF report • 45 min call"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "muhurat",
+      "cat": "jyotish",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "शुभ मुहूर्त निकलवाएँ",
+        "en": "Get an Auspicious Muhurat"
+      },
+      "desc": {
+        "hi": "गृह प्रवेश, विवाह, वाहन क्रय, व्यापार आरंभ आदि के लिए पंचांग से शुभ मुहूर्त।",
+        "en": "Auspicious muhurat from the panchang for griha pravesh, marriage, vehicle purchase, new business etc."
+      },
+      "duration": "15 मिनट",
+      "price": 501,
+      "packages": [
+        {
+          "id": "phone",
+          "name": {
+            "hi": "मुहूर्त परामर्श",
+            "en": "Muhurat consultation"
+          },
+          "price": 501,
+          "popular": true,
+          "features": {
+            "hi": "एक कार्य हेतु मुहूर्त • फ़ोन / व्हाट्सऐप पर",
+            "en": "Muhurat for one event • On phone / WhatsApp"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vastu-paramarsh",
+      "cat": "jyotish",
+      "active": true,
+      "popular": false,
+      "image": "",
+      "name": {
+        "hi": "वास्तु परामर्श",
+        "en": "Vastu Consultation"
+      },
+      "desc": {
+        "hi": "घर/कार्यालय के नक्शे या साइट विज़िट द्वारा वास्तु दोष पहचान और बिना तोड़-फोड़ उपाय।",
+        "en": "Vastu defects identified from your floor plan or a site visit, with no-demolition remedies."
+      },
+      "duration": "45 मिनट",
+      "price": 2100,
+      "packages": [
+        {
+          "id": "phone",
+          "name": {
+            "hi": "फ़ोन / वीडियो परामर्श",
+            "en": "Phone / video call"
+          },
+          "price": 2100,
+          "popular": true,
+          "features": {
+            "hi": "30 मिनट • कुंडली विश्लेषण • उपाय",
+            "en": "30 min • Chart reading • Remedies"
+          }
+        },
+        {
+          "id": "report",
+          "name": {
+            "hi": "लिखित रिपोर्ट + परामर्श",
+            "en": "Written report + call"
+          },
+          "price": 4200,
+          "features": {
+            "hi": "विस्तृत PDF रिपोर्ट • 45 मिनट परामर्श",
+            "en": "Detailed PDF report • 45 min call"
+          }
+        }
+      ],
+      "benefits": {
+        "hi": "",
+        "en": ""
+      },
+      "samagri": {
+        "hi": "",
+        "en": ""
+      }
+    }
+  ],
+  "purposes": [
+    {
+      "id": "p-home",
+      "name": {
+        "hi": "नए घर में सुख-शांति",
+        "en": "Peace in a new home"
+      },
+      "services": [
+        "griha-pravesh",
+        "vastu-shanti",
+        "satyanarayan-katha"
+      ]
+    },
+    {
+      "id": "p-health",
+      "name": {
+        "hi": "आरोग्य व दीर्घायु",
+        "en": "Health & long life"
+      },
+      "services": [
+        "mahamrityunjay-havan",
+        "mahamrityunjay-jaap",
+        "rudrabhishek"
+      ]
+    },
+    {
+      "id": "p-wealth",
+      "name": {
+        "hi": "धन व व्यापार वृद्धि",
+        "en": "Wealth & business"
+      },
+      "services": [
+        "lakshmi-kuber-havan",
+        "office-pujan",
+        "diwali-lakshmi"
+      ]
+    },
+    {
+      "id": "p-marriage",
+      "name": {
+        "hi": "विवाह बाधा निवारण",
+        "en": "Marriage obstacles"
+      },
+      "services": [
+        "manglik",
+        "kundli-milan",
+        "vivah"
+      ]
+    },
+    {
+      "id": "p-planets",
+      "name": {
+        "hi": "ग्रह शांति",
+        "en": "Planetary peace"
+      },
+      "services": [
+        "navgrah-havan",
+        "shani-shanti",
+        "kaalsarp"
+      ]
+    },
+    {
+      "id": "p-ancestors",
+      "name": {
+        "hi": "पितरों की शांति",
+        "en": "Peace of ancestors"
+      },
+      "services": [
+        "pitra-shraddh",
+        "pitra-dosh",
+        "terahvi"
+      ]
+    },
+    {
+      "id": "p-child",
+      "name": {
+        "hi": "शिशु के संस्कार",
+        "en": "Child sanskars"
+      },
+      "services": [
+        "namkaran",
+        "mundan",
+        "gandmool"
+      ]
+    },
+    {
+      "id": "p-protection",
+      "name": {
+        "hi": "संकट व भय निवारण",
+        "en": "Protection from troubles"
+      },
+      "services": [
+        "sundarkand",
+        "hanuman-chalisa-108",
+        "chandi-path-havan"
+      ]
+    }
+  ],
+  "festivals": [
+    {
+      "id": "f1",
+      "date": "2026-11-06",
+      "name": {
+        "hi": "धनतेरस",
+        "en": "Dhanteras"
+      },
+      "note": {
+        "hi": "धन्वंतरि व कुबेर पूजन",
+        "en": "Dhanvantari & Kuber pujan"
+      },
+      "service": "lakshmi-kuber-havan"
+    },
+    {
+      "id": "f2",
+      "date": "2026-11-08",
+      "name": {
+        "hi": "दीपावली",
+        "en": "Diwali"
+      },
+      "note": {
+        "hi": "लक्ष्मी-गणेश पूजन",
+        "en": "Lakshmi-Ganesh pujan"
+      },
+      "service": "diwali-lakshmi"
+    },
+    {
+      "id": "f3",
+      "date": "2026-11-20",
+      "name": {
+        "hi": "देवउठनी एकादशी / तुलसी विवाह",
+        "en": "Dev Uthani Ekadashi / Tulsi Vivah"
+      },
+      "note": {
+        "hi": "मांगलिक कार्यों का आरंभ",
+        "en": "Auspicious ceremonies resume"
+      },
+      "service": "satyanarayan-katha"
+    },
+    {
+      "id": "f4",
+      "date": "2026-11-24",
+      "name": {
+        "hi": "कार्तिक पूर्णिमा",
+        "en": "Kartik Purnima"
+      },
+      "note": {
+        "hi": "सत्यनारायण कथा व दीपदान",
+        "en": "Satyanarayan katha & deep daan"
+      },
+      "service": "satyanarayan-katha"
+    },
+    {
+      "id": "f5",
+      "date": "2026-12-23",
+      "name": {
+        "hi": "मार्गशीर्ष पूर्णिमा",
+        "en": "Margashirsha Purnima"
+      },
+      "note": {
+        "hi": "सत्यनारायण पूजन",
+        "en": "Satyanarayan pujan"
+      },
+      "service": "satyanarayan-katha"
+    },
+    {
+      "id": "f6",
+      "date": "2027-01-14",
+      "name": {
+        "hi": "मकर संक्रांति",
+        "en": "Makar Sankranti"
+      },
+      "note": {
+        "hi": "सूर्य पूजन व दान",
+        "en": "Surya pujan & daan"
+      },
+      "service": "navgrah-havan"
+    }
+  ],
+  "promises": [
+    {
+      "hi": "यजमान के नाम व गोत्र से विधिवत संकल्प",
+      "en": "Proper sankalp in the yajman’s name and gotra"
+    },
+    {
+      "hi": "शास्त्रोक्त वैदिक विधि, बिना जल्दबाज़ी",
+      "en": "Shastric Vedic vidhi, never rushed"
+    },
+    {
+      "hi": "सामग्री सहित या बिना सामग्री — आपकी पसंद",
+      "en": "With or without samagri — your choice"
+    },
+    {
+      "hi": "पंचांग देखकर शुभ मुहूर्त का निर्धारण",
+      "en": "Muhurat fixed from the panchang"
+    },
+    {
+      "hi": "घर पर या ऑनलाइन वीडियो पर पूजा",
+      "en": "At your home or over video"
+    },
+    {
+      "hi": "पहले से स्पष्ट दक्षिणा, कोई छिपा शुल्क नहीं",
+      "en": "Dakshina stated upfront, no hidden charges"
+    }
+  ],
+  "pandits": [],
+  "testimonials": [],
+  "faqs": [
+    {
+      "q": {
+        "hi": "पूजा की बुकिंग कैसे करें?",
+        "en": "How do I book a puja?"
+      },
+      "a": {
+        "hi": "पूजा चुनें, पैकेज चुनें, तिथि व पता भरें और “बुकिंग भेजें” दबाएँ। हमारी टीम 2 घंटे के भीतर कॉल करके मुहूर्त व विवरण पक्का करेगी।",
+        "en": "Choose the puja and package, fill the date and address, and press “Send booking”. Our team calls within 2 hours to confirm the muhurat and details."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या पूजा सामग्री आप लाएँगे?",
+        "en": "Will you bring the samagri?"
+      },
+      "a": {
+        "hi": "“सामग्री सहित” पैकेज में सम्पूर्ण सामग्री हम लाते हैं। “सामान्य” पैकेज में हम आपको सामग्री सूची भेज देते हैं।",
+        "en": "In the “With samagri” package we bring everything. With “Basic” we send you the samagri list."
+      }
+    },
+    {
+      "q": {
+        "hi": "मुहूर्त कौन निकालेगा?",
+        "en": "Who decides the muhurat?"
+      },
+      "a": {
+        "hi": "पंडित जी पंचांग व आपकी जन्म राशि देखकर शुभ मुहूर्त बताते हैं। यह बुकिंग में शामिल है।",
+        "en": "Pandit ji checks the panchang and your rashi to suggest the muhurat. This is included with the booking."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या ऑनलाइन पूजा हो सकती है?",
+        "en": "Can the puja be done online?"
+      },
+      "a": {
+        "hi": "हाँ। दिल्ली-एनसीआर के बाहर या विदेश में रहने वाले यजमान वीडियो कॉल पर संकल्प लेकर पूजा में शामिल हो सकते हैं।",
+        "en": "Yes. Yajmans outside Delhi-NCR or abroad can take sankalp and join over a video call."
+      }
+    },
+    {
+      "q": {
+        "hi": "भुगतान कैसे करें?",
+        "en": "How do I pay?"
+      },
+      "a": {
+        "hi": "बुकिंग पक्की होने पर अग्रिम राशि UPI से और शेष दक्षिणा पूजा के दिन दी जा सकती है।",
+        "en": "Pay the advance by UPI once the booking is confirmed; the remaining dakshina can be given on the puja day."
+      }
+    },
+    {
+      "q": {
+        "hi": "बुकिंग रद्द करनी हो तो?",
+        "en": "What if I need to cancel?"
+      },
+      "a": {
+        "hi": "पूजा से 48 घंटे पहले सूचना देने पर तिथि बदली जा सकती है या अग्रिम राशि लौटाई जाती है।",
+        "en": "With 48 hours’ notice we can reschedule or refund the advance."
+      }
+    }
+  ],
+  "pages": {
+    "terms": {
+      "hi": "बुकिंग पंडित जी की उपलब्धता व मुहूर्त की पुष्टि के बाद ही पक्की मानी जाएगी। दक्षिणा पैकेज अनुसार है; दूरी अधिक होने पर यात्रा व्यय अलग से बताया जाएगा।",
+      "en": "A booking is confirmed only after pandit availability and muhurat are confirmed. Dakshina is as per package; travel cost for long distances is informed separately."
+    },
+    "refund": {
+      "hi": "पूजा से 48 घंटे पहले रद्द करने पर अग्रिम राशि पूरी लौटाई जाएगी या तिथि बदली जाएगी। 48 घंटे से कम समय में रद्द करने पर सामग्री का व्यय काटा जा सकता है।",
+      "en": "Cancel 48 hours before the puja for a full advance refund or a new date. Within 48 hours, samagri costs may be deducted."
+    },
+    "privacy": {
+      "hi": "आपका नाम, फ़ोन, पता व जन्म विवरण केवल पूजा/परामर्श हेतु उपयोग होता है और किसी अन्य को नहीं दिया जाता।",
+      "en": "Your name, phone, address and birth details are used only for the puja/consultation and are never shared."
+    }
+  }
+}
