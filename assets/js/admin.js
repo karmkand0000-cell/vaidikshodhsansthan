@@ -88,7 +88,7 @@
   /* ---------------- tabs ---------------- */
   var TABS = [
     ['overview', 'अवलोकन'], ['bookings', 'बुकिंग'], ['services', 'पूजा सेवाएँ'], ['categories', 'श्रेणियाँ'],
-    ['purposes', 'कामना अनुसार'], ['festivals', 'आगामी पर्व'], ['premium', 'प्रीमियम अनुष्ठान'], ['gallery', 'फ़ोटो गैलरी'], ['pandits', 'पंडित जी'], ['testimonials', 'यजमानों की राय'],
+    ['purposes', 'कामना अनुसार'], ['festivals', 'आगामी पर्व'], ['premium', 'प्रीमियम अनुष्ठान'], ['rashifal', 'राशिफल लिखें'], ['gallery', 'फ़ोटो गैलरी'], ['pandits', 'पंडित जी'], ['testimonials', 'यजमानों की राय'],
     ['faqs', 'प्रश्नोत्तर'], ['promises', 'हमारा संकल्प'], ['settings', 'वेबसाइट सेटिंग'], ['publish', 'प्रकाशन व बैकअप']
   ];
   var current = 'overview';
@@ -114,6 +114,7 @@
     else if (tab === 'settings') settings(v);
     else if (tab === 'publish') publishTab(v);
     else if (tab === 'premium') premiumTab(v);
+    else if (tab === 'rashifal') rashifalTab(v);
     else if (COLS[tab]) collection(v, tab);
     window.scrollTo(0, 0);
   }
@@ -484,6 +485,24 @@
       P.features = hi.map(function (h, i) { return { hi: h.trim(), en: (en[i] || '').trim() }; });
       P.services = $$('[data-multi="services"]:checked', v).map(function (el) { return el.value; });
       save(); toast('सहेजा गया — वेबसाइट पर लाने के लिए “प्रकाशित करें” दबाएँ');
+    };
+  }
+
+  /* ---------------- rashifal (manual) ---------------- */
+  var RASHI = ['मेष', 'वृषभ', 'मिथुन', 'कर्क', 'सिंह', 'कन्या', 'तुला', 'वृश्चिक', 'धनु', 'मकर', 'कुंभ', 'मीन'];
+  function rashifalTab(v) {
+    var R = D.rashifal || (D.rashifal = { date: '', items: {} }); R.items = R.items || {};
+    v.innerHTML = '<div class="note">वेबसाइट का राशिफल हर दिन चंद्र-गोचर से <b>अपने-आप</b> बनता है। किसी दिन पंडित जी अपना लिखा राशिफल दिखाना चाहें तो तिथि चुनकर नीचे लिखें — उस दिन वेबसाइट पर यही दिखेगा (“पंडित जी द्वारा” चिह्न के साथ)। जो राशि खाली छोड़ेंगे, उसका अपने-आप वाला फल दिखेगा।</div>' +
+      '<form id="rfForm" class="panel"><label class="f" style="max-width:240px">किस दिन के लिए<input type="date" name="date" value="' + esc(R.date || today()) + '"></label>' +
+      '<div class="grid2" style="margin-top:12px">' + RASHI.map(function (r, i) { var it = R.items[i] || { hi: '', en: '' };
+        return '<div><label class="f">' + r + '</label><div class="bi"><label class="f"><span>हिंदी</span><textarea rows="3" data-r="' + i + '" data-lang="hi">' + esc(it.hi) + '</textarea></label><label class="f"><span>English</span><textarea rows="3" data-r="' + i + '" data-lang="en">' + esc(it.en) + '</textarea></label></div></div>'; }).join('') +
+      '</div><button class="btn btn-primary" type="submit" style="margin-top:12px">बदलाव सहेजें</button></form>';
+    $('#rfForm').onsubmit = function (e) {
+      e.preventDefault();
+      var items = {};
+      $$('[data-r]', v).forEach(function (el) { var i = el.dataset.r; items[i] = items[i] || { hi: '', en: '' }; items[i][el.dataset.lang] = el.value.trim(); });
+      D.rashifal = { date: this.date.value, items: items }; save();
+      toast('सहेजा गया — वेबसाइट पर लाने के लिए “प्रकाशित करें” दबाएँ');
     };
   }
 

@@ -224,6 +224,7 @@
       { id: 'g7', src: 'assets/img/gallery/rangoli.svg', caption: { hi: 'मांगलिक रंगोली', en: 'Auspicious rangoli' } },
       { id: 'g8', src: 'assets/img/gallery/kundli.svg', caption: { hi: 'जन्म कुंडली विश्लेषण', en: 'Birth chart analysis' } }
     ],
+    rashifal: { date: '', items: {} },
     pandits: [],
     testimonials: [],
     faqs: [

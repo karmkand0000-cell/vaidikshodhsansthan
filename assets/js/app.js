@@ -7,7 +7,7 @@
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
       lang_btn: 'English', book_puja: 'पूजा बुक करें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
-      show_all: 'सभी {n} सेवाएँ देखें',
+      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
       email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
@@ -52,7 +52,7 @@
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
       lang_btn: 'हिंदी', book_puja: 'Book a puja', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
-      show_all: 'See all {n} services',
+      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
       email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
@@ -281,6 +281,8 @@
         '<div>' + YANTRA + '</div>' +
       '</div></section>' +
 
+      (window.VSSAstro ? astroCtx() && window.VSSAstro.strip() : '') +
+
       '<section id="sevaen"><div class="wrap">' +
         '<div class="sec-head"><div><h2>' + u('services_h') + '</h2><p>' + u('services_p') + '</p></div></div>' +
         '<div class="cats" role="toolbar">' +
@@ -418,10 +420,11 @@
     return 'VSS' + String(d.getFullYear()).slice(2) + p(d.getMonth() + 1) + p(d.getDate()) + '-' + Math.floor(1000 + Math.random() * 9000);
   }
 
-  function openBooking(id, pkgId) {
+  function openBooking(id, pkgId, prefill) {
     var s = svc(id); if (!s) return;
     var pk = (s.packages || []).find(function (p) { return p.id === pkgId; }) || (s.packages || []).find(function (p) { return p.popular; }) || (s.packages || [])[0] || { id: 'std', name: { hi: 'मानक', en: 'Standard' }, price: s.price };
     B = { step: 1, s: s, data: { pkg: pk.id, mode: isJyotish(s) ? 'phone' : 'home', time: 'muhurat', lang: 'हिंदी' } };
+    if (prefill) Object.keys(prefill).forEach(function (k) { B.data[k] = prefill[k]; });
     $('#bookTitle').textContent = t(s.name);
     drawStep();
     var dlg = $('#bookDlg');
@@ -591,9 +594,21 @@
 
   function closeDlg() { var dlg = $('#bookDlg'); if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
 
+  function astroCtx() {
+    if (!window.VSSAstro || !window.VSSAstro.available()) return false;
+    window.VSSAstro.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$, openBooking: openBooking, toast: toast });
+    return true;
+  }
+  function qsOf(h) { var o = {}, i = h.indexOf('?'); if (i > -1) new URLSearchParams(h.slice(i + 1)).forEach(function (v, k) { o[k] = v; }); return o; }
+
   /* ---------------- router ---------------- */
   function route() {
     var h = location.hash || '#/';
+    var am = h.match(/^#\/(panchang|kundli|rashifal)/);
+    if (am) {
+      $('#nav').classList.remove('open');
+      if (astroCtx()) { document.title = u('nav_' + am[1]) + ' — ' + t(D.settings.siteName); return window.VSSAstro[am[1]](qsOf(h)); }
+    }
     $('#nav').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded', 'false');
     var m;
     if ((m = h.match(/^#\/seva\/([\w-]+)/))) return detail(m[1]);
