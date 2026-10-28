@@ -7,7 +7,7 @@
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
       lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', our_glimpse: 'हमारे अनुष्ठान की झलक', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
-      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
+      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', nav_books: 'पुस्तकालय', books_h: 'कर्मकांड पुस्तकालय', books_p: 'नित्यकर्म-पूजाप्रकाश, दुर्गासप्तशती, रुद्राष्टाध्यायी, वास्तु व गृहप्रवेश पद्धति — प्रामाणिक स्रोतों से, निःशुल्क पढ़ें।', books_btn: 'सभी पुस्तकें देखें', ey_books: 'ग्रंथ संग्रह', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
       email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
@@ -52,7 +52,7 @@
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
       lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', our_glimpse: 'Glimpses from our rituals', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
-      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
+      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', nav_books: 'Library', books_h: 'Karmkand library', books_p: 'Nitya Karma Puja Prakash, Durga Saptashati, Rudrashtadhyayi, Vastu and Griha Pravesh paddhatis — from authentic sources, free to read.', books_btn: 'See all books', ey_books: 'Granth Sangrah', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
       email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
@@ -316,6 +316,8 @@
         [['sarvatobhadra', 'सर्वतोभद्र मंडल', 'Sarvatobhadra'], ['lingatobhadra', 'लिंगतोभद्र मंडल', 'Lingatobhadra'], ['navgrah', 'नवग्रह मंडल', 'Navagraha'], ['shodash_matrika', 'षोडश मातृका', 'Shodasha Matrika'], ['saptaghrit_matrika', 'सप्तघृत मातृका', 'Saptaghrita Matrika'], ['vastu', 'वास्तु मंडल', 'Vastu Mandal'], ['kshetrapal', 'क्षेत्रपाल मंडल', 'Kshetrapal'], ['yogini', 'चौंसठ योगिनी', '64 Yoginis'], ['lokpal', 'दशदिक्पाल', 'Dashadikpala']].map(function (x) { return '<a href="#/mandal/' + x[0] + '">' + (lang === 'en' ? x[2] : x[1]) + '</a>'; }).join('') +
       '</div></div></section>' +
 
+      '<section class="books-teaser"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_books') + '<h2>' + u('books_h') + '</h2><p>' + u('books_p') + '</p></div><a class="btn btn-ghost" href="#/pustak">' + u('books_btn') + '</a></div><div class="bt-row" id="btRow"></div></div></section>' +
+
       ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_purpose') + '<h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
         D.purposes.map(function (p) {
           var items = (p.services || []).map(svc).filter(Boolean);
@@ -361,6 +363,7 @@
 
     $('#main').innerHTML = html;
     renderServices();
+    if (window.VSSBooks) { window.VSSBooks.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ }); window.VSSBooks.load().then(function (d) { var r = $('#btRow'); if (r) r.innerHTML = d.books.map(function (b) { return '<a class="bt-item" href="#/pustak/' + b.id + '">' + window.VSSBooks.cover(b) + '<span>' + esc(lang === 'en' ? b.title_en : b.title_hi) + '</span></a>'; }).join(''); }).catch(function () {}); }
     $('#finder').addEventListener('submit', function (e) { e.preventDefault(); state.q = $('#q').value; state.cat = 'all'; renderServices(); $('#sevaen').scrollIntoView(); });
     $('#q').addEventListener('input', function () { state.q = this.value; renderServices(); });
     $$('.cat').forEach(function (b) { b.addEventListener('click', function () { state.cat = b.getAttribute('data-cat'); renderServices(); }); });
@@ -632,6 +635,12 @@
       window.VSSTirth.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
       document.title = u('nav_tirth') + ' — ' + t(D.settings.siteName);
       return window.VSSTirth.route(h);
+    }
+    if (/^#\/pustak/.test(h) && window.VSSBooks) {
+      $('#nav').classList.remove('open');
+      window.VSSBooks.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
+      document.title = u('nav_books') + ' — ' + t(D.settings.siteName);
+      return window.VSSBooks.route(h);
     }
     if (/^#\/mandal/.test(h) && window.VSSMandal) {
       $('#nav').classList.remove('open');
