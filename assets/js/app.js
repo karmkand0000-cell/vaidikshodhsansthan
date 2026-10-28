@@ -10,7 +10,7 @@
       show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', nav_books: 'पुस्तकालय', books_h: 'कर्मकांड पुस्तकालय', books_p: 'नित्यकर्म-पूजाप्रकाश, दुर्गासप्तशती, रुद्राष्टाध्यायी, वास्तु व गृहप्रवेश पद्धति — प्रामाणिक स्रोतों से, निःशुल्क पढ़ें।', books_btn: 'सभी पुस्तकें देखें', ey_books: 'ग्रंथ संग्रह', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
-      email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
+      email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'बुकिंग पक्की करने के लिए नीचे के बटन से विवरण व्हाट्सऐप पर भेज दें — एक क्लिक में।', wa_send: 'व्हाट्सऐप पर बुकिंग भेजें', booked_on: 'बुकिंग तिथि', track_note: 'पंडित जी शीघ्र कॉल करके मुहूर्त व दक्षिणा बताएँगे। जल्दी हो तो व्हाट्सऐप पर भेजें या कॉल करें।', or_call: 'या कॉल करें',
       send_email: 'विवरण ईमेल से भेजें', email_btn: 'ईमेल', email_subject: 'पूजा बुकिंग',
       search_ph: 'पूजा खोजें — जैसे गृह प्रवेश, हवन, सुंदरकांड…', search: 'खोजें', all: 'सभी',
       services_h: 'पूजा, हवन, यज्ञ व ज्योतिष सेवाएँ', services_p: 'पूजा चुनें, पैकेज चुनें और तिथि भरें — पंडित जी का मुहूर्त व विवरण हम फ़ोन पर पक्का करेंगे।',
@@ -55,7 +55,7 @@
       show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', nav_books: 'Library', books_h: 'Karmkand library', books_p: 'Nitya Karma Puja Prakash, Durga Saptashati, Rudrashtadhyayi, Vastu and Griha Pravesh paddhatis — from authentic sources, free to read.', books_btn: 'See all books', ey_books: 'Granth Sangrah', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
-      email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
+      email_sent: 'Your booking details have reached our email.', email_fail: 'To confirm your booking, send the details on WhatsApp with the button below — one tap.', wa_send: 'Send booking on WhatsApp', booked_on: 'Booked on', track_note: 'Pandit ji will call soon to fix the muhurat and dakshina. In a hurry? Send it on WhatsApp or call.', or_call: 'or call',
       send_email: 'Send details by email', email_btn: 'Email', email_subject: 'Puja booking',
       search_ph: 'Search a puja — e.g. Griha Pravesh, havan, Sundarkand…', search: 'Search', all: 'All',
       services_h: 'Puja, havan, yagya & jyotish', services_p: 'Pick a puja and package and enter a date — we confirm Pandit ji’s muhurat and details on the phone.',
@@ -458,11 +458,18 @@
     var list = myBookings();
     $('#main').innerHTML = '<div class="wrap detail page-text"><h1>' + u('track_h') + '</h1><p>' + u('track_p') + '</p><div class="track-list">' +
       (list.length ? list.slice().reverse().map(function (b) {
-        return '<div class="track-item" data-id="' + esc(b.id) + '"><b class="bid" style="font-size:1.2rem">' + esc(b.id) + '</b><br>' +
-          esc(b.serviceName) + (b.packageName ? ' — ' + esc(b.packageName) : '') + (showP() && b.price ? ' (' + inr(b.price) + ')' : '') + '<br>' + [b.date, b.time].filter(Boolean).map(esc).join(' • ') +
-          '<br><span class="st">' + u('status') + ': <b>' + u('st_' + (b.status || 'new')) + '</b></span> ' +
+        var when = b.createdAt ? new Date(b.createdAt).toLocaleDateString(lang === 'en' ? 'en-IN' : 'hi-IN', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+        return '<div class="track-item" data-id="' + esc(b.id) + '"><div class="ti-top"><b class="bid">' + esc(b.id) + '</b><span class="ti-st">' + u('st_' + (b.status || 'new')) + '</span></div>' +
+          '<div class="ti-svc">' + esc(b.serviceName) + (b.packageName ? ' — ' + esc(b.packageName) : '') + (showP() && b.price ? ' (' + inr(b.price) + ')' : '') + '</div>' +
+          '<dl class="ti-meta">' + (when ? '<dt>' + u('booked_on') + '</dt><dd>' + esc(when) + '</dd>' : '') +
+          (b.date ? '<dt>' + u('date') + '</dt><dd>' + esc([b.date, b.time].filter(Boolean).join(' • ')) + '</dd>' : '') +
+          (b.name ? '<dt>' + u('name') + '</dt><dd>' + esc(b.name) + '</dd>' : '') + (b.phone ? '<dt>' + u('mobile') + '</dt><dd>' + esc(b.phone) + '</dd>' : '') +
+          (b.address ? '<dt>' + u('addr') + '</dt><dd>' + esc(b.address) + '</dd>' : '') + '</dl>' +
+          '<div class="ti-act"><a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + u('wa_send') + '</a>' +
+          '<a class="btn btn-ghost btn-sm" href="tel:' + esc(String(D.settings.phone || '').replace(/\s/g, '')) + '">' + u('call') + '</a>' +
           (D.settings.bookingEndpoint ? '<button class="btn btn-ghost btn-sm" data-check="' + esc(b.id) + '" data-phone="' + esc(b.phone) + '">' + u('check_status') + '</button>' : '') +
-          ' <a class="btn btn-ghost btn-sm" href="' + mailHref(b) + '">' + u('email_btn') + '</a></div>';
+          '<a class="btn btn-ghost btn-sm" href="' + mailHref(b) + '">' + u('email_btn') + '</a></div>' +
+          '<p class="ti-note">' + u('track_note') + '</p></div>';
       }).join('') : '<div class="empty">' + u('track_empty') + ' <a href="#/book" data-book="">' + u('book_puja') + '</a></div>') +
       '</div></div>';
     $$('[data-check]').forEach(function (btn) {
@@ -557,7 +564,8 @@
       body = '<div class="done"><div class="ok">' + ICONS.check.replace('<svg', '<svg width="40" height="40"') + '</div><h3 style="font-size:1.5rem">' + u('done_h') + '</h3>' +
         '<p>' + u('booking_id') + '</p><p class="bid">' + esc(b.id) + '</p><p style="color:var(--ink-2)">' + u('done_p') + '</p>' +
         '<p class="mailst ' + (B.mailed ? 'is-ok' : 'is-warn') + '">' + (B.mailed ? ICONS.check.replace('<svg', '<svg width="20" height="20"') + ' ' + u('email_sent') : u('email_fail')) + '</p>' +
-        (bookEmail() && !B.mailed ? '<a class="btn ' + (B.mailed ? 'btn-ghost' : 'btn-primary') + '" style="width:100%" href="' + mailHref(b) + '">' + ICONS.mail.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_email') + '</a>' : '') +
+        (!B.mailed ? '<a class="btn btn-wa" style="width:100%" target="_blank" rel="noopener" href="' + waHref(waText(b)) + '">' + u('wa_send') + '</a>' +
+          '<p class="mail-alt"><a href="tel:' + esc(String(D.settings.phone || '').replace(/\s/g, '')) + '">' + u('or_call') + ' ' + esc(D.settings.phone || '') + '</a> • <a href="' + mailHref(b) + '">' + u('send_email') + '</a></p>' : '') +
         (upi && adv && showP() ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
         '<div class="dlg-actions" style="justify-content:center"><button class="btn btn-ghost" type="button" id="doneClose">' + u('close') + '</button></div></div>';
     }
@@ -595,12 +603,15 @@
   }
 
   function waText(b) {
-    var L = [u('wa_greet'), '', u('booking_id') + ': ' + b.id, u('service') + ': ' + b.serviceName, u('package') + ': ' + b.packageName + (showP() ? ' (' + inr(b.price) + ')' : ''),
-      u('date') + ': ' + b.date + ' • ' + b.time, u('mode') + ': ' + b.mode, u('name') + ': ' + b.name, u('mobile') + ': ' + b.phone];
+    var L = [u('wa_greet'), '', u('booking_id') + ': ' + b.id, u('service') + ': ' + b.serviceName];
+    if (b.packageName) L.push(u('package') + ': ' + b.packageName + (showP() && b.price ? ' (' + inr(b.price) + ')' : ''));
+    if (b.date) L.push(u('date') + ': ' + b.date + (b.time ? ' • ' + b.time : ''));
+    if (b.mode) L.push(u('mode') + ': ' + b.mode);
+    L.push(u('name') + ': ' + b.name, u('mobile') + ': ' + b.phone);
     if (b.gotra) L.push(u('gotra') + ': ' + b.gotra);
     if (b.dob) L.push(u('dob') + ': ' + b.dob + ' ' + (b.tob || '') + ' ' + (b.pob || ''));
     if (b.partner) L.push(u('partner') + ': ' + b.partner);
-    if (b.address) L.push(u('addr') + ': ' + b.address + ', ' + (b.city || '') + ' ' + (b.pincode || ''));
+    if (b.address) L.push(u('addr') + ': ' + [b.address, b.city, b.pincode].filter(Boolean).join(', '));
     if (b.question) L.push(u('question') + ': ' + b.question);
     if (b.notes) L.push(u('notes') + ': ' + b.notes);
     return L.join('\n');
@@ -633,6 +644,9 @@
       if (b.email) mail._replyto = b.email;
       jobs.push(fetch('https://formsubmit.co/ajax/' + encodeURIComponent(bookEmail()), { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(mail) })
         .then(function (r) { return r.json(); }).then(function (j) { B.mailed = j && (j.success === true || j.success === 'true'); }).catch(function () {}));
+    }
+    // धीमे नेटवर्क पर भी 10 सेकंड में पुष्टि-स्क्रीन दिखे
+    if (jobs.length) { var timer = new Promise(function (res) { setTimeout(res, 10000); }); Promise.race([Promise.all(jobs), timer]).then(done, done); return;
     }
     Promise.all(jobs).then(done, done);
   }
