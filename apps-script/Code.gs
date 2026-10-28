@@ -12,7 +12,7 @@
 var ADMIN_KEY = 'BADLEN-apni-gupt-kunji-2026';
 
 // नई बुकिंग की सूचना ईमेल पर चाहिए तो अपना ईमेल लिखें, नहीं तो खाली छोड़ें
-var NOTIFY_EMAIL = '';
+var NOTIFY_EMAIL = 'karmkand0000@gmail.com';
 
 var SHEET_NAME = 'Bookings';
 var COLS = ['id', 'createdAt', 'status', 'type', 'serviceId', 'serviceName', 'packageName', 'price', 'mode', 'date', 'time',
