@@ -826,3 +826,9 @@ footer.site .copy{border-top-color:rgba(184,138,59,.25)}
 .md-svg .md-kn{font:700 18px 'Mukta',sans-serif;fill:#fff}.md-svg .md-kr{font:600 12px 'Mukta',sans-serif;fill:#F4E3C1}
 .md-svg .md-yb{font:700 22px 'Mukta',sans-serif;fill:#1E3A8A}.md-svg .md-yn{font:700 11px 'Mukta',sans-serif;fill:#FFF3B0}
 .md-svg .md-dir.faint{fill:#B88A3B}
+
+.svc-media{margin:6px 0 24px}.svc-media h2{font-size:1.4rem;margin-bottom:12px}
+.sm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;align-items:start}
+.sm-video{width:100%;border-radius:14px;background:#000;box-shadow:var(--shadow-s);grid-column:1/-1;max-height:520px}
+.sm-video.portrait{grid-column:auto;aspect-ratio:9/16;object-fit:cover;max-height:560px;max-width:320px}
+.sm-photo{width:100%;border-radius:14px;box-shadow:var(--shadow-s);object-fit:cover;aspect-ratio:3/4}
