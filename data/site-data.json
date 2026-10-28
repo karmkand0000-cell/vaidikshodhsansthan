@@ -11,7 +11,8 @@
     },
     "phone": "9625004090",
     "whatsapp": "919625004090",
-    "email": "",
+    "email": "karmkand0000@gmail.com",
+    "bookingEmail": "karmkand0000@gmail.com",
     "address": {
       "hi": "एफ-171/27, छतरपुर एक्सटेंशन, छतरपुर, नई दिल्ली – 110074",
       "en": "F-171/27, Chhatarpur Extension, Chhatarpur, New Delhi – 110074"
@@ -2299,6 +2300,106 @@
     {
       "hi": "पहले से स्पष्ट दक्षिणा, कोई छिपा शुल्क नहीं",
       "en": "Dakshina stated upfront, no hidden charges"
+    }
+  ],
+  "premium": {
+    "title": {
+      "hi": "विशेष महा-अनुष्ठान",
+      "en": "Premium Maha-Anushthan"
+    },
+    "subtitle": {
+      "hi": "बड़े संकल्पों के लिए विद्वान पंडितों की टोली, सम्पूर्ण सामग्री और शास्त्रोक्त पूर्णाहुति — घर, मंदिर या आपके चुने स्थान पर।",
+      "en": "For major sankalps: a team of learned pandits, complete samagri and a shastric purnahuti — at your home, a temple or a venue you choose."
+    },
+    "features": [
+      {
+        "hi": "अनुभवी पंडितों की टोली",
+        "en": "A team of experienced pandits"
+      },
+      {
+        "hi": "सम्पूर्ण पूजन सामग्री व हवन कुंड",
+        "en": "Complete samagri & havan kund"
+      },
+      {
+        "hi": "संकल्प से पूर्णाहुति तक विधिवत",
+        "en": "Full vidhi from sankalp to purnahuti"
+      },
+      {
+        "hi": "प्रसाद व ब्राह्मण भोजन की व्यवस्था (अनुरोध पर)",
+        "en": "Prasad & Brahmin bhoj on request"
+      }
+    ],
+    "services": [
+      "gayatri-yagya",
+      "mahamrityunjay-jaap",
+      "akhand-ramayan",
+      "chandi-path-havan"
+    ]
+  },
+  "gallery": [
+    {
+      "id": "g1",
+      "src": "assets/img/gallery/havan-kund.svg",
+      "caption": {
+        "hi": "हवन — अग्नि देव को आहुति",
+        "en": "Havan — offerings to Agni Dev"
+      }
+    },
+    {
+      "id": "g2",
+      "src": "assets/img/gallery/kalash-sthapana.svg",
+      "caption": {
+        "hi": "कलश स्थापना",
+        "en": "Kalash sthapana"
+      }
+    },
+    {
+      "id": "g3",
+      "src": "assets/img/gallery/griha-pravesh.svg",
+      "caption": {
+        "hi": "गृह प्रवेश — तोरण व रंगोली",
+        "en": "Griha Pravesh — toran & rangoli"
+      }
+    },
+    {
+      "id": "g4",
+      "src": "assets/img/gallery/rudrabhishek.svg",
+      "caption": {
+        "hi": "रुद्राभिषेक",
+        "en": "Rudrabhishek"
+      }
+    },
+    {
+      "id": "g5",
+      "src": "assets/img/gallery/deepawali-diye.svg",
+      "caption": {
+        "hi": "दीपावली दीपोत्सव",
+        "en": "Deepawali deepotsav"
+      }
+    },
+    {
+      "id": "g6",
+      "src": "assets/img/gallery/navgrah.svg",
+      "caption": {
+        "hi": "नवग्रह शांति",
+        "en": "Navagraha shanti"
+      }
+    },
+    {
+      "id": "g7",
+      "src": "assets/img/gallery/rangoli.svg",
+      "caption": {
+        "hi": "मांगलिक रंगोली",
+        "en": "Auspicious rangoli"
+      }
+    },
+    {
+      "id": "g8",
+      "src": "assets/img/gallery/kundli.svg",
+      "caption": {
+        "hi": "जन्म कुंडली विश्लेषण",
+        "en": "Birth chart analysis"
+      }
     }
   ],
   "pandits": [],
