@@ -7,14 +7,14 @@
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
       lang_btn: 'English', book_puja: 'पूजा बुक करें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
-      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
+      show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
       email_sent: 'बुकिंग का विवरण हमारे ईमेल पर पहुँच गया है।', email_fail: 'ईमेल अपने-आप नहीं जा सका — नीचे दिए बटन से अपने ईमेल ऐप द्वारा भेज दें।',
       send_email: 'विवरण ईमेल से भेजें', email_btn: 'ईमेल', email_subject: 'पूजा बुकिंग',
       search_ph: 'पूजा खोजें — जैसे गृह प्रवेश, हवन, सुंदरकांड…', search: 'खोजें', all: 'सभी',
       services_h: 'पूजा, हवन, यज्ञ व ज्योतिष सेवाएँ', services_p: 'पूजा चुनें, पैकेज चुनें और तिथि भरें — पंडित जी का मुहूर्त व विवरण हम फ़ोन पर पक्का करेंगे।',
-      from: 'दक्षिणा', starting: 'से आरंभ', details: 'विवरण देखें', book: 'बुक करें', popular: 'लोकप्रिय', duration: 'अवधि',
+      from: 'दक्षिणा', starting: 'से आरंभ', details: 'विवरण देखें', price_note: 'दक्षिणा व पूजन सामग्री की पूरी जानकारी पंडित जी फ़ोन पर देंगे — बुकिंग अभी नि:शुल्क है।', photo: 'फ़ोटो', credits: 'फ़ोटो साभार', credits_p: 'इस वेबसाइट की तस्वीरें विकिमीडिया कॉमन्स से मुक्त लाइसेंस के अंतर्गत ली गई हैं। सभी फ़ोटोग्राफ़रों का आभार।', eyebrow_hero: 'शास्त्रोक्त वैदिक अनुष्ठान', ey_services: 'हमारी सेवाएँ', ey_steps: 'सरल प्रक्रिया', ey_trust: 'हमारा संकल्प', ey_fest: 'आगामी पर्व', ey_gallery: 'झलकियाँ', ey_faq: 'जिज्ञासा', ey_purpose: 'मनोकामना अनुसार', ey_tirth: 'तीर्थ दर्शन', h_s1: 'नाम-गोत्र से संकल्प', h_s2: 'आपके घर, आपके मुहूर्त पर', h_s3: 'हिंदी व संस्कृत में विधि', svc_count: 'अनुष्ठान व सेवाएँ', book: 'बुक करें', popular: 'लोकप्रिय', duration: 'अवधि',
       no_results: 'इस खोज से कोई पूजा नहीं मिली। दूसरा शब्द लिखें या हमें कॉल करें — हर प्रकार का कर्मकांड कराया जाता है।',
       purpose_h: 'किस कामना हेतु पूजा करानी है?', purpose_p: 'अपनी आवश्यकता चुनें, उसके अनुसार उपयुक्त अनुष्ठान देखें।',
       steps_h: 'बुकिंग कैसे होती है',
@@ -52,14 +52,14 @@
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
       lang_btn: 'हिंदी', book_puja: 'Book a puja', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
-      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
+      show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
       email_sent: 'Your booking details have reached our email.', email_fail: 'The email could not be sent automatically — use the button below to send it from your email app.',
       send_email: 'Send details by email', email_btn: 'Email', email_subject: 'Puja booking',
       search_ph: 'Search a puja — e.g. Griha Pravesh, havan, Sundarkand…', search: 'Search', all: 'All',
       services_h: 'Puja, havan, yagya & jyotish', services_p: 'Pick a puja and package and enter a date — we confirm Pandit ji’s muhurat and details on the phone.',
-      from: 'Dakshina', starting: 'onwards', details: 'View details', book: 'Book', popular: 'Popular', duration: 'Duration',
+      from: 'Dakshina', starting: 'onwards', details: 'View details', price_note: 'Pandit ji will share dakshina and samagri details on the phone — booking is free.', photo: 'Photo', credits: 'Photo credits', credits_p: 'Photos on this site come from Wikimedia Commons under free licences. Our thanks to every photographer.', eyebrow_hero: 'Vedic rituals, as the shastras prescribe', ey_services: 'Our services', ey_steps: 'Simple process', ey_trust: 'Our promise', ey_fest: 'Upcoming festivals', ey_gallery: 'Glimpses', ey_faq: 'Questions', ey_purpose: 'By wish', ey_tirth: 'Pilgrimage', h_s1: 'Sankalp in your name & gotra', h_s2: 'At your home, on your muhurat', h_s3: 'Rituals in Hindi & Sanskrit', svc_count: 'rituals & services', book: 'Book', popular: 'Popular', duration: 'Duration',
       no_results: 'No puja matches that search. Try another word or call us — every kind of karmkand is performed.',
       purpose_h: 'What is the puja for?', purpose_p: 'Pick your need and see the rituals suited to it.',
       steps_h: 'How booking works',
@@ -123,6 +123,12 @@
   function u(k) { return (UI[lang] && UI[lang][k]) || UI.hi[k] || k; }
   function t(o) { if (o == null) return ''; if (typeof o === 'string') return o; return o[lang] || o.hi || o.en || ''; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function heroTitle(x) { var p = String(x || '').split(/\s+[—–-]\s+/); return p.length > 1 ? esc(p[0]) + '<span class="h1-sub">' + esc(p.slice(1).join(' — ')) + '</span>' : esc(x); }
+  function showP() { return D && D.settings && D.settings.showPrices === true; }
+  function pr(n, pre) { return showP() ? (pre || '') + inr(n) : ''; }
+  function credOk(o) { return !!(o && o.imgCredit && o.imgCredit.file && String(o.image || o.src || '').indexOf(encodeURIComponent(o.imgCredit.file)) > -1); }
+  function credit(c) { if (!c || !c.file) return ''; return u('photo') + ': <a href="https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(c.file.replace(/ /g, '_')) + '" target="_blank" rel="noopener">' + esc(c.artist || 'Wikimedia Commons') + '</a>, ' + esc(c.license || '') + ' — Wikimedia Commons'; }
+  function eyebrow(k, cls) { return '<span class="eyebrow' + (cls ? ' ' + cls : '') + '">' + u(k) + '</span>'; }
   function inr(n) { n = Number(n) || 0; return '₹' + n.toLocaleString('en-IN'); }
   function $(s, el) { return (el || document).querySelector(s); }
   function $$(s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); }
@@ -194,13 +200,14 @@
   function svcCard(s) {
     var c = cat(s.cat);
     return '<article class="svc" data-cat="' + esc(s.cat) + '">' +
-      (s.image ? '<div class="img" style="background-image:url(\'' + esc(s.image) + '\')"></div>' : '') +
-      (s.popular ? '<span class="tag">' + u('popular') + '</span>' : '') +
-      '<span class="meta">' + esc(t(c.name)) + (s.duration ? ' • ' + esc(s.duration) : '') + '</span>' +
+      '<div class="svc-img">' + (s.image ? '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + (credOk(s) ? ' title="' + esc(u('photo') + ': ' + (s.imgCredit.artist || '') + ', ' + (s.imgCredit.license || '')) + '"' : '') + '>' : '<span class="svc-ph">' + (ICONS[c.icon] || ICONS.star) + '</span>') +
+      '<span class="svc-cat">' + esc(t(c.name)) + '</span>' + (s.popular ? '<span class="tag">' + u('popular') + '</span>' : '') + '</div>' +
+      '<div class="svc-body">' +
       '<h3><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></h3>' +
+      (s.duration ? '<span class="meta">' + ICONS.clock.replace('<svg', '<svg width="15" height="15"') + esc(s.duration) + '</span>' : '') +
       '<p>' + esc(t(s.desc)) + '</p>' +
-      '<div class="foot"><span class="price">' + inr(minPrice(s)) + '</span>' +
-      '<button class="btn btn-primary btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div></article>';
+      '<div class="foot">' + (showP() ? '<span class="price">' + inr(minPrice(s)) + '</span>' : '<span class="more">' + u('details') + ' <i aria-hidden="true">→</i></span>') +
+      '<button class="btn btn-primary btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div></div></article>';
   }
 
   function filtered() {
@@ -218,7 +225,7 @@
     var list = filtered(), more = '';
     if (state.cat === 'all' && !state.q.trim() && !state.all && list.length > 8) {
       var pop = list.filter(function (s) { return s.popular; });
-      var show = pop.concat(list.filter(function (s) { return !s.popular; })).slice(0, Math.max(8, Math.min(pop.length, 12)));
+      var show = pop.concat(list.filter(function (s) { return !s.popular; })).slice(0, 8);
       more = '<div style="grid-column:1/-1;text-align:center"><button class="btn btn-ghost" id="showAll" type="button">' + u('show_all').replace('{n}', list.length) + '</button></div>';
       list = show;
     }
@@ -232,12 +239,12 @@
     var items = (P.services || []).map(svc).filter(Boolean);
     if (!items.length) return '';
     return '<section class="premium" id="premium"><div class="wrap prem-grid">' +
-      '<div class="prem-art"><img src="assets/img/gallery/havan-kund.svg" alt="" width="800" height="600"></div>' +
-      '<div><h2>' + esc(t(P.title)) + '</h2><p class="prem-sub">' + esc(t(P.subtitle)) + '</p>' +
+      '<figure class="prem-art"><img src="' + esc(P.image || 'assets/img/gallery/havan-kund.svg') + '" alt="" loading="lazy">' + (credOk(P) ? '<figcaption>' + credit(P.imgCredit) + '</figcaption>' : '') + '</figure>' +
+      '<div><span class="eyebrow">' + (lang === 'en' ? 'Premium anushthan' : 'विशेष अनुष्ठान') + '</span><h2>' + esc(t(P.title)) + '</h2><p class="prem-sub">' + esc(t(P.subtitle)) + '</p>' +
       ((P.features || []).length ? '<ul class="prem-feat">' + P.features.map(function (f) { return '<li>' + ICONS.check + '<span>' + esc(t(f)) + '</span></li>'; }).join('') + '</ul>' : '') +
       '<div class="prem-list">' + items.map(function (s) {
         return '<div class="prem-item"><div><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a><small>' + esc(s.duration || '') + '</small></div>' +
-          '<span class="prem-price">' + inr(minPrice(s)) + '</span>' +
+          (showP() ? '<span class="prem-price">' + inr(minPrice(s)) + '</span>' : '') +
           '<button class="btn btn-gold btn-sm" data-book="' + esc(s.id) + '">' + u('book') + '</button></div>';
       }).join('') + '</div>' +
       '<a class="btn btn-ghost-light" href="tel:+91' + digits(D.settings.phone).slice(-10) + '">' + u('premium_enquire') + ' — ' + esc(D.settings.phone) + '</a>' +
@@ -247,7 +254,7 @@
   function galleryHTML() {
     var G = (D.gallery || []).filter(function (g) { return g.src; });
     if (!G.length) return '<span id="gallery"></span>';
-    return '<section class="alt" id="gallery"><div class="wrap"><div class="sec-head"><div><h2>' + u('gallery_h') + '</h2><p>' + u('gallery_p') + '</p></div></div>' +
+    return '<section class="alt" id="gallery"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_gallery') + '<h2>' + u('gallery_h') + '</h2><p>' + u('gallery_p') + '</p></div></div>' +
       '<div class="gallery">' + G.map(function (g, i) {
         var rem = (G.length + 3) % 4, span = (i === G.length - 1 && G.length > 1 && rem) ? ' style="grid-column:span ' + (5 - rem) + '"' : '';
         return '<figure class="gi' + (i === 0 ? ' big' : '') + '"' + span + '><button type="button" data-lb="' + i + '" aria-label="' + esc(t(g.caption)) + '"><img loading="lazy" src="' + esc(g.src) + '" alt="' + esc(t(g.caption)) + '"></button><figcaption>' + esc(t(g.caption)) + '</figcaption></figure>';
@@ -256,7 +263,7 @@
 
   function openLightbox(i) {
     var G = (D.gallery || []).filter(function (g) { return g.src; }), dlg = $('#lbDlg');
-    var show = function () { var g = G[i]; $('#lbImg').src = g.src; $('#lbImg').alt = t(g.caption); $('#lbCap').textContent = t(g.caption) + '  (' + (i + 1) + '/' + G.length + ')'; };
+    var show = function () { var g = G[i]; $('#lbImg').src = g.src; $('#lbImg').alt = t(g.caption); $('#lbCap').innerHTML = esc(t(g.caption)) + '  (' + (i + 1) + '/' + G.length + ')' + (g.credit ? '<small>' + credit(g.credit) + '</small>' : ''); };
     show();
     $('#lbPrev').onclick = function () { i = (i - 1 + G.length) % G.length; show(); };
     $('#lbNext').onclick = function () { i = (i + 1) % G.length; show(); };
@@ -273,49 +280,58 @@
     var mapSrc = 'https://maps.google.com/maps?q=' + encodeURIComponent(D.settings.mapQuery || t(D.settings.address)) + '&z=15&output=embed';
 
     var html =
-      '<section class="hero" style="padding:0"><div class="wrap">' +
-        '<div><h1>' + esc(t(D.hero.title)) + '</h1><p class="lead">' + esc(t(D.hero.subtitle)) + '</p>' +
-        '<form class="finder" id="finder" role="search"><label class="sr" for="q">' + u('search') + '</label><input id="q" type="search" placeholder="' + esc(u('search_ph')) + '" value="' + esc(state.q) + '"><button class="btn btn-primary btn-sm">' + u('search') + '</button></form>' +
-        '<div class="ctas"><a class="btn btn-primary" href="#sevaen">' + u('book_puja') + '</a><a class="btn btn-ghost" href="' + telHref() + '">' + u('call_now') + ' ' + esc(D.settings.phone) + '</a></div>' +
-        '<p class="area">' + ICONS.pin.replace('<svg', '<svg width="20" height="20" style="flex:none;margin-top:3px"') + '<span>' + esc(t(D.settings.serviceArea)) + '</span></p></div>' +
-        '<div>' + YANTRA + '</div>' +
-      '</div></section>' +
+      '<section class="hero' + (D.hero.image ? ' has-photo' : '') + '">' +
+        (D.hero.image ? '<img class="hero-bg" src="' + esc(D.hero.image) + '" alt="" fetchpriority="high">' : '') +
+        '<div class="wrap"><div class="hero-copy">' +
+        '<span class="eyebrow light">॥ ' + u('eyebrow_hero') + ' ॥</span>' +
+        '<h1>' + heroTitle(t(D.hero.title)) + '</h1><p class="lead">' + esc(t(D.hero.subtitle)) + '</p>' +
+        '<form class="finder" id="finder" role="search"><label class="sr" for="q">' + u('search') + '</label><input id="q" type="search" placeholder="' + esc(u('search_ph')) + '" value="' + esc(state.q) + '"><button class="btn btn-gold btn-sm">' + u('search') + '</button></form>' +
+        '<div class="ctas"><a class="btn btn-gold" href="#sevaen">' + u('book_puja') + '</a><a class="btn btn-ghost-light" href="' + telHref() + '">' + ICONS.phone.replace('<svg', '<svg width="18" height="18"') + ' ' + esc(D.settings.phone) + '</a></div>' +
+        '<ul class="hero-trust"><li><b>' + D.services.filter(function (x) { return x.active !== false; }).length + '+</b> ' + u('svc_count') + '</li><li>' + u('h_s1') + '</li><li>' + u('h_s2') + '</li><li>' + u('h_s3') + '</li></ul>' +
+        '</div></div>' +
+        (D.hero.image && credOk(D.hero) ? '<small class="hero-credit">' + credit(D.hero.imgCredit) + '</small>' : '') +
+      '</section>' +
+      '<div class="area-band"><div class="wrap">' + ICONS.pin.replace('<svg', '<svg width="18" height="18"') + '<span>' + esc(t(D.settings.serviceArea)) + '</span></div></div>' +
 
       (window.VSSAstro ? astroCtx() && window.VSSAstro.strip() : '') +
 
       '<section id="sevaen"><div class="wrap">' +
-        '<div class="sec-head"><div><h2>' + u('services_h') + '</h2><p>' + u('services_p') + '</p></div></div>' +
+        '<div class="sec-head center"><div>' + eyebrow('ey_services') + '<h2>' + u('services_h') + '</h2><p>' + u('services_p') + '</p></div></div>' +
         '<div class="cats" role="toolbar">' +
           '<button class="cat" data-cat="all">' + ICONS.kalash + u('all') + '</button>' +
-          D.categories.map(function (c) { return '<button class="cat" data-cat="' + esc(c.id) + '">' + (ICONS[c.icon] || ICONS.star) + esc(t(c.name)) + '</button>'; }).join('') +
+          D.categories.map(function (c) { return '<button class="cat" data-cat="' + esc(c.id) + '">' + (c.image ? '<img class="cat-img" src="' + esc(c.image) + '" alt="" loading="lazy">' : (ICONS[c.icon] || ICONS.star)) + esc(t(c.name)) + '</button>'; }).join('') +
         '</div>' +
         '<div class="services" id="svcGrid" aria-live="polite"></div>' +
       '</div></section>' +
 
       premiumHTML() +
 
-      '<section class="tirth-teaser"><div class="wrap"><div class="sec-head"><div><h2>' + u('tirth_h') + '</h2><p>' + u('tirth_p') + '</p></div></div><div class="tt-grid">' +
+      '<section class="tirth-teaser"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_tirth') + '<h2>' + u('tirth_h') + '</h2><p>' + u('tirth_p') + '</p></div></div><div class="tt-grid">' +
         [['jyotirling', lang === 'en' ? '12 Jyotirlingas' : '12 ज्योतिर्लिंग', lang === 'en' ? 'Somnath to Grishneshwar' : 'सोमनाथ से घृष्णेश्वर तक'],
          ['ashtavinayak', lang === 'en' ? 'Ashtavinayak' : 'अष्टविनायक', lang === 'en' ? 'Eight swayambhu Ganesh shrines' : 'आठ स्वयंभू गणपति'],
          ['shaktipeeth', lang === 'en' ? '51 Shakti Peethas' : '51 शक्तिपीठ', lang === 'en' ? 'From Hinglaj to Kamakhya' : 'हिंगलाज से कामाख्या तक']].map(function (x) {
-          return '<a class="tt-card tt-' + x[0] + '" href="#/tirth/' + x[0] + '"><b>' + x[1] + '</b><span>' + x[2] + '</span></a>'; }).join('') +
+          var ph = { jyotirling: 'Somanath_mandir_(cropped).jpg', ashtavinayak: 'Siddhi_Vinayak_at_Siddhatek.jpg', shaktipeeth: 'Kamakhya_Temple_-_DEV_8829.jpg' }; return '<a class="tt-card tt-' + x[0] + '" href="#/tirth/' + x[0] + '"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(ph[x[0]]) + '?width=700" alt="" loading="lazy"><b>' + x[1] + '</b><span>' + x[2] + '</span></a>'; }).join('') +
       '</div></div></section>' +
 
-      ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div><h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
+      '<section class="mandal-teaser"><div class="wrap mt-in"><div>' + eyebrow('ey_mandal', 'light') + '<h2>' + u('mandal_h') + '</h2><p>' + u('mandal_p') + '</p><a class="btn btn-gold" href="#/mandal">' + u('mandal_btn') + '</a></div><div class="mt-chips">' +
+        [['sarvatobhadra', 'सर्वतोभद्र मंडल', 'Sarvatobhadra'], ['lingatobhadra', 'लिंगतोभद्र मंडल', 'Lingatobhadra'], ['navgrah', 'नवग्रह मंडल', 'Navagraha'], ['shodash_matrika', 'षोडश मातृका', 'Shodasha Matrika'], ['saptaghrit_matrika', 'सप्तघृत मातृका', 'Saptaghrita Matrika'], ['vastu', 'वास्तु मंडल', 'Vastu Mandal'], ['kshetrapal', 'क्षेत्रपाल मंडल', 'Kshetrapal'], ['yogini', 'चौंसठ योगिनी', '64 Yoginis'], ['lokpal', 'दशदिक्पाल', 'Dashadikpala']].map(function (x) { return '<a href="#/mandal/' + x[0] + '">' + (lang === 'en' ? x[2] : x[1]) + '</a>'; }).join('') +
+      '</div></div></section>' +
+
+      ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_purpose') + '<h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
         D.purposes.map(function (p) {
           var items = (p.services || []).map(svc).filter(Boolean);
           if (!items.length) return '';
           return '<div class="purpose"><h3>' + esc(t(p.name)) + '</h3><ul>' + items.map(function (s) { return '<li><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></li>'; }).join('') + '</ul></div>';
         }).join('') + '</div></div></section>' : '') +
 
-      '<section><div class="wrap"><h2>' + u('steps_h') + '</h2><ol class="steps" style="padding:0;margin:20px 0 0">' +
+      '<section class="steps-sec"><div class="wrap"><div class="sec-head center"><div>' + eyebrow('ey_steps') + '<h2>' + u('steps_h') + '</h2></div></div><ol class="steps">' +
         [1, 2, 3, 4].map(function (i) { return '<li><h3>' + u('s' + i + 'h') + '</h3><p>' + u('s' + i + 'p') + '</p></li>'; }).join('') +
       '</ol></div></section>' +
 
-      ((D.promises || []).length ? '<section class="alt"><div class="wrap"><h2>' + u('promise_h') + '</h2><ul class="promises">' +
+      ((D.promises || []).length ? '<section class="alt promise-sec"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_trust') + '<h2>' + u('promise_h') + '</h2></div></div><ul class="promises">' +
         D.promises.map(function (p) { return '<li>' + ICONS.check + '<span>' + esc(t(p)) + '</span></li>'; }).join('') + '</ul></div></section>' : '') +
 
-      (fests.length ? '<section id="festivals"><div class="wrap"><div class="sec-head"><div><h2>' + u('fest_h') + '</h2><p>' + u('fest_p') + '</p></div></div><div class="fests">' +
+      (fests.length ? '<section id="festivals"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_fest') + '<h2>' + u('fest_h') + '</h2><p>' + u('fest_p') + '</p></div></div><div class="fests">' +
         fests.map(function (f) {
           var d = new Date(f.date + 'T00:00:00');
           var mon = d.toLocaleDateString(lang === 'hi' ? 'hi-IN' : 'en-IN', { month: 'short', year: 'numeric' });
@@ -334,7 +350,7 @@
         '</div></div></section>' : '') +
 
       '<section class="alt" id="contact"><div class="wrap two-col">' +
-        '<div class="faq"><h2>' + u('faq_h') + '</h2>' + (D.faqs || []).map(function (f) { return '<details><summary>' + esc(t(f.q)) + '</summary><p>' + esc(t(f.a)) + '</p></details>'; }).join('') + '</div>' +
+        '<div class="faq">' + eyebrow('ey_faq') + '<h2>' + u('faq_h') + '</h2>' + (D.faqs || []).map(function (f) { return '<details><summary>' + esc(t(f.q)) + '</summary><p>' + esc(t(f.a)) + '</p></details>'; }).join('') + '</div>' +
         '<div style="display:grid;gap:18px"><div class="contact-card"><h3 style="margin:0;font-family:var(--f-display);font-size:1.6rem">' + u('contact_h') + '</h3>' +
           '<div class="row">' + ICONS.pin + '<div><b>' + u('address') + '</b><br>' + esc(t(D.settings.address)) + '</div></div>' +
           '<div class="row">' + ICONS.phone + '<div><b>' + u('phone') + '</b><br><a href="' + telHref() + '">' + esc(D.settings.phone) + '</a> • <a href="' + waHref() + '" target="_blank" rel="noopener">' + u('whatsapp') + '</a></div></div>' +
@@ -363,7 +379,7 @@
       '<nav class="crumbs"><a href="#/">' + u('home') + '</a> / <a href="#/cat/' + esc(s.cat) + '">' + esc(t(c.name)) + '</a> / ' + esc(t(s.name)) + '</nav>' +
       '<div class="detail-grid"><div>' +
         '<h1>' + esc(t(s.name)) + '</h1>' +
-        '<div class="hero-img"' + (s.image ? ' style="background-image:url(\'' + esc(s.image) + '\')"' : '') + '>' + (s.image ? '' : (ICONS[c.icon] || ICONS.star)) + '</div>' +
+        (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '">' + (credOk(s) ? '<figcaption>' + credit(s.imgCredit) + '</figcaption>' : '') + '</figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
         '<p style="font-size:1.1rem">' + esc(t(s.desc)) + '</p>' +
         (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
         (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +
@@ -371,9 +387,10 @@
       '</div><aside class="pkg-box"><h2 style="font-size:1.4rem">' + u('choose_pkg') + '</h2><form id="pkgForm">' +
         (s.packages || []).map(function (p, i) {
           return '<label class="pkg"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + ((p.popular || (i === 0 && !(s.packages || []).some(function (x) { return x.popular; }))) ? ' checked' : '') + '>' +
-            '<span class="top"><span>' + esc(t(p.name)) + (p.popular ? '<span class="pop">' + u('popular') + '</span>' : '') + '</span><span>' + inr(p.price) + '</span></span>' +
+            '<span class="top"><span>' + esc(t(p.name)) + (p.popular ? '<span class="pop">' + u('popular') + '</span>' : '') + '</span><span>' + pr(p.price) + '</span></span>' +
             '<small>' + esc(t(p.features)) + '</small></label>';
         }).join('') +
+        (showP() ? '' : '<p class="price-note">' + u('price_note') + '</p>') +
         '<button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">' + u('book_this') + '</button>' +
         '<a class="btn btn-wa" style="width:100%;margin-top:10px" target="_blank" rel="noopener" href="' + waHref(u('wa_ask') + ' ' + t(s.name)) + '">' + u('ask_wa') + '</a>' +
       '</form></aside></div>' +
@@ -383,7 +400,19 @@
     window.scrollTo(0, 0);
   }
 
+  function credits() {
+    var rows = [];
+    var add = function (label, c) { if (c && c.file) rows.push('<li><b>' + esc(label) + '</b> — ' + credit(c) + '</li>'); };
+    if (credOk(D.hero)) add(lang === 'en' ? 'Home banner' : 'मुखपृष्ठ बैनर', D.hero.imgCredit);
+    D.services.forEach(function (s) { if (s.active !== false && credOk(s)) add(t(s.name), s.imgCredit); });
+    if (D.premium && credOk(D.premium)) add(t(D.premium.title), D.premium.imgCredit);
+    (D.gallery || []).forEach(function (g) { if (g.credit) add(t(g.caption), g.credit); });
+    $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + u('credits') + '</h1><p>' + u('credits_p') + '</p><ul class="credits">' + rows.join('') + '</ul><p><a href="#/tirth">' + u('nav_tirth') + '</a> ' + (lang === 'en' ? 'pages carry their own photo credits.' : 'की तस्वीरों का श्रेय हर तीर्थ के पेज पर दिया गया है।') + '</p></div>';
+    window.scrollTo(0, 0);
+  }
+
   function page(key) {
+    if (key === 'credits') return credits();
     var titles = { terms: u('terms'), refund: u('refund'), privacy: u('privacy') };
     var txt = D.pages && D.pages[key] ? t(D.pages[key]) : '';
     $('#main').innerHTML = '<div class="wrap detail page-text"><nav class="crumbs"><a href="#/">' + u('home') + '</a></nav><h1>' + esc(titles[key] || '') + '</h1>' +
@@ -398,7 +427,7 @@
     $('#main').innerHTML = '<div class="wrap detail page-text"><h1>' + u('track_h') + '</h1><p>' + u('track_p') + '</p><div class="track-list">' +
       (list.length ? list.slice().reverse().map(function (b) {
         return '<div class="track-item" data-id="' + esc(b.id) + '"><b class="bid" style="font-size:1.2rem">' + esc(b.id) + '</b><br>' +
-          esc(b.serviceName) + ' — ' + esc(b.packageName) + ' (' + inr(b.price) + ')<br>' + esc(b.date) + ' • ' + esc(b.time) +
+          esc(b.serviceName) + ' — ' + esc(b.packageName) + (showP() ? ' (' + inr(b.price) + ')' : '') + '<br>' + esc(b.date) + ' • ' + esc(b.time) +
           '<br><span class="st">' + u('status') + ': <b>' + u('st_' + (b.status || 'new')) + '</b></span> ' +
           (D.settings.bookingEndpoint ? '<button class="btn btn-ghost btn-sm" data-check="' + esc(b.id) + '" data-phone="' + esc(b.phone) + '">' + u('check_status') + '</button>' : '') +
           ' <a class="btn btn-ghost btn-sm" href="' + mailHref(b) + '">' + u('email_btn') + '</a></div>';
@@ -465,7 +494,7 @@
         '<div class="full"><b>' + u('choose_pkg') + '</b>' +
         (s.packages || []).map(function (p) {
           return '<label class="pkg" style="margin-top:8px"><input type="radio" name="pkg" value="' + esc(p.id) + '"' + (B.data.pkg === p.id ? ' checked' : '') + '>' +
-            '<span class="top"><span>' + esc(t(p.name)) + '</span><span>' + inr(p.price) + '</span></span><small>' + esc(t(p.features)) + '</small></label>';
+            '<span class="top"><span>' + esc(t(p.name)) + '</span><span>' + pr(p.price) + '</span></span><small>' + esc(t(p.features)) + '</small></label>';
         }).join('') + '</div>' +
         '<div class="full"><b>' + u('mode') + '</b>' + (jy ? seg('mode', [['phone', u('mode_phone')], ['visit', u('mode_visit')]]) : seg('mode', [['home', u('mode_home')], ['online', u('mode_online')]])) + '</div>' +
         field('date', u('date'), 'date', { attrs: ' min="' + todayISO() + '" required' }) +
@@ -491,7 +520,7 @@
       var p = curPkg(), d = B.data;
       var timeLbl = { muhurat: u('t_muhurat'), morning: u('t_morning'), noon: u('t_noon'), evening: u('t_evening') }[d.time];
       var modeLbl = { home: u('mode_home'), online: u('mode_online'), phone: u('mode_phone'), visit: u('mode_visit') }[d.mode];
-      var rows = [[u('service'), t(s.name)], [u('package'), t(p.name) + ' — ' + inr(p.price)], [u('mode'), modeLbl], [u('date'), d.date + ' • ' + timeLbl], [u('name'), d.name], [u('mobile'), d.phone]];
+      var rows = [[u('service'), t(s.name)], [u('package'), t(p.name) + pr(p.price, ' — ')], [u('mode'), modeLbl], [u('date'), d.date + ' • ' + timeLbl], [u('name'), d.name], [u('mobile'), d.phone]];
       if (d.gotra) rows.push([u('gotra'), d.gotra]);
       if (d.dob) rows.push([u('dob'), d.dob + (d.tob ? ' ' + d.tob : '') + (d.pob ? ', ' + d.pob : '')]);
       if (d.address) rows.push([u('addr'), d.address + (d.city ? ', ' + d.city : '') + (d.pincode ? ' – ' + d.pincode : '')]);
@@ -505,7 +534,7 @@
         '<p>' + u('booking_id') + '</p><p class="bid">' + esc(b.id) + '</p><p style="color:var(--ink-2)">' + u('done_p') + '</p>' +
         '<p class="mailst ' + (B.mailed ? 'ok' : 'warn') + '">' + (B.mailed ? ICONS.check.replace('<svg', '<svg width="20" height="20"') + ' ' + u('email_sent') : u('email_fail')) + '</p>' +
         (bookEmail() ? '<a class="btn ' + (B.mailed ? 'btn-ghost' : 'btn-primary') + '" style="width:100%" href="' + mailHref(b) + '">' + ICONS.mail.replace('<svg', '<svg width="20" height="20"') + ' ' + u('send_email') + '</a>' : '') +
-        (upi && adv ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
+        (upi && adv && showP() ? '<div class="upi"><b>' + u('advance') + ': ' + inr(adv) + '</b> — UPI: ' + esc(D.settings.upiId) + '<br><a class="btn btn-ghost btn-sm" style="margin-top:8px" href="' + upi + '">' + u('pay_upi') + '</a><br><small>' + u('upi_note') + '</small></div>' : '') +
         '<div class="dlg-actions" style="justify-content:center"><button class="btn btn-ghost" type="button" id="doneClose">' + u('close') + '</button></div></div>';
     }
     $('#dlgBody').innerHTML = prog + body;
@@ -557,7 +586,7 @@
   }
 
   function waText(b) {
-    var L = [u('wa_greet'), '', u('booking_id') + ': ' + b.id, u('service') + ': ' + b.serviceName, u('package') + ': ' + b.packageName + ' (' + inr(b.price) + ')',
+    var L = [u('wa_greet'), '', u('booking_id') + ': ' + b.id, u('service') + ': ' + b.serviceName, u('package') + ': ' + b.packageName + (showP() ? ' (' + inr(b.price) + ')' : ''),
       u('date') + ': ' + b.date + ' • ' + b.time, u('mode') + ': ' + b.mode, u('name') + ': ' + b.name, u('mobile') + ': ' + b.phone];
     if (b.gotra) L.push(u('gotra') + ': ' + b.gotra);
     if (b.dob) L.push(u('dob') + ': ' + b.dob + ' ' + (b.tob || '') + ' ' + (b.pob || ''));
@@ -616,6 +645,12 @@
       window.VSSTirth.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
       document.title = u('nav_tirth') + ' — ' + t(D.settings.siteName);
       return window.VSSTirth.route(h);
+    }
+    if (/^#\/mandal/.test(h) && window.VSSMandal) {
+      $('#nav').classList.remove('open');
+      window.VSSMandal.init({ D: D, lang: lang, t: t, u: u, esc: esc, $: $, $$: $$ });
+      document.title = u('nav_mandal') + ' — ' + t(D.settings.siteName);
+      return window.VSSMandal.route(h);
     }
     var am = h.match(/^#\/(panchang|kundli|rashifal|milan)/);
     if (am) {

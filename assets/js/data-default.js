@@ -43,6 +43,7 @@
       hours: { hi: 'प्रतिदिन प्रातः 7 बजे से रात्रि 9 बजे तक', en: 'Daily, 7 am to 9 pm' },
       serviceArea: { hi: 'दिल्ली-एनसीआर में घर पर पूजा • पूरे विश्व में ऑनलाइन (वीडियो) पूजा', en: 'Home puja across Delhi-NCR • Online (video) puja worldwide' },
       bookingEndpoint: '',
+      showPrices: false,
       upiId: '',
       advancePercent: 25,
       mapQuery: 'Chhatarpur Extension, New Delhi 110074',
@@ -247,4 +248,292 @@
       privacy: { hi: 'आपका नाम, फ़ोन, पता व जन्म विवरण केवल पूजा/परामर्श हेतु उपयोग होता है और किसी अन्य को नहीं दिया जाता।', en: 'Your name, phone, address and birth details are used only for the puja/consultation and are never shared.' }
     }
   };
+
+  /* ---- असली फ़ोटो (Wikimedia Commons, मुक्त लाइसेंस, फ़ोटोग्राफ़र का नाम साथ में) ---- */
+  var IMG = {
+ "griha-pravesh": {
+  "file": "Griha-Pravesh-ritual.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "Aruna at ml.wikipedia"
+ },
+ "vastu-shanti": {
+  "file": "Griha Pravesh Puja Ceremony.jpg",
+  "license": "CC0",
+  "artist": "AditiChintarevula"
+ },
+ "bhoomi-pujan": {
+  "file": "Bhoomi Pooja 3.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Yakshitha"
+ },
+ "office-pujan": {
+  "file": "Vishwakarma Puja Celebrations 2024 at Oil India Limited, Human Resources Office, Duliajan 03.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "AjayDas"
+ },
+ "navgrah-havan": {
+  "file": "Navgrah idols at Maa Durga Sai Baba Temple in Orlando.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Kiran891"
+ },
+ "manglik": {
+  "file": "Mangal Graha (Mars) at Navagraha mandapam, Shani Shingnapur.jpg",
+  "license": "CC0",
+  "artist": "K.Venkataramana"
+ },
+ "mahamrityunjay-havan": {
+  "file": "1 Brahmin performing homa fire yajna sacrifice, offerings in a Hindu ritual.jpg",
+  "license": "CC BY 2.0",
+  "artist": "Onkar Hoysala"
+ },
+ "rudrabhishek": {
+  "file": "Rudrabhishake Structure.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Anush Singh"
+ },
+ "chandi-path-havan": {
+  "file": "16th-century, Devi Mahatmya Narayani Stutti, Sanskrit, Devanagari, Det Kongelige Bibliotek, Copenhagen University, Denmark.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Ms Sarah Welch"
+ },
+ "gayatri-yagya": {
+  "file": "Gayatri yagya.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Anjalikaushal1910"
+ },
+ "satyanarayan-katha": {
+  "file": "Shree Satyanarayan Bhagwan Puja.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Subhmanish"
+ },
+ "namkaran": {
+  "file": "NoolKettu.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "Sandeepndas"
+ },
+ "mundan": {
+  "file": "MundanOfMathil.jpg",
+  "license": "Public domain",
+  "artist": "Anand Jha"
+ },
+ "janeu": {
+  "file": "A yagyopaveet sanskar upanayana samskara.jpg",
+  "license": "CC BY 2.0",
+  "artist": "vinodbahal from Shimla, India"
+ },
+ "vivah": {
+  "file": "Saat phere.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Bhumish143"
+ },
+ "pitra-shraddh": {
+  "file": "A man and a Brahmin performing Shraddha ceremony in Nepal.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "9n2nk"
+ },
+ "pitra-dosh": {
+  "file": "Perform Pinda Dana.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "TAPAS KUMAR HALDER"
+ },
+ "terahvi": {
+  "file": "Ghats of Varanasi and Hindu rituals 40.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Goutam1962"
+ },
+ "sundarkand": {
+  "file": "Sundarkand 02.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "The open draft"
+ },
+ "akhand-ramayan": {
+  "file": "Ramcharitmanas Verses - III.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Nmisra"
+ },
+ "hanuman-chalisa-108": {
+  "file": "Hanuman Chalisa at Hanuman Jayanti.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Suyash Dwivedi"
+ },
+ "mahamrityunjay-jaap": {
+  "file": "108+1 five mukhi Rudraksha mala.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "शिव साहिल"
+ },
+ "shani-shanti": {
+  "file": "Pouring Til oil on the Shani idol at Shani Shingnapur, maharastra.jpg",
+  "license": "CC0",
+  "artist": "K.Venkataramana"
+ },
+ "diwali-lakshmi": {
+  "file": "Diwali Lakshmi Poojan.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Tamilmama"
+ },
+ "lakshmi-kuber-havan": {
+  "file": "Lakshmi Pujan.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Harshada raut"
+ },
+ "kaalsarp": {
+  "file": "20.17b Nagakal Kaladi.png",
+  "license": "CC BY-SA 4.0",
+  "artist": "Kharmacher"
+ },
+ "navratri-path": {
+  "file": "घटस्थापना.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "उज्ज्वला संजय पवार"
+ },
+ "gandmool": {
+  "file": "Kalash puja.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Abhya2022"
+ },
+ "kundli-vishleshan": {
+  "file": "Horoscope of Lehna Singh Majithia, folio of the work 'Sarvasiddhāntatattva-cuḍāmaṇi' (“The Jewel of the Essence of All Sciences”), 1840.jpg",
+  "license": "Public domain",
+  "artist": "अज्ञात (1840)"
+ },
+ "muhurat": {
+  "file": "Tamil panchangam inside.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "Azhagiya manavalan"
+ },
+ "vastu-paramarsh": {
+  "file": "A folio from Vastu sastra hiti dayeka manuscript, water spout design, Sanskrit language, Newari script - 3.jpg",
+  "license": "CC0",
+  "artist": "Ms Sarah Welch"
+ },
+ "kundli-milan": {
+  "file": "Astrologer of the Brahmin caste, India, c 1825 Wellcome L0035997.jpg",
+  "license": "CC BY 4.0",
+  "artist": "Wellcome Collection"
+ },
+ "x_hero": {
+  "file": "Brahmana performing fire sacrifice.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "Ilya Mauter"
+ },
+ "x_homam4": {
+  "file": "Homam for lord Ganesha.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Chandu7299"
+ }
+};
+  function cu(c, w) { return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(c.file) + '?width=' + (w || 960); }
+  var DD = window.DEFAULT_DATA;
+  DD.services.forEach(function (s) { var c = IMG[s.id]; if (c) { s.image = cu(c); s.imgCredit = c; } });
+  var CATIMG = { griha: 'griha-pravesh', yagya: 'gayatri-yagya', karmkand: 'satyanarayan-katha', path: 'sundarkand', dosh: 'navgrah-havan', festival: 'diwali-lakshmi', jyotish: 'kundli-vishleshan' };
+  DD.categories.forEach(function (c) { var k = IMG[CATIMG[c.id]]; if (k) { c.image = cu(k, 640); c.imgCredit = k; } });
+  DD.hero.image = cu(IMG.x_hero, 1920); DD.hero.imgCredit = IMG.x_hero;
+  DD.premium.image = cu(IMG.x_homam4, 1100); DD.premium.imgCredit = IMG.x_homam4;
+  DD.gallery = [
+ {
+  "id": "g1",
+  "src": "",
+  "credit": {
+   "file": "Homam (246246081).jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Rakesh from Bangalore"
+  },
+  "caption": {
+   "hi": "घर पर हवन — अग्नि देव को आहुति",
+   "en": "Havan at home — offerings to Agni"
+  }
+ },
+ {
+  "id": "g2",
+  "src": "",
+  "credit": {
+   "file": "Overflowing boiling milk during gruhapravesam.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Bssasidhar"
+  },
+  "caption": {
+   "hi": "गृह प्रवेश — नए घर में दूध उफनाने की रस्म",
+   "en": "Griha Pravesh — the milk-boiling ritual"
+  }
+ },
+ {
+  "id": "g3",
+  "src": "",
+  "credit": {
+   "file": "Satyanarayan Pooja.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Coolgama"
+  },
+  "caption": {
+   "hi": "सत्यनारायण पूजा की वेदी",
+   "en": "Satyanarayan puja altar"
+  }
+ },
+ {
+  "id": "g4",
+  "src": "",
+  "credit": {
+   "file": "Pooja ki thaal rudrabhishek.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Saumya.st"
+  },
+  "caption": {
+   "hi": "रुद्राभिषेक की पूजा थाली",
+   "en": "Puja thali for Rudrabhishek"
+  }
+ },
+ {
+  "id": "g5",
+  "src": "",
+  "credit": {
+   "file": "Samuhik Yagya.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "All World Gayatri Pariwar, Shantikunj"
+  },
+  "caption": {
+   "hi": "सामूहिक यज्ञ",
+   "en": "Collective yagya"
+  }
+ },
+ {
+  "id": "g6",
+  "src": "",
+  "credit": {
+   "file": "Diwali Oil lamps Darjeeling.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Benoy"
+  },
+  "caption": {
+   "hi": "दीपावली के दीप",
+   "en": "Diwali lamps"
+  }
+ },
+ {
+  "id": "g7",
+  "src": "",
+  "credit": {
+   "file": "Devi jawaraa.png",
+   "license": "CC BY-SA 4.0",
+   "artist": "Kim Hyul Seok"
+  },
+  "caption": {
+   "hi": "नवरात्रि — जवारे",
+   "en": "Navratri — jawara"
+  }
+ },
+ {
+  "id": "g8",
+  "src": "",
+  "credit": {
+   "file": "Sacred Flames of Devotion – The Ganga Aarti at Dashashwamedh Ghat.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Subhranilbasak0"
+  },
+  "caption": {
+   "hi": "गंगा आरती, काशी",
+   "en": "Ganga Aarti, Kashi"
+  }
+ }
+];
+  DD.gallery.forEach(function (g) { g.src = cu(g.credit, 1280); });
 })();

@@ -449,7 +449,7 @@
     ['संपर्क', [{ k: 'settings.phone', t: 'text', l: 'फ़ोन नंबर' }, { k: 'settings.whatsapp', t: 'text', l: 'व्हाट्सऐप नंबर (91 सहित)', help: 'जैसे 919625004090' }, { k: 'settings.email', t: 'text', l: 'संपर्क ईमेल (वेबसाइट पर दिखेगा)' }, { k: 'settings.bookingEmail', t: 'text', l: 'बुकिंग किस ईमेल पर आए', help: 'हर नई बुकिंग इस ईमेल पर आएगी (FormSubmit द्वारा, मुफ़्त)। पहली बुकिंग पर FormSubmit एक “Activate” ईमेल भेजेगा — उसे एक बार क्लिक करें।' }, { k: 'settings.mapQuery', t: 'text', l: 'नक्शे के लिए पता/स्थान' },
       { k: 'settings.address', t: 'bitext', l: 'पूरा पता', full: true }, { k: 'settings.hours', t: 'bi', l: 'समय', full: true }, { k: 'settings.serviceArea', t: 'bi', l: 'सेवा क्षेत्र', full: true }]],
     ['सोशल मीडिया', [{ k: 'settings.social.facebook', t: 'url', l: 'Facebook लिंक' }, { k: 'settings.social.instagram', t: 'url', l: 'Instagram लिंक' }, { k: 'settings.social.youtube', t: 'url', l: 'YouTube लिंक' }]],
-    ['भुगतान', [{ k: 'settings.upiId', t: 'text', l: 'UPI आईडी', help: 'जैसे name@okhdfcbank — भरने पर बुकिंग के बाद “UPI से अग्रिम दें” बटन दिखेगा' }, { k: 'settings.advancePercent', t: 'number', l: 'अग्रिम राशि (%)' }]],
+    ['भुगतान', [{ k: 'settings.showPrices', t: 'bool', l: 'वेबसाइट पर पूजा का मूल्य (दक्षिणा) दिखाएँ', full: true }, { k: 'settings.upiId', t: 'text', l: 'UPI आईडी', help: 'जैसे name@okhdfcbank — भरने पर बुकिंग के बाद “UPI से अग्रिम दें” बटन दिखेगा' }, { k: 'settings.advancePercent', t: 'number', l: 'अग्रिम राशि (%)' }]],
     ['नीतियाँ', [{ k: 'pages.terms', t: 'bitext', l: 'नियम व शर्तें', full: true }, { k: 'pages.refund', t: 'bitext', l: 'रद्दीकरण व धनवापसी', full: true }, { k: 'pages.privacy', t: 'bitext', l: 'गोपनीयता नीति', full: true }]]
   ];
   function settings(v) {
@@ -460,6 +460,7 @@
       SETTINGS.forEach(function (g) {
         g[1].forEach(function (f) {
           if (f.t === 'bi' || f.t === 'bitext') { var o = {}; $$('[data-k="' + f.k + '"]', v).forEach(function (el) { o[el.dataset.lang] = el.value.trim(); }); setP(D, f.k, o); }
+          else if (f.t === 'bool') setP(D, f.k, $('[data-k="' + f.k + '"]', v).checked);
           else { var el = $('[data-k="' + f.k + '"]', v); setP(D, f.k, f.t === 'number' ? Number(el.value) || 0 : el.value.trim()); }
         });
       });
