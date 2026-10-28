@@ -6,7 +6,7 @@
   var UI = {
     hi: {
       nav_home: 'मुखपृष्ठ', nav_services: 'पूजा सेवाएँ', nav_jyotish: 'ज्योतिष', nav_fest: 'आगामी पर्व', nav_track: 'मेरी बुकिंग', nav_contact: 'संपर्क',
-      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
+      lang_btn: 'English', book_puja: 'पूजा बुक करें', choose_svc: 'पूजा चुनें', our_glimpse: 'हमारे अनुष्ठान की झलक', simple_note: 'बुकिंग भेजते ही पंडित जी आपको फ़ोन करके मुहूर्त, तिथि और दक्षिणा की जानकारी देंगे।', e_svc: 'कृपया पहले पूजा चुनें', call: 'कॉल करें', whatsapp: 'व्हाट्सऐप', call_now: 'अभी कॉल करें',
       show_all: 'सभी {n} सेवाएँ देखें', nav_panchang: 'पंचांग', nav_kundli: 'कुंडली', nav_rashifal: 'राशिफल', nav_milan: 'कुंडली मिलान', nav_tirth: 'तीर्थ दर्शन', nav_mandal: 'पूजा मंडल', mandal_h: 'पूजा के मंडल', mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका, वास्तु — वेदी पर बनने वाले हर मंडल की रचना, रंग और आवाहित देवता, स्रोत सहित।', mandal_btn: 'सभी मंडल देखें', ey_mandal: 'वेदी व मंडल', tirth_h: 'तीर्थ दर्शन', tirth_p: 'द्वादश ज्योतिर्लिंग, अष्टविनायक और 51 शक्तिपीठ — कथा, स्थान व विशेषताएँ प्रामाणिक स्रोतों सहित।',
       nav_gallery: 'गैलरी', gallery_h: 'झलकियाँ', gallery_p: 'हमारे अनुष्ठानों, हवन और संस्कारों की कुछ झलकियाँ।',
       premium_cta: 'महा-अनुष्ठान बुक करें', premium_enquire: 'विशेष अनुष्ठान हेतु पूछें',
@@ -51,7 +51,7 @@
     },
     en: {
       nav_home: 'Home', nav_services: 'Puja services', nav_jyotish: 'Jyotish', nav_fest: 'Festivals', nav_track: 'My bookings', nav_contact: 'Contact',
-      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
+      lang_btn: 'हिंदी', book_puja: 'Book a puja', choose_svc: 'Choose a puja', our_glimpse: 'Glimpses from our rituals', simple_note: 'Once you send this, Pandit ji will call you to fix the muhurat, date and dakshina.', e_svc: 'Please choose a puja first', call: 'Call', whatsapp: 'WhatsApp', call_now: 'Call now',
       show_all: 'See all {n} services', nav_panchang: 'Panchang', nav_kundli: 'Kundli', nav_rashifal: 'Horoscope', nav_milan: 'Kundli Milan', nav_tirth: 'Tirthas', nav_mandal: 'Puja Mandals', mandal_h: 'The mandals of puja', mandal_p: 'Sarvatobhadra, Navagraha, Shodash Matrika, Vastu — the layout, colours and deities of every mandal drawn on the vedi, with sources.', mandal_btn: 'See all mandals', ey_mandal: 'Vedi & Mandal', tirth_h: 'Sacred Tirthas', tirth_p: 'The 12 Jyotirlingas, Ashtavinayak and 51 Shakti Peethas — legends, locations and highlights with sources.',
       nav_gallery: 'Gallery', gallery_h: 'Glimpses', gallery_p: 'A few glimpses of our rituals, havans and sanskars.',
       premium_cta: 'Book a Maha-Anushthan', premium_enquire: 'Enquire about special rituals',
@@ -200,7 +200,7 @@
   function svcCard(s) {
     var c = cat(s.cat);
     return '<article class="svc" data-cat="' + esc(s.cat) + '">' +
-      '<div class="svc-img">' + (s.image ? '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + '' + '>' : '<span class="svc-ph">' + (ICONS[c.icon] || ICONS.star) + '</span>') +
+      '<div class="svc-img">' + (s.image ? '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + (s.imgPos ? ' style="object-position:' + esc(s.imgPos) + '"' : '') + '>' : '<span class="svc-ph">' + (ICONS[c.icon] || ICONS.star) + '</span>') +
       '<span class="svc-cat">' + esc(t(c.name)) + '</span>' + (s.popular ? '<span class="tag">' + u('popular') + '</span>' : '') + '</div>' +
       '<div class="svc-body">' +
       '<h3><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></h3>' +
@@ -378,7 +378,11 @@
       '<nav class="crumbs"><a href="#/">' + u('home') + '</a> / <a href="#/cat/' + esc(s.cat) + '">' + esc(t(c.name)) + '</a> / ' + esc(t(s.name)) + '</nav>' +
       '<div class="detail-grid"><div>' +
         '<h1>' + esc(t(s.name)) + '</h1>' +
-        (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '">' + (false ? '<figcaption>' + credit(s.imgCredit) + '</figcaption>' : '') + '</figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
+        (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + (s.imgPos ? ' style="object-position:' + esc(s.imgPos) + '"' : '') + '></figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
+        ((s.video || (s.photos || []).length) ? '<div class="svc-media"><h2>' + u('our_glimpse') + '</h2><div class="sm-grid">' +
+          (s.video ? '<video class="sm-video' + (s.videoPortrait ? ' portrait' : '') + '" src="' + esc(s.video) + '"' + (s.videoPoster ? ' poster="' + esc(s.videoPoster) + '"' : '') + ' controls playsinline preload="metadata"></video>' : '') +
+          (s.photos || []).map(function (ph) { return '<img class="sm-photo" loading="lazy" src="' + esc(ph) + '" alt="' + esc(t(s.name)) + '">'; }).join('') +
+        '</div></div>' : '') +
         '<p style="font-size:1.1rem">' + esc(t(s.desc)) + '</p>' +
         (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
         (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +

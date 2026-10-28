@@ -50,6 +50,11 @@
     if (!started || !on) return;
     if (document.hidden) a.pause(); else play();
   });
+  // पेज पर कोई वीडियो चले तो संगीत रुक जाए, वीडियो रुकने पर फिर धीरे से शुरू
+  var byVideo = false;
+  document.addEventListener('play', function (e) { if (e.target && e.target.tagName === 'VIDEO' && !a.paused) { byVideo = true; fade(0, 400, function () { a.pause(); label(); }); } }, true);
+  document.addEventListener('pause', function (e) { if (e.target && e.target.tagName === 'VIDEO' && byVideo && on) { byVideo = false; play(); } }, true);
+  document.addEventListener('ended', function (e) { if (e.target && e.target.tagName === 'VIDEO' && byVideo && on) { byVideo = false; play(); } }, true);
   new MutationObserver(label).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   label();
   if (on) play(); // works only where the browser already allows autoplay

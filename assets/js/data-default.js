@@ -536,4 +536,10 @@
  }
 ];
   DD.gallery.forEach(function (g) { g.src = cu(g.credit, 1280); });
+  // संस्थान के अपने अनुष्ठानों की फ़ोटो/वीडियो
+  var OWN = {
+    'mahamrityunjay-havan': { image: 'assets/img/seva/mahamrityunjay-havan.jpg', imgCredit: null, video: 'assets/video/mahamrityunjay-havan.mp4', videoPoster: 'assets/img/seva/mahamrityunjay-havan-poster.jpg', photos: ['assets/img/seva/shivling-pujan.jpg'] },
+    'sundarkand': { image: 'assets/img/seva/sundarkand.jpg', imgCredit: null, imgPos: '50% 35%', video: 'assets/video/sundarkand.mp4', videoPortrait: true, videoPoster: 'assets/img/seva/sundarkand.jpg' }
+  };
+  DD.services.forEach(function (s) { if (OWN[s.id]) Object.keys(OWN[s.id]).forEach(function (k) { s[k] = OWN[s.id][k]; }); });
 })();
