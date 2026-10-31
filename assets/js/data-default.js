@@ -267,9 +267,9 @@
   "artist": "Yakshitha"
  },
  "office-pujan": {
-  "file": "Vishwakarma Puja Celebrations 2024 at Oil India Limited, Human Resources Office, Duliajan 03.jpg",
+  "file": "Diwali Ganesh Laxmi Puja 001.jpg",
   "license": "CC BY-SA 4.0",
-  "artist": "AjayDas"
+  "artist": "Suyash Dwivedi"
  },
  "navgrah-havan": {
   "file": "Navgrah idols at Maa Durga Sai Baba Temple in Orlando.jpg",
