@@ -18,6 +18,7 @@
       no_results: 'इस खोज से कोई पूजा नहीं मिली। दूसरा शब्द लिखें या हमें कॉल करें — हर प्रकार का कर्मकांड कराया जाता है।',
       purpose_h: 'किस कामना हेतु पूजा करानी है?', purpose_p: 'अपनी आवश्यकता चुनें, उसके अनुसार उपयुक्त अनुष्ठान देखें।',
       steps_h: 'बुकिंग कैसे होती है',
+      inc_h: 'इस पैकेज में शामिल', trust_h: 'आपके भरोसे के लिए', t1: 'यजमान के नाम-गोत्र से संकल्प', t2: 'पंचांग देखकर शुभ मुहूर्त — निःशुल्क', t3: 'बुकिंग अभी निःशुल्क, पुष्टि व्हाट्सऐप पर', t4: 'दिल्ली-एनसीआर में घर पर • विश्व भर में ऑनलाइन', mode_home: 'घर पर', mode_online: 'ऑनलाइन (वीडियो)', flow_h: 'पूजा कैसे होगी', why_h: 'वैदिक शोध संस्थान ही क्यों', ey_why: 'विश्वास', know_h: 'ज्ञान केंद्र', know_p: 'पंचांग, कुंडली, तीर्थ, मंडल और कर्मकांड पुस्तकें — सब एक जगह, निःशुल्क।', ey_know: 'निःशुल्क संसाधन', k_tools: 'पंचांग व कुंडली', k_tools_p: 'आज का पंचांग, जन्म कुंडली, कुंडली मिलान, राशिफल', k_tirth_p: '12 ज्योतिर्लिंग, अष्टविनायक, 51 शक्तिपीठ', k_mandal: 'पूजा मंडल', k_mandal_p: 'सर्वतोभद्र, नवग्रह, षोडश मातृका व अन्य', k_books: 'कर्मकांड पुस्तकालय', k_books_p: 'पूजन पद्धतियाँ व पाठ, पढ़ने हेतु', explore: 'देखें', review_cta: 'आपने हमसे पूजा कराई है? अपना अनुभव लिखें',
       s1h: 'पूजा चुनें', s1p: 'सेवा व पैकेज — सामग्री सहित या बिना सामग्री।',
       s2h: 'विवरण भरें', s2p: 'नाम, गोत्र, पता और अपनी पसंद की तिथि।',
       s3h: 'मुहूर्त पक्का', s3p: 'पंडित जी पंचांग देखकर कॉल पर मुहूर्त व समय तय करेंगे।',
@@ -63,6 +64,7 @@
       no_results: 'No puja matches that search. Try another word or call us — every kind of karmkand is performed.',
       purpose_h: 'What is the puja for?', purpose_p: 'Pick your need and see the rituals suited to it.',
       steps_h: 'How booking works',
+      inc_h: 'Included in this package', trust_h: 'Why families trust us', t1: 'Sankalp in your name & gotra', t2: 'Auspicious muhurat from the panchang — free', t3: 'Free booking, confirmed on WhatsApp', t4: 'At home in Delhi-NCR • online worldwide', mode_home: 'At home', mode_online: 'Online (video)', flow_h: 'How the puja will happen', why_h: 'Why Vaidik Shodh Sansthan', ey_why: 'Trust', know_h: 'Knowledge centre', know_p: 'Panchang, kundli, pilgrimages, mandals and karmkand books — all in one place, free.', ey_know: 'Free resources', k_tools: 'Panchang & Kundli', k_tools_p: 'Today’s panchang, birth chart, matching, horoscope', k_tirth_p: '12 Jyotirlingas, Ashtavinayak, 51 Shakti Peethas', k_mandal: 'Puja mandals', k_mandal_p: 'Sarvatobhadra, Navagraha, Shodasha Matrika & more', k_books: 'Karmkand library', k_books_p: 'Puja paddhatis and paths to read', explore: 'Explore', review_cta: 'Had a puja with us? Share your experience',
       s1h: 'Choose a puja', s1p: 'Service and package — with or without samagri.',
       s2h: 'Fill details', s2p: 'Name, gotra, address and your preferred date.',
       s3h: 'Muhurat confirmed', s3p: 'Pandit ji checks the panchang and fixes the time on a call.',
@@ -292,8 +294,6 @@
               '</section>' +
       '<div class="area-band"><div class="wrap">' + ICONS.pin.replace('<svg', '<svg width="18" height="18"') + '<span>' + esc(t(D.settings.serviceArea)) + '</span></div></div>' +
 
-      (window.VSSAstro ? astroCtx() && window.VSSAstro.strip() : '') +
-
       '<section id="sevaen"><div class="wrap">' +
         '<div class="sec-head center"><div>' + eyebrow('ey_services') + '<h2>' + u('services_h') + '</h2><p>' + u('services_p') + '</p></div></div>' +
         '<div class="cats" role="toolbar">' +
@@ -303,20 +303,14 @@
         '<div class="services" id="svcGrid" aria-live="polite"></div>' +
       '</div></section>' +
 
+      ((D.promises || []).length ? '<section class="why-sec"><div class="wrap"><div class="sec-head center"><div>' + eyebrow('ey_why') + '<h2>' + u('why_h') + '</h2></div></div><ul class="why">' +
+        D.promises.map(function (p) { return '<li>' + ICONS.check + '<span>' + esc(t(p)) + '</span></li>'; }).join('') + '</ul></div></section>' : '') +
+
+      '<section class="steps-sec"><div class="wrap"><div class="sec-head center"><div>' + eyebrow('ey_steps') + '<h2>' + u('steps_h') + '</h2></div></div><ol class="steps">' +
+        [1, 2, 3, 4].map(function (i) { return '<li><h3>' + u('s' + i + 'h') + '</h3><p>' + u('s' + i + 'p') + '</p></li>'; }).join('') +
+      '</ol></div></section>' +
+
       premiumHTML() +
-
-      '<section class="tirth-teaser"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_tirth') + '<h2>' + u('tirth_h') + '</h2><p>' + u('tirth_p') + '</p></div></div><div class="tt-grid">' +
-        [['jyotirling', lang === 'en' ? '12 Jyotirlingas' : '12 ज्योतिर्लिंग', lang === 'en' ? 'Somnath to Grishneshwar' : 'सोमनाथ से घृष्णेश्वर तक'],
-         ['ashtavinayak', lang === 'en' ? 'Ashtavinayak' : 'अष्टविनायक', lang === 'en' ? 'Eight swayambhu Ganesh shrines' : 'आठ स्वयंभू गणपति'],
-         ['shaktipeeth', lang === 'en' ? '51 Shakti Peethas' : '51 शक्तिपीठ', lang === 'en' ? 'From Hinglaj to Kamakhya' : 'हिंगलाज से कामाख्या तक']].map(function (x) {
-          var ph = { jyotirling: 'Somanath_mandir_(cropped).jpg', ashtavinayak: 'Siddhi_Vinayak_at_Siddhatek.jpg', shaktipeeth: 'Kamakhya_Temple_-_DEV_8829.jpg' }; return '<a class="tt-card tt-' + x[0] + '" href="#/tirth/' + x[0] + '"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(ph[x[0]]) + '?width=700" alt="" loading="lazy"><b>' + x[1] + '</b><span>' + x[2] + '</span></a>'; }).join('') +
-      '</div></div></section>' +
-
-      '<section class="mandal-teaser"><div class="wrap mt-in"><div>' + eyebrow('ey_mandal', 'light') + '<h2>' + u('mandal_h') + '</h2><p>' + u('mandal_p') + '</p><a class="btn btn-gold" href="#/mandal">' + u('mandal_btn') + '</a></div><div class="mt-chips">' +
-        [['sarvatobhadra', 'सर्वतोभद्र मंडल', 'Sarvatobhadra'], ['lingatobhadra', 'लिंगतोभद्र मंडल', 'Lingatobhadra'], ['navgrah', 'नवग्रह मंडल', 'Navagraha'], ['shodash_matrika', 'षोडश मातृका', 'Shodasha Matrika'], ['saptaghrit_matrika', 'सप्तघृत मातृका', 'Saptaghrita Matrika'], ['vastu', 'वास्तु मंडल', 'Vastu Mandal'], ['kshetrapal', 'क्षेत्रपाल मंडल', 'Kshetrapal'], ['yogini', 'चौंसठ योगिनी', '64 Yoginis'], ['lokpal', 'दशदिक्पाल', 'Dashadikpala']].map(function (x) { return '<a href="#/mandal/' + x[0] + '">' + (lang === 'en' ? x[2] : x[1]) + '</a>'; }).join('') +
-      '</div></div></section>' +
-
-      '<section class="books-teaser"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_books') + '<h2>' + u('books_h') + '</h2><p>' + u('books_p') + '</p></div><a class="btn btn-ghost" href="#/pustak">' + u('books_btn') + '</a></div><div class="bt-row" id="btRow"></div></div></section>' +
 
       ((D.purposes || []).length ? '<section class="alt" id="kamna"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_purpose') + '<h2>' + u('purpose_h') + '</h2><p>' + u('purpose_p') + '</p></div></div><div class="purposes">' +
         D.purposes.map(function (p) {
@@ -324,13 +318,6 @@
           if (!items.length) return '';
           return '<div class="purpose"><h3>' + esc(t(p.name)) + '</h3><ul>' + items.map(function (s) { return '<li><a href="#/seva/' + esc(s.id) + '">' + esc(t(s.name)) + '</a></li>'; }).join('') + '</ul></div>';
         }).join('') + '</div></div></section>' : '') +
-
-      '<section class="steps-sec"><div class="wrap"><div class="sec-head center"><div>' + eyebrow('ey_steps') + '<h2>' + u('steps_h') + '</h2></div></div><ol class="steps">' +
-        [1, 2, 3, 4].map(function (i) { return '<li><h3>' + u('s' + i + 'h') + '</h3><p>' + u('s' + i + 'p') + '</p></li>'; }).join('') +
-      '</ol></div></section>' +
-
-      ((D.promises || []).length ? '<section class="alt promise-sec"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_trust') + '<h2>' + u('promise_h') + '</h2></div></div><ul class="promises">' +
-        D.promises.map(function (p) { return '<li>' + ICONS.check + '<span>' + esc(t(p)) + '</span></li>'; }).join('') + '</ul></div></section>' : '') +
 
       (fests.length ? '<section id="festivals"><div class="wrap"><div class="sec-head"><div>' + eyebrow('ey_fest') + '<h2>' + u('fest_h') + '</h2><p>' + u('fest_p') + '</p></div></div><div class="fests">' +
         fests.map(function (f) {
@@ -349,6 +336,12 @@
       (testi.length ? '<section><div class="wrap"><h2>' + u('testi_h') + '</h2><div class="people">' +
         testi.map(function (q) { return '<blockquote class="quote"><div class="stars" aria-label="' + (q.rating || 5) + '/5">' + '★★★★★'.slice(0, q.rating || 5) + '</div><p>' + esc(t(q.text)) + '</p><footer>' + esc(q.name) + (q.city ? ', ' + esc(q.city) : '') + '</footer></blockquote>'; }).join('') +
         '</div></div></section>' : '') +
+
+      (window.VSSAstro ? astroCtx() && window.VSSAstro.strip() : '') +
+
+      '<section class="know-sec" id="gyan"><div class="wrap"><div class="sec-head center"><div>' + eyebrow('ey_know') + '<h2>' + u('know_h') + '</h2><p>' + u('know_p') + '</p></div></div><div class="know">' +
+        [['panchang.html', 'k_tools', 'k_tools_p', 'clock'], ['#/tirth', 'nav_tirth', 'k_tirth_p', 'globe'], ['#/mandal', 'k_mandal', 'k_mandal_p', 'kalash'], ['#/pustak', 'k_books', 'k_books_p', 'star']].map(function (k) { return '<a class="kc" href="' + k[0] + '">' + (ICONS[k[3]] || ICONS.star) + '<b>' + u(k[1]) + '</b><span>' + u(k[2]) + '</span><em>' + u('explore') + ' →</em></a>'; }).join('') +
+      '</div></div></section>' +
 
       '<section class="alt" id="contact"><div class="wrap two-col">' +
         '<div class="faq">' + eyebrow('ey_faq') + '<h2>' + u('faq_h') + '</h2>' + (D.faqs || []).map(function (f) { return '<details><summary>' + esc(t(f.q)) + '</summary><p>' + esc(t(f.a)) + '</p></details>'; }).join('') + '</div>' +
@@ -381,6 +374,7 @@
       '<nav class="crumbs"><a href="#/">' + u('home') + '</a> / <a href="#/cat/' + esc(s.cat) + '">' + esc(t(c.name)) + '</a> / ' + esc(t(s.name)) + '</nav>' +
       '<div class="detail-grid"><div>' +
         '<h1>' + esc(t(s.name)) + '</h1>' +
+        '<ul class="facts">' + (s.duration ? '<li>' + ICONS.clock + esc(s.duration) + '</li>' : '') + (isJyotish(s) ? '<li>' + ICONS.globe + u('mode_online') + '</li>' : '<li>' + ICONS.pin + u('mode_home') + '</li><li>' + ICONS.globe + u('mode_online') + '</li>') + (showP() && minPrice(s) ? '<li class="fp">' + inr(minPrice(s)) + ' ' + u('starting') + '</li>' : '') + '</ul>' +
         (s.image ? '<figure class="hero-img"><img src="' + esc(s.image) + '" alt="' + esc(t(s.name)) + '"' + (s.imgPos ? ' style="object-position:' + esc(s.imgPos) + '"' : '') + '></figure>' : '<div class="hero-img">' + (ICONS[c.icon] || ICONS.star) + '</div>') +
         ((s.video || (s.photos || []).length) ? '<div class="svc-media"><h2>' + u('our_glimpse') + '</h2><div class="sm-grid">' +
           (s.video ? '<video class="sm-video' + (s.videoPortrait ? ' portrait' : '') + '" src="' + esc(s.video) + '"' + (s.videoPoster ? ' poster="' + esc(s.videoPoster) + '"' : '') + ' controls playsinline preload="metadata"></video>' : '') +
@@ -390,6 +384,7 @@
         (s.duration ? '<p><b>' + u('duration') + ':</b> ' + esc(s.duration) + '</p>' : '') +
         (ben.length ? '<h2 style="font-size:1.5rem">' + u('benefits') + '</h2><ul class="list">' + ben.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '') +
         (sam.length ? '<h2 style="font-size:1.5rem">' + u('samagri') + '</h2><p>' + sam.map(esc).join(', ') + '</p>' : '') +
+        '<h2 style="font-size:1.5rem">' + u('flow_h') + '</h2><ol class="flow">' + [1, 2, 3, 4].map(function (i) { return '<li><b>' + u('s' + i + 'h') + '</b><span>' + u('s' + i + 'p') + '</span></li>'; }).join('') + '</ol>' +
         '<div class="faq svc-qa"><h2 style="font-size:1.5rem">' + u('qa_h') + '</h2>' + svcQA(s, ben, sam).map(function (f) { return '<details><summary>' + esc(f[0]) + '</summary><p>' + esc(f[1]) + '</p></details>'; }).join('') + '</div>' +
       '</div><aside class="pkg-box"><h2 style="font-size:1.4rem">' + u('choose_pkg') + '</h2><form id="pkgForm">' +
         (s.packages || []).map(function (p, i) {
@@ -400,6 +395,8 @@
         (showP() ? '' : '<p class="price-note">' + u('price_note') + '</p>') +
         '<button class="btn btn-primary" style="width:100%;margin-top:6px" type="submit">' + u('book_this') + '</button>' +
         '<a class="btn btn-wa" style="width:100%;margin-top:10px" target="_blank" rel="noopener" href="' + waHref(u('wa_ask') + ' ' + t(s.name)) + '">' + u('ask_wa') + '</a>' +
+        '<div class="pkg-trust"><b>' + u('trust_h') + '</b><ul>' + ['t1', 't2', 't3', 't4'].map(function (k) { return '<li>' + ICONS.check + '<span>' + u(k) + '</span></li>'; }).join('') + '</ul></div>' +
+        '<a class="pkg-call" href="' + telHref() + '">' + ICONS.phone + '<span>' + esc(D.settings.phone) + '<small>' + esc(t(D.settings.hours)) + '</small></span></a>' +
       '</form></aside></div>' +
       (rel.length ? '<section style="padding:48px 0 0"><h2>' + u('related') + '</h2><div class="services">' + rel.map(svcCard).join('') + '</div></section>' : '') +
     '</div>';

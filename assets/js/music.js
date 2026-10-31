@@ -7,8 +7,9 @@
   var get = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
   var set = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} };
   var a = new Audio('assets/audio/ambient.mp3?v=1');
-  a.loop = true; a.preload = 'auto'; a.volume = 0;
-  var on = get() !== 'off', fadeT = null, started = false;
+  a.loop = true; a.preload = 'none'; a.volume = 0;
+  // संगीत अब केवल बटन दबाने पर चलता है (पहले किसी भी क्लिक पर चल जाता था)
+  var on = get() === 'on', fadeT = null, started = false;
 
   var btn = document.createElement('button');
   btn.type = 'button'; btn.className = 'music-btn'; btn.id = 'musicBtn';
@@ -45,7 +46,7 @@
     ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { document.removeEventListener(ev, firstTouch, true); });
     if (on && a.paused) play();
   }
-  ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { document.addEventListener(ev, firstTouch, true); });
+  if (on) ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { document.addEventListener(ev, firstTouch, true); });
   document.addEventListener('visibilitychange', function () {
     if (!started || !on) return;
     if (document.hidden) a.pause(); else play();

@@ -868,3 +868,48 @@ footer.site .copy{border-top-color:rgba(184,138,59,.25)}
 .track-item .ti-meta dt{color:var(--ink-2)}.track-item .ti-meta dd{margin:0}
 .track-item .ti-act{display:flex;flex-wrap:wrap;gap:8px}
 .track-item .ti-note{margin:12px 0 0;font-size:.9rem;color:var(--ink-2)}
+
+/* =====================================================================
+   v19 — premium trust & conversion layer
+   ===================================================================== */
+/* service page: facts row */
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0}
+.facts li{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:999px;background:#fff;border:1px solid rgba(184,138,59,.35);font-size:.92rem;color:var(--ink)}
+.facts svg{width:17px;height:17px;color:var(--gold-d)}
+.facts li.fp{background:var(--night);color:var(--gold-l);border-color:var(--night);font-weight:600}
+/* service page: puja flow */
+.flow{list-style:none;counter-reset:f;margin:0 0 28px;padding:0;display:grid;gap:0;border-left:1px solid rgba(184,138,59,.45);margin-left:14px}
+.flow li{counter-increment:f;position:relative;padding:0 0 18px 28px}
+.flow li::before{content:counter(f,devanagari);position:absolute;left:-15px;top:-2px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--night);color:var(--gold-l);font-family:var(--f-display);font-size:1rem;box-shadow:0 0 0 4px var(--vibhuti)}
+html[lang=en] .flow li::before{content:counter(f)}
+.flow b{display:block;font-weight:600;color:var(--kumkum-d)}
+.flow span{color:var(--ink-2);font-size:.97rem}
+/* service page: sidebar trust + call */
+.pkg-trust{margin-top:18px;padding-top:16px;border-top:1px dashed rgba(184,138,59,.5)}
+.pkg-trust b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--kumkum-d);margin-bottom:6px}
+.pkg-trust ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pkg-trust li{display:flex;gap:9px;font-size:.93rem;line-height:1.45}
+.pkg-trust svg{flex:none;width:18px;height:18px;color:var(--patta);margin-top:2px}
+.pkg-call{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px 14px;border-radius:14px;background:var(--chandan);text-decoration:none;color:var(--ink)}
+.pkg-call svg{flex:none;width:34px;height:34px;padding:7px;border-radius:50%;background:var(--kumkum-d);color:#fff}
+.pkg-call span{font-weight:700;font-size:1.1rem;line-height:1.2}
+.pkg-call small{display:block;font-weight:400;font-size:.8rem;color:var(--ink-2)}
+/* home: why-us cards */
+.why-sec{background:#fff;border-block:1px solid rgba(184,138,59,.18)}
+.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why li{display:flex;gap:14px;align-items:flex-start;padding:22px;border-radius:18px;background:var(--vibhuti);border:1px solid rgba(184,138,59,.22);line-height:1.5}
+.why svg{flex:none;width:36px;height:36px;padding:8px;border-radius:50%;background:var(--night);color:var(--gold-l)}
+@media (max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+/* home: knowledge hub */
+.know-sec{background:linear-gradient(180deg,var(--vibhuti),#FFF6E6)}
+.know{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kc{display:flex;flex-direction:column;gap:6px;padding:24px 22px;border-radius:18px;background:#fff;border:1px solid rgba(184,138,59,.25);text-decoration:none;color:var(--ink);box-shadow:var(--shadow-s);transition:transform .3s,box-shadow .3s}
+.kc:hover{transform:translateY(-3px);box-shadow:var(--shadow-l)}
+.kc svg{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--chandan);color:var(--kumkum-d);margin-bottom:6px}
+.kc b{font-family:var(--f-display);font-weight:400;font-size:1.3rem;color:var(--kumkum-d)}
+.kc span{color:var(--ink-2);font-size:.93rem;line-height:1.45}
+.kc em{font-style:normal;margin-top:auto;padding-top:8px;color:var(--gold-d);font-weight:600;font-size:.9rem}
+@media (max-width:900px){.know{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.know{grid-template-columns:1fr}}
+.know-sec + .pstrip,.pstrip{border-radius:0}
